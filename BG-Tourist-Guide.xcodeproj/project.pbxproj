@@ -13,6 +13,8 @@
 		C97DB6E41C5D38FB00ED629F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97DB6E21C5D38FB00ED629F /* Main.storyboard */; };
 		C97DB6E61C5D38FB00ED629F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97DB6E51C5D38FB00ED629F /* Assets.xcassets */; };
 		C97DB6E91C5D38FB00ED629F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97DB6E71C5D38FB00ED629F /* LaunchScreen.storyboard */; };
+		C97DB6F51C5D44CF00ED629F /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C97DB6F41C5D44CF00ED629F /* Logo.png */; };
+		C97DB6F71C5D478400ED629F /* SlimLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C97DB6F61C5D478400ED629F /* SlimLogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		C97DB6E51C5D38FB00ED629F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C97DB6E81C5D38FB00ED629F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C97DB6EA1C5D38FB00ED629F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C97DB6F41C5D44CF00ED629F /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = ../../Resources/Logo.png; sourceTree = "<group>"; };
+		C97DB6F61C5D478400ED629F /* SlimLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SlimLogo.png; path = ../../Resources/SlimLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		C97DB6D81C5D38FA00ED629F /* BG-Tourist-Guide */ = {
 			isa = PBXGroup;
 			children = (
+				C97DB6F01C5D446700ED629F /* Resources */,
 				C97DB6DC1C5D38FA00ED629F /* AppDelegate.h */,
 				C97DB6DD1C5D38FA00ED629F /* AppDelegate.m */,
 				C97DB6DF1C5D38FA00ED629F /* ViewController.h */,
@@ -77,6 +82,23 @@
 				C97DB6DA1C5D38FA00ED629F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C97DB6F01C5D446700ED629F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C97DB6F11C5D447100ED629F /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C97DB6F11C5D447100ED629F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C97DB6F61C5D478400ED629F /* SlimLogo.png */,
+				C97DB6F41C5D44CF00ED629F /* Logo.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +159,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97DB6F71C5D478400ED629F /* SlimLogo.png in Resources */,
+				C97DB6F51C5D44CF00ED629F /* Logo.png in Resources */,
 				C97DB6E91C5D38FB00ED629F /* LaunchScreen.storyboard in Resources */,
 				C97DB6E61C5D38FB00ED629F /* Assets.xcassets in Resources */,
 				C97DB6E41C5D38FB00ED629F /* Main.storyboard in Resources */,
@@ -305,6 +329,7 @@
 				C97DB6EF1C5D38FB00ED629F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
