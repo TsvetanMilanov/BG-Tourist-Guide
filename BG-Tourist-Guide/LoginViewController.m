@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "UserLoginRequestModel.h"
 
 @interface LoginViewController ()
 - (IBAction)btnLoginTap:(id)sender;
@@ -38,5 +39,10 @@
 */
 
 - (IBAction)btnLoginTap:(id)sender {
+    NSString *name = self.tfUsername.text;
+    NSString *password = self.tfPassword.text;
+    
+    UserLoginRequestModel *user = [UserLoginRequestModel userLoginRequestModelWithUsername:name andPassword:password];
+    NSLog(@"%@ %@", user.username, user.password);
 }
 @end

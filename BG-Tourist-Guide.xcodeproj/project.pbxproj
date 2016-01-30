@@ -19,6 +19,8 @@
 		C97DB7021C5D55CA00ED629F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB7011C5D55CA00ED629F /* LoginViewController.m */; };
 		C97DB7061C5D597500ED629F /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB7051C5D597500ED629F /* RegisterViewController.m */; };
 		C97DB70B1C5D5EA400ED629F /* UserLoginRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB70A1C5D5EA400ED629F /* UserLoginRequestModel.m */; };
+		C97DB70F1C5D61E200ED629F /* UserRegisterRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB70E1C5D61E200ED629F /* UserRegisterRequestModel.m */; };
+		C97DB7121C5D67D300ED629F /* AlertControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB7111C5D67D300ED629F /* AlertControllerFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,10 @@
 		C97DB7051C5D597500ED629F /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		C97DB7091C5D5EA400ED629F /* UserLoginRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLoginRequestModel.h; sourceTree = "<group>"; };
 		C97DB70A1C5D5EA400ED629F /* UserLoginRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginRequestModel.m; sourceTree = "<group>"; };
+		C97DB70D1C5D61E200ED629F /* UserRegisterRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRegisterRequestModel.h; sourceTree = "<group>"; };
+		C97DB70E1C5D61E200ED629F /* UserRegisterRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRegisterRequestModel.m; sourceTree = "<group>"; };
+		C97DB7101C5D67D300ED629F /* AlertControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertControllerFactory.h; sourceTree = "<group>"; };
+		C97DB7111C5D67D300ED629F /* AlertControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertControllerFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,8 @@
 			children = (
 				C97DB6FC1C5D505100ED629F /* Constants.h */,
 				C97DB6FD1C5D505100ED629F /* Constants.m */,
+				C97DB7101C5D67D300ED629F /* AlertControllerFactory.h */,
+				C97DB7111C5D67D300ED629F /* AlertControllerFactory.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -147,10 +155,20 @@
 		C97DB7081C5D5E8400ED629F /* UserModels */ = {
 			isa = PBXGroup;
 			children = (
-				C97DB7091C5D5EA400ED629F /* UserLoginRequestModel.h */,
-				C97DB70A1C5D5EA400ED629F /* UserLoginRequestModel.m */,
+				C97DB70C1C5D61CA00ED629F /* RequestModels */,
 			);
 			name = UserModels;
+			sourceTree = "<group>";
+		};
+		C97DB70C1C5D61CA00ED629F /* RequestModels */ = {
+			isa = PBXGroup;
+			children = (
+				C97DB7091C5D5EA400ED629F /* UserLoginRequestModel.h */,
+				C97DB70A1C5D5EA400ED629F /* UserLoginRequestModel.m */,
+				C97DB70D1C5D61E200ED629F /* UserRegisterRequestModel.h */,
+				C97DB70E1C5D61E200ED629F /* UserRegisterRequestModel.m */,
+			);
+			name = RequestModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,9 +244,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97DB7121C5D67D300ED629F /* AlertControllerFactory.m in Sources */,
 				C97DB6E11C5D38FA00ED629F /* MainViewController.m in Sources */,
 				C97DB7061C5D597500ED629F /* RegisterViewController.m in Sources */,
 				C97DB6DE1C5D38FA00ED629F /* AppDelegate.m in Sources */,
+				C97DB70F1C5D61E200ED629F /* UserRegisterRequestModel.m in Sources */,
 				C97DB70B1C5D5EA400ED629F /* UserLoginRequestModel.m in Sources */,
 				C97DB6DB1C5D38FA00ED629F /* main.m in Sources */,
 				C97DB6FE1C5D505100ED629F /* Constants.m in Sources */,
