@@ -15,4 +15,8 @@
 -(void) postJSONWithUrl: (NSString*) url
                  data: (NSString*) data
               andBlock: (void (^)(NSError *err, id result)) block;
+
+-(void) postFormUrlEncodedWithUrl: (NSString*) url
+                   data: (NSDictionary*) data
+               andBlock: (void (^)(NSError *err, id result)) block;
 @end

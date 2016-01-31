@@ -13,6 +13,7 @@
     if (self = [super init]) {
         self.username = username;
         self.password = password;
+        self.grant_type = @"password";
     }
     
     return self;

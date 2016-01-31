@@ -12,6 +12,7 @@
 @interface UserLoginRequestModel : JSONModel
 @property NSString *username;
 @property NSString *password;
+@property NSString *grant_type;
 
 -(instancetype)initWithUsername: (NSString*) username
                     andPassword: (NSString*) password;

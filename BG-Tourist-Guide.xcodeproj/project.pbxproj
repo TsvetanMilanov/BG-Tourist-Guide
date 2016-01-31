@@ -24,6 +24,7 @@
 		C97DB7121C5D67D300ED629F /* AlertControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB7111C5D67D300ED629F /* AlertControllerFactory.m */; };
 		C99FB74F1C5D738D00901E10 /* UserLoginResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C99FB74E1C5D738D00901E10 /* UserLoginResponseModel.m */; };
 		C9E788AF1C5D8A3C00541AD9 /* Requester.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E788AE1C5D8A3C00541AD9 /* Requester.m */; };
+		C9E788B21C5E0D4A00541AD9 /* ActivityIndicatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E788B11C5E0D4A00541AD9 /* ActivityIndicatorFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		C99FB74E1C5D738D00901E10 /* UserLoginResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginResponseModel.m; sourceTree = "<group>"; };
 		C9E788AD1C5D8A3C00541AD9 /* Requester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Requester.h; sourceTree = "<group>"; };
 		C9E788AE1C5D8A3C00541AD9 /* Requester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Requester.m; sourceTree = "<group>"; };
+		C9E788B01C5E0D4A00541AD9 /* ActivityIndicatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityIndicatorFactory.h; sourceTree = "<group>"; };
+		C9E788B11C5E0D4A00541AD9 /* ActivityIndicatorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityIndicatorFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +160,8 @@
 				C97DB6FD1C5D505100ED629F /* Constants.m */,
 				C97DB7101C5D67D300ED629F /* AlertControllerFactory.h */,
 				C97DB7111C5D67D300ED629F /* AlertControllerFactory.m */,
+				C9E788B01C5E0D4A00541AD9 /* ActivityIndicatorFactory.h */,
+				C9E788B11C5E0D4A00541AD9 /* ActivityIndicatorFactory.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -348,6 +353,7 @@
 				C97DB6FE1C5D505100ED629F /* Constants.m in Sources */,
 				C97DB7021C5D55CA00ED629F /* LoginViewController.m in Sources */,
 				C9E788AF1C5D8A3C00541AD9 /* Requester.m in Sources */,
+				C9E788B21C5E0D4A00541AD9 /* ActivityIndicatorFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

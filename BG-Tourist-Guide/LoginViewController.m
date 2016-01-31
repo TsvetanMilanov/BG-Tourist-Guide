@@ -10,6 +10,9 @@
 #import "UserLoginRequestModel.h"
 #import "Requester.h"
 #import "AlertControllerFactory.h"
+#import "ActivityIndicatorFactory.h"
+#import "UserLoginResponseModel.h"
+#import "Constants.h"
 
 @interface LoginViewController ()
 - (IBAction)btnLoginTap:(id)sender;
@@ -41,22 +44,32 @@
 */
 
 - (IBAction)btnLoginTap:(id)sender {
+    UIActivityIndicatorView *progressIndicator = [ActivityIndicatorFactory activityIndicatorWithParentView:self.view];
+    [progressIndicator startAnimating];
+    
     NSString *name = self.tfUsername.text;
     NSString *password = self.tfPassword.text;
     
     UserLoginRequestModel *user = [UserLoginRequestModel userLoginRequestModelWithUsername:name andPassword:password];
-    NSLog(@"%@ %@", user.username, user.password);
     Requester *requester = [[Requester alloc] init];
     
     __weak UIViewController *weakSelf = self;
     
-    [requester postJSONWithUrl:@"/Token" data:[user toJSONString] andBlock:^(NSError *err, id result) {
+    [requester postFormUrlEncodedWithUrl:@"/Token" data:[user toDictionary] andBlock:^(NSError *err, id result) {
+        [progressIndicator stopAnimating];
+        
         if (err) {
             [AlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Unsuccessfull login." andUIViewController: weakSelf];
             return;
         }
         
-        NSLog(@"%@", result);
+        UserLoginResponseModel *responseUser = [[UserLoginResponseModel alloc] initWithDictionary:result error:nil];
+        
+        NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
+        
+        [settings setObject:responseUser.access_token forKey: CURRENT_USER_TOKEN_KEY];
+        
+        [AlertControllerFactory showAlertDialogWithTitle:@"Success" message:@"Login successfull!" andUIViewController:weakSelf];
     }];
 }
 @end

@@ -262,18 +262,13 @@
                                     <segue destination="d3i-eq-oFV" kind="show" id="ksA-4D-Aum"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIa-BT-vFR">
-                                <rect key="frame" x="269" y="353" width="62" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <segue destination="CgL-gq-0cn" kind="show" id="hZ7-In-ZZq"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkN-4a-Pb8">
                                 <rect key="frame" x="261" y="403" width="78" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="btnLogoutTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rBV-LY-vLX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usd-V1-ZjL">
                                 <rect key="frame" x="265" y="453" width="70" height="42"/>
@@ -302,6 +297,14 @@
                                     <constraint firstAttribute="height" constant="77" id="cFf-Sd-YKV"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIa-BT-vFR">
+                                <rect key="frame" x="269" y="353" width="62" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <segue destination="CgL-gq-0cn" kind="show" id="hZ7-In-ZZq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -325,6 +328,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5ok-Ay-RsY"/>
+                    <connections>
+                        <outlet property="btnLogin" destination="jIa-BT-vFR" id="NEf-bK-qhu"/>
+                        <outlet property="btnLogout" destination="xkN-4a-Pb8" id="0HB-Hh-Am4"/>
+                        <outlet property="btnLogoutTopConstraint" destination="lPz-t4-YuO" id="F8L-YG-9y2"/>
+                        <outlet property="btnProfile" destination="Usd-V1-ZjL" id="7BT-kR-z1O"/>
+                        <outlet property="btnRegister" destination="KQT-6Q-Xrd" id="OLp-jW-oAP"/>
+                        <outlet property="btnSyncTopConstraint" destination="HSs-wd-9t7" id="5tu-dY-q2F"/>
+                        <outlet property="btnTouristSites" destination="CnV-ck-kp0" id="6Wy-7K-xR4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
