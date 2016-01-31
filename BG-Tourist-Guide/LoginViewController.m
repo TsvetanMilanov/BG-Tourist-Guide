@@ -8,6 +8,8 @@
 
 #import "LoginViewController.h"
 #import "UserLoginRequestModel.h"
+#import "Requester.h"
+#import "AlertControllerFactory.h"
 
 @interface LoginViewController ()
 - (IBAction)btnLoginTap:(id)sender;
@@ -44,5 +46,17 @@
     
     UserLoginRequestModel *user = [UserLoginRequestModel userLoginRequestModelWithUsername:name andPassword:password];
     NSLog(@"%@ %@", user.username, user.password);
+    Requester *requester = [[Requester alloc] init];
+    
+    __weak UIViewController *weakSelf = self;
+    
+    [requester postJSONWithUrl:@"/Token" data:[user toJSONString] andBlock:^(NSError *err, id result) {
+        if (err) {
+            [AlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Unsuccessfull login." andUIViewController: weakSelf];
+            return;
+        }
+        
+        NSLog(@"%@", result);
+    }];
 }
 @end

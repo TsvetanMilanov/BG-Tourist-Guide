@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JSONModel.h"
 
-@interface UserLoginRequestModel : NSObject
+@interface UserLoginRequestModel : JSONModel
 @property NSString *username;
 @property NSString *password;
 

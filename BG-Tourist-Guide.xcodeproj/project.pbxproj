@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F4AE667A7F5708A6C166E25 /* libPods-BG-Tourist-Guide.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A69391C216757CF77DB5CDB0 /* libPods-BG-Tourist-Guide.a */; };
 		C97DB6DB1C5D38FA00ED629F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB6DA1C5D38FA00ED629F /* main.m */; };
 		C97DB6DE1C5D38FA00ED629F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB6DD1C5D38FA00ED629F /* AppDelegate.m */; };
 		C97DB6E11C5D38FA00ED629F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB6E01C5D38FA00ED629F /* MainViewController.m */; };
@@ -21,9 +22,14 @@
 		C97DB70B1C5D5EA400ED629F /* UserLoginRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB70A1C5D5EA400ED629F /* UserLoginRequestModel.m */; };
 		C97DB70F1C5D61E200ED629F /* UserRegisterRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB70E1C5D61E200ED629F /* UserRegisterRequestModel.m */; };
 		C97DB7121C5D67D300ED629F /* AlertControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB7111C5D67D300ED629F /* AlertControllerFactory.m */; };
+		C99FB74F1C5D738D00901E10 /* UserLoginResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C99FB74E1C5D738D00901E10 /* UserLoginResponseModel.m */; };
+		C9E788AF1C5D8A3C00541AD9 /* Requester.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E788AE1C5D8A3C00541AD9 /* Requester.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		099F8884153F349DFE1BC24A /* Pods-BG-Tourist-Guide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BG-Tourist-Guide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BG-Tourist-Guide/Pods-BG-Tourist-Guide.debug.xcconfig"; sourceTree = "<group>"; };
+		8C6557488B28C9E673BA445F /* Pods-BG-Tourist-Guide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BG-Tourist-Guide.release.xcconfig"; path = "Pods/Target Support Files/Pods-BG-Tourist-Guide/Pods-BG-Tourist-Guide.release.xcconfig"; sourceTree = "<group>"; };
+		A69391C216757CF77DB5CDB0 /* libPods-BG-Tourist-Guide.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BG-Tourist-Guide.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97DB6D61C5D38FA00ED629F /* BG-Tourist-Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BG-Tourist-Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97DB6DA1C5D38FA00ED629F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C97DB6DC1C5D38FA00ED629F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,6 +54,10 @@
 		C97DB70E1C5D61E200ED629F /* UserRegisterRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRegisterRequestModel.m; sourceTree = "<group>"; };
 		C97DB7101C5D67D300ED629F /* AlertControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertControllerFactory.h; sourceTree = "<group>"; };
 		C97DB7111C5D67D300ED629F /* AlertControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertControllerFactory.m; sourceTree = "<group>"; };
+		C99FB74D1C5D738D00901E10 /* UserLoginResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLoginResponseModel.h; sourceTree = "<group>"; };
+		C99FB74E1C5D738D00901E10 /* UserLoginResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginResponseModel.m; sourceTree = "<group>"; };
+		C9E788AD1C5D8A3C00541AD9 /* Requester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Requester.h; sourceTree = "<group>"; };
+		C9E788AE1C5D8A3C00541AD9 /* Requester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Requester.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,17 +65,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F4AE667A7F5708A6C166E25 /* libPods-BG-Tourist-Guide.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1526F26BE47602D5D7DD86F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A69391C216757CF77DB5CDB0 /* libPods-BG-Tourist-Guide.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C6FD79899C2F862E586469D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				099F8884153F349DFE1BC24A /* Pods-BG-Tourist-Guide.debug.xcconfig */,
+				8C6557488B28C9E673BA445F /* Pods-BG-Tourist-Guide.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C97DB6CD1C5D38FA00ED629F = {
 			isa = PBXGroup;
 			children = (
 				C97DB6D81C5D38FA00ED629F /* BG-Tourist-Guide */,
 				C97DB6D71C5D38FA00ED629F /* Products */,
+				C6FD79899C2F862E586469D2 /* Pods */,
+				1526F26BE47602D5D7DD86F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				C97DB7081C5D5E8400ED629F /* UserModels */,
+				C9E788AD1C5D8A3C00541AD9 /* Requester.h */,
+				C9E788AE1C5D8A3C00541AD9 /* Requester.m */,
 			);
 			name = Web;
 			sourceTree = "<group>";
@@ -155,6 +187,7 @@
 		C97DB7081C5D5E8400ED629F /* UserModels */ = {
 			isa = PBXGroup;
 			children = (
+				C99FB74C1C5D737400901E10 /* ResponseModels */,
 				C97DB70C1C5D61CA00ED629F /* RequestModels */,
 			);
 			name = UserModels;
@@ -171,6 +204,15 @@
 			name = RequestModels;
 			sourceTree = "<group>";
 		};
+		C99FB74C1C5D737400901E10 /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				C99FB74D1C5D738D00901E10 /* UserLoginResponseModel.h */,
+				C99FB74E1C5D738D00901E10 /* UserLoginResponseModel.m */,
+			);
+			name = ResponseModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,9 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C97DB6ED1C5D38FB00ED629F /* Build configuration list for PBXNativeTarget "BG-Tourist-Guide" */;
 			buildPhases = (
+				010F199A4996BB1183CA40B2 /* Check Pods Manifest.lock */,
 				C97DB6D21C5D38FA00ED629F /* Sources */,
 				C97DB6D31C5D38FA00ED629F /* Frameworks */,
 				C97DB6D41C5D38FA00ED629F /* Resources */,
+				93EBC1A24DC97F807C5D9EBC /* Embed Pods Frameworks */,
+				462BF47AF08973F698B4D4E2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,6 +284,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		010F199A4996BB1183CA40B2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		462BF47AF08973F698B4D4E2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BG-Tourist-Guide/Pods-BG-Tourist-Guide-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93EBC1A24DC97F807C5D9EBC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BG-Tourist-Guide/Pods-BG-Tourist-Guide-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C97DB6D21C5D38FA00ED629F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -246,6 +339,7 @@
 			files = (
 				C97DB7121C5D67D300ED629F /* AlertControllerFactory.m in Sources */,
 				C97DB6E11C5D38FA00ED629F /* MainViewController.m in Sources */,
+				C99FB74F1C5D738D00901E10 /* UserLoginResponseModel.m in Sources */,
 				C97DB7061C5D597500ED629F /* RegisterViewController.m in Sources */,
 				C97DB6DE1C5D38FA00ED629F /* AppDelegate.m in Sources */,
 				C97DB70F1C5D61E200ED629F /* UserRegisterRequestModel.m in Sources */,
@@ -253,6 +347,7 @@
 				C97DB6DB1C5D38FA00ED629F /* main.m in Sources */,
 				C97DB6FE1C5D505100ED629F /* Constants.m in Sources */,
 				C97DB7021C5D55CA00ED629F /* LoginViewController.m in Sources */,
+				C9E788AF1C5D8A3C00541AD9 /* Requester.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +455,7 @@
 		};
 		C97DB6EE1C5D38FB00ED629F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 099F8884153F349DFE1BC24A /* Pods-BG-Tourist-Guide.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -374,6 +470,7 @@
 		};
 		C97DB6EF1C5D38FB00ED629F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C6557488B28C9E673BA445F /* Pods-BG-Tourist-Guide.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
