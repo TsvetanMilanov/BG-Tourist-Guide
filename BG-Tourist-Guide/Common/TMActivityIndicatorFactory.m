@@ -11,7 +11,7 @@
 @implementation TMActivityIndicatorFactory
 +(UIActivityIndicatorView *)activityIndicatorWithParentView:(UIView *)parent{
     UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    indicator.frame = CGRectMake(0.0, 0.0, 50, 50);
+    indicator.frame = CGRectMake(0.0, 0.0, 150, 150);
     
     indicator.center = parent.center;
     [parent addSubview: indicator];

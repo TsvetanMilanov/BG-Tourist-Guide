@@ -3,6 +3,8 @@
 # Uncomment this line if you're using Swift
 # use_frameworks!
 
+workspace 'BG-Tourist-Guide'
+
 target 'BG-Tourist-Guide' do
 
 pod 'AFNetworking', '~> 2.6'

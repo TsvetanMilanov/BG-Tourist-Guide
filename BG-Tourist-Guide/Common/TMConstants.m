@@ -10,4 +10,5 @@
 
 @implementation TMConstants
 NSString* const CURRENT_USER_TOKEN_KEY = @"CurrentUserTokenKey";
+NSString* const CURRENT_USER_ROLES_KEY = @"CurrentUserRolesKey";
 @end

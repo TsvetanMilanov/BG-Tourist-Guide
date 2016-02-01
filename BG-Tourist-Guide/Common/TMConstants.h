@@ -10,4 +10,5 @@
 
 @interface TMConstants : NSObject
 extern NSString* const CURRENT_USER_TOKEN_KEY;
+extern NSString* const CURRENT_USER_ROLES_KEY;
 @end

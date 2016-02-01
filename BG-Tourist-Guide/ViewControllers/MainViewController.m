@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "TMConstants.h"
 #import "TMAlertControllerFactory.h"
+#import "TMRequester.h"
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *btnRegister;
@@ -16,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnLogout;
 @property (weak, nonatomic) IBOutlet UIButton *btnProfile;
 @property (weak, nonatomic) IBOutlet UIButton *btnTouristSites;
+@property (weak, nonatomic) IBOutlet UIButton *btnAdministration;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *btnLogoutTopConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *btnSyncTopConstraint;
 
@@ -76,10 +78,14 @@
     
     [settings setObject:nil forKey:CURRENT_USER_TOKEN_KEY];
     
+    TMRequester *requester = [[TMRequester alloc] init];
+    
     __weak UIViewController *weakSelf = self;
     
-    [TMAlertControllerFactory showAlertDialogWithTitle:@"Success" message:@"Logout successfull!" andUIViewController:weakSelf];
-    hideProfileControls(self);
+    [requester postJSONWithUrl:@"Account/Logout" data:@"" andBlock:^(NSError *err, id result) {
+        [TMAlertControllerFactory showAlertDialogWithTitle:@"Success" message:@"Logout successfull!" andUIViewController:weakSelf];
+        hideProfileControls(self);
+    }];
 }
 
 void hideProfileControls(MainViewController *controller){
@@ -87,6 +93,7 @@ void hideProfileControls(MainViewController *controller){
     controller.btnRegister.hidden = NO;
     controller.btnLogout.hidden = YES;
     controller.btnProfile.hidden = YES;
+    controller.btnAdministration.hidden = YES;
     if (controller.isFirstControllerLoad == YES) {
         controller.btnLogoutTopConstraint.constant = controller.originalbtnLogoutTopConstraint;
     } else {
@@ -103,6 +110,7 @@ void hideAuthenticationControls(MainViewController *controller){
     controller.btnRegister.hidden = YES;
     controller.btnLogout.hidden = NO;
     controller.btnProfile.hidden = NO;
+    controller.btnAdministration.hidden = YES;
     if (controller.isFirstControllerLoad == YES) {
         controller.btnLogoutTopConstraint.constant = -2 * (controller.btnLogoutTopConstraint.constant + controller.btnTouristSites.frame.size.height);
         controller.btnSyncTopConstraint.constant = controller.originalbtnSyncTopConstraint;

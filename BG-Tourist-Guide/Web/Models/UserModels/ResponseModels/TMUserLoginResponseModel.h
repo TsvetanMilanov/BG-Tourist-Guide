@@ -6,10 +6,10 @@
 //  Copyright © 2016 Hakintosh. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "JSONModel.h"
 
 @interface TMUserLoginResponseModel : JSONModel
-@property NSString* access_token;
-@property NSString* userName;
+@property (strong, nonatomic) NSString* access_token;
+@property (strong, nonatomic) NSString* userName;
+@property (strong, nonatomic) NSString* roles;
 @end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F4AE667A7F5708A6C166E25 /* libPods-BG-Tourist-Guide.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A69391C216757CF77DB5CDB0 /* libPods-BG-Tourist-Guide.a */; };
+		C900E52A1C600688005F8AE4 /* TMUserDefaultsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C900E5291C600688005F8AE4 /* TMUserDefaultsHelper.m */; };
 		C97DB6DB1C5D38FA00ED629F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB6DA1C5D38FA00ED629F /* main.m */; };
 		C97DB6DE1C5D38FA00ED629F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB6DD1C5D38FA00ED629F /* AppDelegate.m */; };
 		C97DB6E11C5D38FA00ED629F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB6E01C5D38FA00ED629F /* MainViewController.m */; };
@@ -31,6 +32,8 @@
 		099F8884153F349DFE1BC24A /* Pods-BG-Tourist-Guide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BG-Tourist-Guide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BG-Tourist-Guide/Pods-BG-Tourist-Guide.debug.xcconfig"; sourceTree = "<group>"; };
 		8C6557488B28C9E673BA445F /* Pods-BG-Tourist-Guide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BG-Tourist-Guide.release.xcconfig"; path = "Pods/Target Support Files/Pods-BG-Tourist-Guide/Pods-BG-Tourist-Guide.release.xcconfig"; sourceTree = "<group>"; };
 		A69391C216757CF77DB5CDB0 /* libPods-BG-Tourist-Guide.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BG-Tourist-Guide.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C900E5281C600688005F8AE4 /* TMUserDefaultsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMUserDefaultsHelper.h; sourceTree = "<group>"; };
+		C900E5291C600688005F8AE4 /* TMUserDefaultsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMUserDefaultsHelper.m; sourceTree = "<group>"; };
 		C97DB6D61C5D38FA00ED629F /* BG-Tourist-Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BG-Tourist-Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97DB6DA1C5D38FA00ED629F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C97DB6DC1C5D38FA00ED629F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -92,6 +95,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C900E52B1C60069B005F8AE4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C900E52C1C6006A2005F8AE4 /* Models */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		C900E52C1C6006A2005F8AE4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		C97DB6CD1C5D38FA00ED629F = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +131,7 @@
 		C97DB6D81C5D38FA00ED629F /* BG-Tourist-Guide */ = {
 			isa = PBXGroup;
 			children = (
+				C900E52B1C60069B005F8AE4 /* Data */,
 				C97DB7071C5D5E7700ED629F /* Web */,
 				C97DB6F81C5D4EA700ED629F /* Common */,
 				C97DB6F01C5D446700ED629F /* Resources */,
@@ -162,6 +181,8 @@
 				C97DB7111C5D67D300ED629F /* TMAlertControllerFactory.m */,
 				C9E788B01C5E0D4A00541AD9 /* TMActivityIndicatorFactory.h */,
 				C9E788B11C5E0D4A00541AD9 /* TMActivityIndicatorFactory.m */,
+				C900E5281C600688005F8AE4 /* TMUserDefaultsHelper.h */,
+				C900E5291C600688005F8AE4 /* TMUserDefaultsHelper.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -343,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C97DB7121C5D67D300ED629F /* TMAlertControllerFactory.m in Sources */,
+				C900E52A1C600688005F8AE4 /* TMUserDefaultsHelper.m in Sources */,
 				C97DB6E11C5D38FA00ED629F /* MainViewController.m in Sources */,
 				C99FB74F1C5D738D00901E10 /* TMUserLoginResponseModel.m in Sources */,
 				C97DB7061C5D597500ED629F /* RegisterViewController.m in Sources */,

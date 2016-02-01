@@ -68,6 +68,7 @@
         NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
         
         [settings setObject:responseUser.access_token forKey: CURRENT_USER_TOKEN_KEY];
+        [settings setObject:responseUser.roles forKey: CURRENT_USER_ROLES_KEY];
         
         [TMAlertControllerFactory showAlertDialogWithTitle:@"Success" message:@"Login successfull!" andUIViewController:weakSelf];
     }];

@@ -9,14 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @interface TMUserRegisterRequestModel : NSObject
-@property NSString *email;
-@property NSString *username;
-@property NSString *firstName;
-@property NSString *lastName;
-@property NSString *password;
-@property NSString *confirmPassword;
+@property (strong, nonatomic) NSString *email;
+@property (strong, nonatomic) NSString *username;
+@property (strong, nonatomic) NSString *firstName;
+@property (strong, nonatomic) NSString *lastName;
+@property (strong, nonatomic) NSString *password;
+@property (strong, nonatomic) NSString *confirmPassword;
 
--(instancetype)initWithEmail: (NSString*) email
+-(instancetype)initWithEmail: (NSString*) email		
                     username: (NSString*) username
                     password: (NSString*) password
           andConfirmPassword:  (NSString*) confirmPassword;

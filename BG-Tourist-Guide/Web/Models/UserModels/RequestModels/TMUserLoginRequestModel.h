@@ -10,9 +10,9 @@
 #import "JSONModel.h"
 
 @interface TMUserLoginRequestModel : JSONModel
-@property NSString *username;
-@property NSString *password;
-@property NSString *grant_type;
+@property (strong, nonatomic) NSString *username;
+@property (strong, nonatomic) NSString *password;
+@property (strong, nonatomic) NSString *grant_type;
 
 -(instancetype)initWithUsername: (NSString*) username
                     andPassword: (NSString*) password;
