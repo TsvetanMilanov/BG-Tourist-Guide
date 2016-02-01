@@ -7,8 +7,10 @@
 //
 
 #import "RegisterViewController.h"
+#import "MainViewController.h"
 #import "TMUserRegisterRequestModel.h"
 #import "TMAlertControllerFactory.h"
+#import "TMRequester.h"
 
 @interface RegisterViewController ()
 - (IBAction)btnRegisterTap:(id)sender;
@@ -34,14 +36,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)btnRegisterTap:(id)sender {
     NSString *email = self.tfEmail.text;
@@ -51,7 +53,7 @@
     NSString *password = self.tfPassword.text;
     NSString *confirmPassword = self.tfConfirmPassword.text;
     
-        
+    
     if (email.length <= 0 ||
         username.length <= 0 ||
         password.length <= 0 ||
@@ -71,5 +73,21 @@
     }
     
     TMUserRegisterRequestModel *user = [TMUserRegisterRequestModel userRegisterRequestModelWithEmail:email username:username firstName:firstName lastName:lastName password:password andConfirmPassword:confirmPassword];
+    
+    TMRequester* requester = [[TMRequester alloc]init];
+    
+    __weak UIViewController *weakSelf = self;
+    
+    [requester postJSONWithUrl:@"/api/Account/Register" data:[user toJSONString] andBlock:^(NSError *err, id result) {
+        if (err) {
+            [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Cannot register user." uiViewController:weakSelf andHandler:nil];
+            return;
+        }
+        
+        [TMAlertControllerFactory showAlertDialogWithTitle:@"Success" message:@"Registration successfull. Now You can login." uiViewController:weakSelf andHandler:^(UIAlertAction * _Nonnull action) {
+            [weakSelf.navigationController popToRootViewControllerAnimated:NO];
+            [weakSelf.navigationController pushViewController:[[MainViewController alloc] init] animated:YES];
+        }];
+    }];
 }
 @end

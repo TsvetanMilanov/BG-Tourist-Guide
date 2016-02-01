@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JSONModel.h"
 
-@interface TMUserRegisterRequestModel : NSObject
+@interface TMUserRegisterRequestModel : JSONModel
 @property (strong, nonatomic) NSString *email;
 @property (strong, nonatomic) NSString *username;
 @property (strong, nonatomic) NSString *firstName;
