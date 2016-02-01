@@ -8,62 +8,62 @@
 
 /* Begin PBXBuildFile section */
 		4F4AE667A7F5708A6C166E25 /* libPods-BG-Tourist-Guide.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A69391C216757CF77DB5CDB0 /* libPods-BG-Tourist-Guide.a */; };
-		C900E52A1C600688005F8AE4 /* TMUserDefaultsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C900E5291C600688005F8AE4 /* TMUserDefaultsHelper.m */; };
+		C954C7B81C6015AA00E12996 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7B31C6015AA00E12996 /* LoginViewController.m */; };
+		C954C7B91C6015AA00E12996 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7B51C6015AA00E12996 /* MainViewController.m */; };
+		C954C7BA1C6015AA00E12996 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7B71C6015AA00E12996 /* RegisterViewController.m */; };
+		C954C7C41C6015E300E12996 /* TMActivityIndicatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7BD1C6015E300E12996 /* TMActivityIndicatorFactory.m */; };
+		C954C7C51C6015E300E12996 /* TMAlertControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7BF1C6015E300E12996 /* TMAlertControllerFactory.m */; };
+		C954C7C61C6015E300E12996 /* TMConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7C11C6015E300E12996 /* TMConstants.m */; };
+		C954C7C71C6015E300E12996 /* TMUserDefaultsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7C31C6015E300E12996 /* TMUserDefaultsHelper.m */; };
+		C954C7CE1C60162200E12996 /* TMUserLoginResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7CD1C60162200E12996 /* TMUserLoginResponseModel.m */; };
+		C954C7D31C60163B00E12996 /* TMUserLoginRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7D01C60163B00E12996 /* TMUserLoginRequestModel.m */; };
+		C954C7D41C60163B00E12996 /* TMUserRegisterRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7D21C60163B00E12996 /* TMUserRegisterRequestModel.m */; };
+		C954C7D71C60165C00E12996 /* TMRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7D61C60165C00E12996 /* TMRequester.m */; };
 		C97DB6DB1C5D38FA00ED629F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB6DA1C5D38FA00ED629F /* main.m */; };
 		C97DB6DE1C5D38FA00ED629F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB6DD1C5D38FA00ED629F /* AppDelegate.m */; };
-		C97DB6E11C5D38FA00ED629F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB6E01C5D38FA00ED629F /* MainViewController.m */; };
 		C97DB6E41C5D38FB00ED629F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97DB6E21C5D38FB00ED629F /* Main.storyboard */; };
 		C97DB6E61C5D38FB00ED629F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97DB6E51C5D38FB00ED629F /* Assets.xcassets */; };
 		C97DB6E91C5D38FB00ED629F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97DB6E71C5D38FB00ED629F /* LaunchScreen.storyboard */; };
-		C97DB6F51C5D44CF00ED629F /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C97DB6F41C5D44CF00ED629F /* Logo.png */; };
-		C97DB6F71C5D478400ED629F /* SlimLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C97DB6F61C5D478400ED629F /* SlimLogo.png */; };
-		C97DB6FE1C5D505100ED629F /* TMConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB6FD1C5D505100ED629F /* TMConstants.m */; };
-		C97DB7021C5D55CA00ED629F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB7011C5D55CA00ED629F /* LoginViewController.m */; };
-		C97DB7061C5D597500ED629F /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB7051C5D597500ED629F /* RegisterViewController.m */; };
-		C97DB70B1C5D5EA400ED629F /* TMUserLoginRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB70A1C5D5EA400ED629F /* TMUserLoginRequestModel.m */; };
-		C97DB70F1C5D61E200ED629F /* TMUserRegisterRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB70E1C5D61E200ED629F /* TMUserRegisterRequestModel.m */; };
-		C97DB7121C5D67D300ED629F /* TMAlertControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB7111C5D67D300ED629F /* TMAlertControllerFactory.m */; };
-		C99FB74F1C5D738D00901E10 /* TMUserLoginResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C99FB74E1C5D738D00901E10 /* TMUserLoginResponseModel.m */; };
-		C9E788AF1C5D8A3C00541AD9 /* TMRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E788AE1C5D8A3C00541AD9 /* TMRequester.m */; };
-		C9E788B21C5E0D4A00541AD9 /* TMActivityIndicatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E788B11C5E0D4A00541AD9 /* TMActivityIndicatorFactory.m */; };
+		C9ED0B6B1C6019660085EBF2 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9ED0B691C6019660085EBF2 /* Logo.png */; };
+		C9ED0B6C1C6019660085EBF2 /* SlimLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9ED0B6A1C6019660085EBF2 /* SlimLogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		099F8884153F349DFE1BC24A /* Pods-BG-Tourist-Guide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BG-Tourist-Guide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BG-Tourist-Guide/Pods-BG-Tourist-Guide.debug.xcconfig"; sourceTree = "<group>"; };
 		8C6557488B28C9E673BA445F /* Pods-BG-Tourist-Guide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BG-Tourist-Guide.release.xcconfig"; path = "Pods/Target Support Files/Pods-BG-Tourist-Guide/Pods-BG-Tourist-Guide.release.xcconfig"; sourceTree = "<group>"; };
 		A69391C216757CF77DB5CDB0 /* libPods-BG-Tourist-Guide.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BG-Tourist-Guide.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C900E5281C600688005F8AE4 /* TMUserDefaultsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMUserDefaultsHelper.h; sourceTree = "<group>"; };
-		C900E5291C600688005F8AE4 /* TMUserDefaultsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMUserDefaultsHelper.m; sourceTree = "<group>"; };
+		C954C7B21C6015AA00E12996 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ViewControllers/LoginViewController.h; sourceTree = "<group>"; };
+		C954C7B31C6015AA00E12996 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ViewControllers/LoginViewController.m; sourceTree = "<group>"; };
+		C954C7B41C6015AA00E12996 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ViewControllers/MainViewController.h; sourceTree = "<group>"; };
+		C954C7B51C6015AA00E12996 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ViewControllers/MainViewController.m; sourceTree = "<group>"; };
+		C954C7B61C6015AA00E12996 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController.h; path = ViewControllers/RegisterViewController.h; sourceTree = "<group>"; };
+		C954C7B71C6015AA00E12996 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController.m; path = ViewControllers/RegisterViewController.m; sourceTree = "<group>"; };
+		C954C7BC1C6015E300E12996 /* TMActivityIndicatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMActivityIndicatorFactory.h; path = Common/TMActivityIndicatorFactory.h; sourceTree = "<group>"; };
+		C954C7BD1C6015E300E12996 /* TMActivityIndicatorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMActivityIndicatorFactory.m; path = Common/TMActivityIndicatorFactory.m; sourceTree = "<group>"; };
+		C954C7BE1C6015E300E12996 /* TMAlertControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMAlertControllerFactory.h; path = Common/TMAlertControllerFactory.h; sourceTree = "<group>"; };
+		C954C7BF1C6015E300E12996 /* TMAlertControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMAlertControllerFactory.m; path = Common/TMAlertControllerFactory.m; sourceTree = "<group>"; };
+		C954C7C01C6015E300E12996 /* TMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMConstants.h; path = Common/TMConstants.h; sourceTree = "<group>"; };
+		C954C7C11C6015E300E12996 /* TMConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMConstants.m; path = Common/TMConstants.m; sourceTree = "<group>"; };
+		C954C7C21C6015E300E12996 /* TMUserDefaultsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMUserDefaultsHelper.h; path = Common/TMUserDefaultsHelper.h; sourceTree = "<group>"; };
+		C954C7C31C6015E300E12996 /* TMUserDefaultsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMUserDefaultsHelper.m; path = Common/TMUserDefaultsHelper.m; sourceTree = "<group>"; };
+		C954C7CC1C60162200E12996 /* TMUserLoginResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMUserLoginResponseModel.h; path = Web/UserModels/ResponseModels/TMUserLoginResponseModel.h; sourceTree = "<group>"; };
+		C954C7CD1C60162200E12996 /* TMUserLoginResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMUserLoginResponseModel.m; path = Web/UserModels/ResponseModels/TMUserLoginResponseModel.m; sourceTree = "<group>"; };
+		C954C7CF1C60163B00E12996 /* TMUserLoginRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMUserLoginRequestModel.h; path = Web/UserModels/RequestModels/TMUserLoginRequestModel.h; sourceTree = "<group>"; };
+		C954C7D01C60163B00E12996 /* TMUserLoginRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMUserLoginRequestModel.m; path = Web/UserModels/RequestModels/TMUserLoginRequestModel.m; sourceTree = "<group>"; };
+		C954C7D11C60163B00E12996 /* TMUserRegisterRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMUserRegisterRequestModel.h; path = Web/UserModels/RequestModels/TMUserRegisterRequestModel.h; sourceTree = "<group>"; };
+		C954C7D21C60163B00E12996 /* TMUserRegisterRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMUserRegisterRequestModel.m; path = Web/UserModels/RequestModels/TMUserRegisterRequestModel.m; sourceTree = "<group>"; };
+		C954C7D51C60165C00E12996 /* TMRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMRequester.h; path = Web/TMRequester.h; sourceTree = "<group>"; };
+		C954C7D61C60165C00E12996 /* TMRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMRequester.m; path = Web/TMRequester.m; sourceTree = "<group>"; };
 		C97DB6D61C5D38FA00ED629F /* BG-Tourist-Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BG-Tourist-Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97DB6DA1C5D38FA00ED629F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C97DB6DC1C5D38FA00ED629F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C97DB6DD1C5D38FA00ED629F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C97DB6DF1C5D38FA00ED629F /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		C97DB6E01C5D38FA00ED629F /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		C97DB6E31C5D38FB00ED629F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C97DB6E51C5D38FB00ED629F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C97DB6E81C5D38FB00ED629F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C97DB6EA1C5D38FB00ED629F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C97DB6F41C5D44CF00ED629F /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = ../../Resources/Logo.png; sourceTree = "<group>"; };
-		C97DB6F61C5D478400ED629F /* SlimLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SlimLogo.png; path = ../../Resources/SlimLogo.png; sourceTree = "<group>"; };
-		C97DB6FC1C5D505100ED629F /* TMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMConstants.h; sourceTree = "<group>"; };
-		C97DB6FD1C5D505100ED629F /* TMConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMConstants.m; sourceTree = "<group>"; };
-		C97DB7001C5D55CA00ED629F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		C97DB7011C5D55CA00ED629F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		C97DB7041C5D597500ED629F /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
-		C97DB7051C5D597500ED629F /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		C97DB7091C5D5EA400ED629F /* TMUserLoginRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMUserLoginRequestModel.h; sourceTree = "<group>"; };
-		C97DB70A1C5D5EA400ED629F /* TMUserLoginRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMUserLoginRequestModel.m; sourceTree = "<group>"; };
-		C97DB70D1C5D61E200ED629F /* TMUserRegisterRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMUserRegisterRequestModel.h; sourceTree = "<group>"; };
-		C97DB70E1C5D61E200ED629F /* TMUserRegisterRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMUserRegisterRequestModel.m; sourceTree = "<group>"; };
-		C97DB7101C5D67D300ED629F /* TMAlertControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMAlertControllerFactory.h; sourceTree = "<group>"; };
-		C97DB7111C5D67D300ED629F /* TMAlertControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMAlertControllerFactory.m; sourceTree = "<group>"; };
-		C99FB74D1C5D738D00901E10 /* TMUserLoginResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMUserLoginResponseModel.h; sourceTree = "<group>"; };
-		C99FB74E1C5D738D00901E10 /* TMUserLoginResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMUserLoginResponseModel.m; sourceTree = "<group>"; };
-		C9E788AD1C5D8A3C00541AD9 /* TMRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMRequester.h; sourceTree = "<group>"; };
-		C9E788AE1C5D8A3C00541AD9 /* TMRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMRequester.m; sourceTree = "<group>"; };
-		C9E788B01C5E0D4A00541AD9 /* TMActivityIndicatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMActivityIndicatorFactory.h; sourceTree = "<group>"; };
-		C9E788B11C5E0D4A00541AD9 /* TMActivityIndicatorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMActivityIndicatorFactory.m; sourceTree = "<group>"; };
+		C9ED0B691C6019660085EBF2 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = Images/Logo.png; sourceTree = "<group>"; };
+		C9ED0B6A1C6019660085EBF2 /* SlimLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SlimLogo.png; path = Images/SlimLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,19 +95,71 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		C900E52B1C60069B005F8AE4 /* Data */ = {
+		C954C7B11C60159000E12996 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C900E52C1C6006A2005F8AE4 /* Models */,
+				C954C7B21C6015AA00E12996 /* LoginViewController.h */,
+				C954C7B31C6015AA00E12996 /* LoginViewController.m */,
+				C954C7B41C6015AA00E12996 /* MainViewController.h */,
+				C954C7B51C6015AA00E12996 /* MainViewController.m */,
+				C954C7B61C6015AA00E12996 /* RegisterViewController.h */,
+				C954C7B71C6015AA00E12996 /* RegisterViewController.m */,
 			);
-			name = Data;
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		C900E52C1C6006A2005F8AE4 /* Models */ = {
+		C954C7BB1C6015D400E12996 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C954C7BC1C6015E300E12996 /* TMActivityIndicatorFactory.h */,
+				C954C7BD1C6015E300E12996 /* TMActivityIndicatorFactory.m */,
+				C954C7BE1C6015E300E12996 /* TMAlertControllerFactory.h */,
+				C954C7BF1C6015E300E12996 /* TMAlertControllerFactory.m */,
+				C954C7C01C6015E300E12996 /* TMConstants.h */,
+				C954C7C11C6015E300E12996 /* TMConstants.m */,
+				C954C7C21C6015E300E12996 /* TMUserDefaultsHelper.h */,
+				C954C7C31C6015E300E12996 /* TMUserDefaultsHelper.m */,
 			);
-			name = Models;
+			name = Common;
+			sourceTree = "<group>";
+		};
+		C954C7C81C6015EC00E12996 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				C954C7C91C6015F300E12996 /* UserModels */,
+				C954C7D51C60165C00E12996 /* TMRequester.h */,
+				C954C7D61C60165C00E12996 /* TMRequester.m */,
+			);
+			name = Web;
+			sourceTree = "<group>";
+		};
+		C954C7C91C6015F300E12996 /* UserModels */ = {
+			isa = PBXGroup;
+			children = (
+				C954C7CB1C60160900E12996 /* ResponseModels */,
+				C954C7CA1C6015FA00E12996 /* RequestModels */,
+			);
+			name = UserModels;
+			sourceTree = "<group>";
+		};
+		C954C7CA1C6015FA00E12996 /* RequestModels */ = {
+			isa = PBXGroup;
+			children = (
+				C954C7CF1C60163B00E12996 /* TMUserLoginRequestModel.h */,
+				C954C7D01C60163B00E12996 /* TMUserLoginRequestModel.m */,
+				C954C7D11C60163B00E12996 /* TMUserRegisterRequestModel.h */,
+				C954C7D21C60163B00E12996 /* TMUserRegisterRequestModel.m */,
+			);
+			name = RequestModels;
+			sourceTree = "<group>";
+		};
+		C954C7CB1C60160900E12996 /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				C954C7CC1C60162200E12996 /* TMUserLoginResponseModel.h */,
+				C954C7CD1C60162200E12996 /* TMUserLoginResponseModel.m */,
+			);
+			name = ResponseModels;
 			sourceTree = "<group>";
 		};
 		C97DB6CD1C5D38FA00ED629F = {
@@ -131,13 +183,12 @@
 		C97DB6D81C5D38FA00ED629F /* BG-Tourist-Guide */ = {
 			isa = PBXGroup;
 			children = (
-				C900E52B1C60069B005F8AE4 /* Data */,
-				C97DB7071C5D5E7700ED629F /* Web */,
-				C97DB6F81C5D4EA700ED629F /* Common */,
-				C97DB6F01C5D446700ED629F /* Resources */,
+				C954C7BB1C6015D400E12996 /* Common */,
+				C954C7C81C6015EC00E12996 /* Web */,
+				C9ED0B671C6019080085EBF2 /* Resources */,
+				C954C7B11C60159000E12996 /* ViewControllers */,
 				C97DB6DC1C5D38FA00ED629F /* AppDelegate.h */,
 				C97DB6DD1C5D38FA00ED629F /* AppDelegate.m */,
-				C97DB6FF1C5D55A500ED629F /* ViewControllers */,
 				C97DB6E21C5D38FB00ED629F /* Main.storyboard */,
 				C97DB6E51C5D38FB00ED629F /* Assets.xcassets */,
 				C97DB6E71C5D38FB00ED629F /* LaunchScreen.storyboard */,
@@ -155,88 +206,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C97DB6F01C5D446700ED629F /* Resources */ = {
+		C9ED0B671C6019080085EBF2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C97DB6F11C5D447100ED629F /* Images */,
+				C9ED0B681C6019120085EBF2 /* Images */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		C97DB6F11C5D447100ED629F /* Images */ = {
+		C9ED0B681C6019120085EBF2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				C97DB6F61C5D478400ED629F /* SlimLogo.png */,
-				C97DB6F41C5D44CF00ED629F /* Logo.png */,
+				C9ED0B691C6019660085EBF2 /* Logo.png */,
+				C9ED0B6A1C6019660085EBF2 /* SlimLogo.png */,
 			);
 			name = Images;
-			sourceTree = "<group>";
-		};
-		C97DB6F81C5D4EA700ED629F /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				C97DB6FC1C5D505100ED629F /* TMConstants.h */,
-				C97DB6FD1C5D505100ED629F /* TMConstants.m */,
-				C97DB7101C5D67D300ED629F /* TMAlertControllerFactory.h */,
-				C97DB7111C5D67D300ED629F /* TMAlertControllerFactory.m */,
-				C9E788B01C5E0D4A00541AD9 /* TMActivityIndicatorFactory.h */,
-				C9E788B11C5E0D4A00541AD9 /* TMActivityIndicatorFactory.m */,
-				C900E5281C600688005F8AE4 /* TMUserDefaultsHelper.h */,
-				C900E5291C600688005F8AE4 /* TMUserDefaultsHelper.m */,
-			);
-			name = Common;
-			sourceTree = "<group>";
-		};
-		C97DB6FF1C5D55A500ED629F /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				C97DB6DF1C5D38FA00ED629F /* MainViewController.h */,
-				C97DB6E01C5D38FA00ED629F /* MainViewController.m */,
-				C97DB7001C5D55CA00ED629F /* LoginViewController.h */,
-				C97DB7011C5D55CA00ED629F /* LoginViewController.m */,
-				C97DB7041C5D597500ED629F /* RegisterViewController.h */,
-				C97DB7051C5D597500ED629F /* RegisterViewController.m */,
-			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		C97DB7071C5D5E7700ED629F /* Web */ = {
-			isa = PBXGroup;
-			children = (
-				C97DB7081C5D5E8400ED629F /* UserModels */,
-				C9E788AD1C5D8A3C00541AD9 /* TMRequester.h */,
-				C9E788AE1C5D8A3C00541AD9 /* TMRequester.m */,
-			);
-			name = Web;
-			sourceTree = "<group>";
-		};
-		C97DB7081C5D5E8400ED629F /* UserModels */ = {
-			isa = PBXGroup;
-			children = (
-				C99FB74C1C5D737400901E10 /* ResponseModels */,
-				C97DB70C1C5D61CA00ED629F /* RequestModels */,
-			);
-			name = UserModels;
-			sourceTree = "<group>";
-		};
-		C97DB70C1C5D61CA00ED629F /* RequestModels */ = {
-			isa = PBXGroup;
-			children = (
-				C97DB7091C5D5EA400ED629F /* TMUserLoginRequestModel.h */,
-				C97DB70A1C5D5EA400ED629F /* TMUserLoginRequestModel.m */,
-				C97DB70D1C5D61E200ED629F /* TMUserRegisterRequestModel.h */,
-				C97DB70E1C5D61E200ED629F /* TMUserRegisterRequestModel.m */,
-			);
-			name = RequestModels;
-			sourceTree = "<group>";
-		};
-		C99FB74C1C5D737400901E10 /* ResponseModels */ = {
-			isa = PBXGroup;
-			children = (
-				C99FB74D1C5D738D00901E10 /* TMUserLoginResponseModel.h */,
-				C99FB74E1C5D738D00901E10 /* TMUserLoginResponseModel.m */,
-			);
-			name = ResponseModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,11 +284,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C97DB6F71C5D478400ED629F /* SlimLogo.png in Resources */,
-				C97DB6F51C5D44CF00ED629F /* Logo.png in Resources */,
 				C97DB6E91C5D38FB00ED629F /* LaunchScreen.storyboard in Resources */,
+				C9ED0B6B1C6019660085EBF2 /* Logo.png in Resources */,
 				C97DB6E61C5D38FB00ED629F /* Assets.xcassets in Resources */,
 				C97DB6E41C5D38FB00ED629F /* Main.storyboard in Resources */,
+				C9ED0B6C1C6019660085EBF2 /* SlimLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,19 +347,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C97DB7121C5D67D300ED629F /* TMAlertControllerFactory.m in Sources */,
-				C900E52A1C600688005F8AE4 /* TMUserDefaultsHelper.m in Sources */,
-				C97DB6E11C5D38FA00ED629F /* MainViewController.m in Sources */,
-				C99FB74F1C5D738D00901E10 /* TMUserLoginResponseModel.m in Sources */,
-				C97DB7061C5D597500ED629F /* RegisterViewController.m in Sources */,
+				C954C7BA1C6015AA00E12996 /* RegisterViewController.m in Sources */,
 				C97DB6DE1C5D38FA00ED629F /* AppDelegate.m in Sources */,
-				C97DB70F1C5D61E200ED629F /* TMUserRegisterRequestModel.m in Sources */,
-				C97DB70B1C5D5EA400ED629F /* TMUserLoginRequestModel.m in Sources */,
+				C954C7CE1C60162200E12996 /* TMUserLoginResponseModel.m in Sources */,
+				C954C7C71C6015E300E12996 /* TMUserDefaultsHelper.m in Sources */,
+				C954C7D31C60163B00E12996 /* TMUserLoginRequestModel.m in Sources */,
+				C954C7D71C60165C00E12996 /* TMRequester.m in Sources */,
 				C97DB6DB1C5D38FA00ED629F /* main.m in Sources */,
-				C97DB6FE1C5D505100ED629F /* TMConstants.m in Sources */,
-				C97DB7021C5D55CA00ED629F /* LoginViewController.m in Sources */,
-				C9E788AF1C5D8A3C00541AD9 /* TMRequester.m in Sources */,
-				C9E788B21C5E0D4A00541AD9 /* TMActivityIndicatorFactory.m in Sources */,
+				C954C7B81C6015AA00E12996 /* LoginViewController.m in Sources */,
+				C954C7C51C6015E300E12996 /* TMAlertControllerFactory.m in Sources */,
+				C954C7C41C6015E300E12996 /* TMActivityIndicatorFactory.m in Sources */,
+				C954C7C61C6015E300E12996 /* TMConstants.m in Sources */,
+				C954C7D41C60163B00E12996 /* TMUserRegisterRequestModel.m in Sources */,
+				C954C7B91C6015AA00E12996 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

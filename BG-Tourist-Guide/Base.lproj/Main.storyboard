@@ -291,12 +291,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Tourist Sites"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SlimLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="0VS-H6-wQD">
-                                <rect key="frame" x="0.0" y="64" width="600" height="77"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="77" id="cFf-Sd-YKV"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIa-BT-vFR">
                                 <rect key="frame" x="269" y="353" width="62" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -310,6 +304,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Administration"/>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SlimLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="0VS-H6-wQD">
+                                <rect key="frame" x="0.0" y="64" width="600" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="cFf-Sd-YKV"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
