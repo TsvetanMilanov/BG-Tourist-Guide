@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "MainViewController.h"
 #import "TMUserLoginRequestModel.h"
 #import "TMRequester.h"
 #import "TMAlertControllerFactory.h"
@@ -59,7 +60,7 @@
         [progressIndicator stopAnimating];
         
         if (err) {
-            [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Unsuccessfull login." andUIViewController: weakSelf];
+            [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Unsuccessfull login." uiViewController: weakSelf andHandler:nil];
             return;
         }
         
@@ -70,7 +71,10 @@
         [settings setObject:responseUser.access_token forKey: CURRENT_USER_TOKEN_KEY];
         [settings setObject:responseUser.roles forKey: CURRENT_USER_ROLES_KEY];
         
-        [TMAlertControllerFactory showAlertDialogWithTitle:@"Success" message:@"Login successfull!" andUIViewController:weakSelf];
+        [TMAlertControllerFactory showAlertDialogWithTitle:@"Success" message:@"Login successfull!" uiViewController:weakSelf andHandler:^(UIAlertAction * _Nonnull action) {
+            [weakSelf.navigationController popToRootViewControllerAnimated:NO];
+            [weakSelf.navigationController pushViewController:[[MainViewController alloc] init] animated:YES];
+        }];
     }];
 }
 @end

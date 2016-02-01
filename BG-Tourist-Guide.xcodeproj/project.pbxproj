@@ -14,7 +14,6 @@
 		C954C7C41C6015E300E12996 /* TMActivityIndicatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7BD1C6015E300E12996 /* TMActivityIndicatorFactory.m */; };
 		C954C7C51C6015E300E12996 /* TMAlertControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7BF1C6015E300E12996 /* TMAlertControllerFactory.m */; };
 		C954C7C61C6015E300E12996 /* TMConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7C11C6015E300E12996 /* TMConstants.m */; };
-		C954C7C71C6015E300E12996 /* TMUserDefaultsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7C31C6015E300E12996 /* TMUserDefaultsHelper.m */; };
 		C954C7CE1C60162200E12996 /* TMUserLoginResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7CD1C60162200E12996 /* TMUserLoginResponseModel.m */; };
 		C954C7D31C60163B00E12996 /* TMUserLoginRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7D01C60163B00E12996 /* TMUserLoginRequestModel.m */; };
 		C954C7D41C60163B00E12996 /* TMUserRegisterRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7D21C60163B00E12996 /* TMUserRegisterRequestModel.m */; };
@@ -44,8 +43,6 @@
 		C954C7BF1C6015E300E12996 /* TMAlertControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMAlertControllerFactory.m; path = Common/TMAlertControllerFactory.m; sourceTree = "<group>"; };
 		C954C7C01C6015E300E12996 /* TMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMConstants.h; path = Common/TMConstants.h; sourceTree = "<group>"; };
 		C954C7C11C6015E300E12996 /* TMConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMConstants.m; path = Common/TMConstants.m; sourceTree = "<group>"; };
-		C954C7C21C6015E300E12996 /* TMUserDefaultsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMUserDefaultsHelper.h; path = Common/TMUserDefaultsHelper.h; sourceTree = "<group>"; };
-		C954C7C31C6015E300E12996 /* TMUserDefaultsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMUserDefaultsHelper.m; path = Common/TMUserDefaultsHelper.m; sourceTree = "<group>"; };
 		C954C7CC1C60162200E12996 /* TMUserLoginResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMUserLoginResponseModel.h; path = Web/UserModels/ResponseModels/TMUserLoginResponseModel.h; sourceTree = "<group>"; };
 		C954C7CD1C60162200E12996 /* TMUserLoginResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMUserLoginResponseModel.m; path = Web/UserModels/ResponseModels/TMUserLoginResponseModel.m; sourceTree = "<group>"; };
 		C954C7CF1C60163B00E12996 /* TMUserLoginRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMUserLoginRequestModel.h; path = Web/UserModels/RequestModels/TMUserLoginRequestModel.h; sourceTree = "<group>"; };
@@ -117,8 +114,6 @@
 				C954C7BF1C6015E300E12996 /* TMAlertControllerFactory.m */,
 				C954C7C01C6015E300E12996 /* TMConstants.h */,
 				C954C7C11C6015E300E12996 /* TMConstants.m */,
-				C954C7C21C6015E300E12996 /* TMUserDefaultsHelper.h */,
-				C954C7C31C6015E300E12996 /* TMUserDefaultsHelper.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -350,7 +345,6 @@
 				C954C7BA1C6015AA00E12996 /* RegisterViewController.m in Sources */,
 				C97DB6DE1C5D38FA00ED629F /* AppDelegate.m in Sources */,
 				C954C7CE1C60162200E12996 /* TMUserLoginResponseModel.m in Sources */,
-				C954C7C71C6015E300E12996 /* TMUserDefaultsHelper.m in Sources */,
 				C954C7D31C60163B00E12996 /* TMUserLoginRequestModel.m in Sources */,
 				C954C7D71C60165C00E12996 /* TMRequester.m in Sources */,
 				C97DB6DB1C5D38FA00ED629F /* main.m in Sources */,

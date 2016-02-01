@@ -10,10 +10,12 @@
 #import <UIKit/UIKit.h>
 
 @interface TMAlertControllerFactory : NSObject
-+(UIAlertController*) alertControllerWithTitle: (NSString*) title
-                                    andMessage: (NSString*) message;
++(UIAlertController* _Nonnull) alertControllerWithTitle: (NSString* _Nullable) title
+                                    message: (NSString* _Nullable) message
+                                    andHandler: (void (^ __nullable)(UIAlertAction* _Nonnull action))handler;
 
-+(void) showAlertDialogWithTitle: (NSString*) title
-                         message: (NSString*) message
-             andUIViewController: (UIViewController*) controller;
++(void) showAlertDialogWithTitle: (NSString* _Nullable) title
+                         message: (NSString* _Nullable) message
+                uiViewController: (UIViewController* _Nonnull) controller
+                      andHandler: (void (^ __nullable)(UIAlertAction* _Nonnull action))handler;
 @end

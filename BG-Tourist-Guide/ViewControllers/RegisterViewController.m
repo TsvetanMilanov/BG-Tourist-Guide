@@ -56,17 +56,17 @@
         username.length <= 0 ||
         password.length <= 0 ||
         confirmPassword.length <= 0) {
-        [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Email, usernam and password fields are required." andUIViewController:self];
+        [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Email, usernam and password fields are required." uiViewController:self andHandler:nil];
         return;
     }
     
     if (password.length < 6 || confirmPassword.length < 6) {
-        [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Your password must be atleast 6 symbols." andUIViewController:self];
+        [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Your password must be atleast 6 symbols." uiViewController:self andHandler:nil];
         return;
     }
     
     if ([password compare: confirmPassword] != NSOrderedSame) {
-        [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Password and Confirm Password doesn't match!" andUIViewController:self];
+        [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Password and Confirm Password doesn't match!" uiViewController:self andHandler:nil];
         return;
     }
     

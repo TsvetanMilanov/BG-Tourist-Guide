@@ -9,19 +9,24 @@
 #import "TMAlertControllerFactory.h"
 
 @implementation TMAlertControllerFactory
-+(UIAlertController *)alertControllerWithTitle:(NSString *)title andMessage:(NSString *)message {
++(UIAlertController *)alertControllerWithTitle:(NSString *)title
+                                       message:(NSString *)message
+                                    andHandler: (void (^ __nullable)(UIAlertAction *action))handler {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle: title message: message preferredStyle: UIAlertControllerStyleAlert];
     
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:handler];
     
     [alertController addAction:action];
     
     return alertController;
 }
 
-+(void)showAlertDialogWithTitle:(NSString *)title message:(NSString *)message andUIViewController:(UIViewController *)controller{
-    UIAlertController *alertController = [TMAlertControllerFactory alertControllerWithTitle:title andMessage:message];
++(void)showAlertDialogWithTitle:(NSString *)title
+                        message:(NSString *)message
+               uiViewController:(UIViewController *)controller
+                andHandler:(void (^ __nullable)(UIAlertAction *action)) handler{
+    UIAlertController *alertController = [TMAlertControllerFactory alertControllerWithTitle:title message:message andHandler: handler];
     
-    [controller presentViewController:alertController animated:YES completion:nil];
+    [controller presentViewController:alertController animated:YES completion: nil];
 }
 @end

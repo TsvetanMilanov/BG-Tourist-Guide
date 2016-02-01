@@ -83,7 +83,7 @@
     __weak UIViewController *weakSelf = self;
     
     [requester postJSONWithUrl:@"Account/Logout" data:@"" andBlock:^(NSError *err, id result) {
-        [TMAlertControllerFactory showAlertDialogWithTitle:@"Success" message:@"Logout successfull!" andUIViewController:weakSelf];
+        [TMAlertControllerFactory showAlertDialogWithTitle:@"Success" message:@"Logout successfull!" uiViewController:weakSelf andHandler:nil];
         hideProfileControls(self);
     }];
 }
@@ -110,7 +110,14 @@ void hideAuthenticationControls(MainViewController *controller){
     controller.btnRegister.hidden = YES;
     controller.btnLogout.hidden = NO;
     controller.btnProfile.hidden = NO;
-    controller.btnAdministration.hidden = YES;
+    
+    NSString* currenUserRoles = [[NSUserDefaults standardUserDefaults] valueForKey: CURRENT_USER_ROLES_KEY];
+    
+    if ([currenUserRoles containsString: ADMIN_USER_ROLE]) {
+        controller.btnAdministration.hidden = NO;
+    }
+    
+    
     if (controller.isFirstControllerLoad == YES) {
         controller.btnLogoutTopConstraint.constant = -2 * (controller.btnLogoutTopConstraint.constant + controller.btnTouristSites.frame.size.height);
         controller.btnSyncTopConstraint.constant = controller.originalbtnSyncTopConstraint;
