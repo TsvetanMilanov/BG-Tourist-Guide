@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UserRegisterRequestModel : NSObject
+@interface TMUserRegisterRequestModel : NSObject
 @property NSString *email;
 @property NSString *username;
 @property NSString *firstName;
@@ -27,12 +27,12 @@
                     password: (NSString *) password
           andConfirmPassword: (NSString *) confirmPassword;
 
-+(UserRegisterRequestModel*) userRegisterRequestModelWithEmail: (NSString*) email
++(TMUserRegisterRequestModel*) userRegisterRequestModelWithEmail: (NSString*) email
                                                       username: (NSString*) username
                                                       password: (NSString*) password
                                             andConfirmPassword:  (NSString*) confirmPassword;
 
-+(UserRegisterRequestModel*) userRegisterRequestModelWithEmail: (NSString *) email
++(TMUserRegisterRequestModel*) userRegisterRequestModelWithEmail: (NSString *) email
                                                       username: (NSString *) username
                                                      firstName: (NSString*) firstName
                                                       lastName: (NSString*) lastName

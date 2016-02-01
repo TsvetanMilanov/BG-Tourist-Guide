@@ -7,8 +7,8 @@
 //
 
 #import "MainViewController.h"
-#import "Constants.h"
-#import "AlertControllerFactory.h"
+#import "TMConstants.h"
+#import "TMAlertControllerFactory.h"
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *btnRegister;
@@ -78,7 +78,7 @@
     
     __weak UIViewController *weakSelf = self;
     
-    [AlertControllerFactory showAlertDialogWithTitle:@"Success" message:@"Logout successfull!" andUIViewController:weakSelf];
+    [TMAlertControllerFactory showAlertDialogWithTitle:@"Success" message:@"Logout successfull!" andUIViewController:weakSelf];
     hideProfileControls(self);
 }
 

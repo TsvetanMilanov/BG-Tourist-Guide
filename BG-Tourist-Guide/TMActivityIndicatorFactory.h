@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface ActivityIndicatorFactory : NSObject
+@interface TMActivityIndicatorFactory : NSObject
 +(UIActivityIndicatorView*) activityIndicatorWithParentView: (UIView *) parent;
 @end

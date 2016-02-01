@@ -6,9 +6,9 @@
 //  Copyright © 2016 Hakintosh. All rights reserved.
 //
 
-#import "ActivityIndicatorFactory.h"
+#import "TMActivityIndicatorFactory.h"
 
-@implementation ActivityIndicatorFactory
+@implementation TMActivityIndicatorFactory
 +(UIActivityIndicatorView *)activityIndicatorWithParentView:(UIView *)parent{
     UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     indicator.frame = CGRectMake(0.0, 0.0, 50, 50);

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "JSONModel.h"
 
-@interface UserLoginRequestModel : JSONModel
+@interface TMUserLoginRequestModel : JSONModel
 @property NSString *username;
 @property NSString *password;
 @property NSString *grant_type;
@@ -17,6 +17,6 @@
 -(instancetype)initWithUsername: (NSString*) username
                     andPassword: (NSString*) password;
 
-+(UserLoginRequestModel*) userLoginRequestModelWithUsername: (NSString*) username
++(TMUserLoginRequestModel*) userLoginRequestModelWithUsername: (NSString*) username
                                                 andPassword: (NSString*) password;
 @end

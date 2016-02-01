@@ -6,9 +6,9 @@
 //  Copyright © 2016 Hakintosh. All rights reserved.
 //
 
-#import "UserLoginRequestModel.h"
+#import "TMUserLoginRequestModel.h"
 
-@implementation UserLoginRequestModel
+@implementation TMUserLoginRequestModel
 -(instancetype)initWithUsername:(NSString *)username andPassword:(NSString *)password{
     if (self = [super init]) {
         self.username = username;
@@ -19,7 +19,7 @@
     return self;
 }
 
-+(UserLoginRequestModel *)userLoginRequestModelWithUsername:(NSString *)username andPassword:(NSString *)password{
-    return [[UserLoginRequestModel alloc] initWithUsername:username andPassword:password];
++(TMUserLoginRequestModel *)userLoginRequestModelWithUsername:(NSString *)username andPassword:(NSString *)password{
+    return [[TMUserLoginRequestModel alloc] initWithUsername:username andPassword:password];
 }
 @end

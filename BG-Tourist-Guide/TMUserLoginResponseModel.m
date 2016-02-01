@@ -6,7 +6,7 @@
 //  Copyright © 2016 Hakintosh. All rights reserved.
 //
 
-#import "UserLoginResponseModel.h"
+#import "TMUserLoginResponseModel.h"
 
-@implementation UserLoginResponseModel
+@implementation TMUserLoginResponseModel
 @end

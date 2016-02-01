@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Constants : NSObject
+@interface TMConstants : NSObject
 extern NSString* const CURRENT_USER_TOKEN_KEY;
 @end

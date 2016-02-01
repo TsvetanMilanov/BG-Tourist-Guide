@@ -6,14 +6,14 @@
 //  Copyright © 2016 Hakintosh. All rights reserved.
 //
 
-#import "Requester.h"
+#import "TMRequester.h"
 #import "AFNetworking.h"
 
-@interface Requester()
+@interface TMRequester()
 @property NSString *baseUrl;
 @end
 
-@implementation Requester
+@implementation TMRequester
 -(instancetype)init{
     if (self = [super init]) {
         self.baseUrl = @"http://bg-tourist-guide-server.apphb.com";

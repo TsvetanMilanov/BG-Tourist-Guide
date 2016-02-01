@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "JSONModel.h"
 
-@interface UserLoginResponseModel : JSONModel
+@interface TMUserLoginResponseModel : JSONModel
 @property NSString* access_token;
 @property NSString* userName;
 @end

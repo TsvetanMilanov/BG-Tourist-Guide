@@ -6,8 +6,8 @@
 //  Copyright © 2016 Hakintosh. All rights reserved.
 //
 
-#import "Constants.h"
+#import "TMConstants.h"
 
-@implementation Constants
+@implementation TMConstants
 NSString* const CURRENT_USER_TOKEN_KEY = @"CurrentUserTokenKey";
 @end

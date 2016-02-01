@@ -6,9 +6,9 @@
 //  Copyright © 2016 Hakintosh. All rights reserved.
 //
 
-#import "AlertControllerFactory.h"
+#import "TMAlertControllerFactory.h"
 
-@implementation AlertControllerFactory
+@implementation TMAlertControllerFactory
 +(UIAlertController *)alertControllerWithTitle:(NSString *)title andMessage:(NSString *)message {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle: title message: message preferredStyle: UIAlertControllerStyleAlert];
     
@@ -20,7 +20,7 @@
 }
 
 +(void)showAlertDialogWithTitle:(NSString *)title message:(NSString *)message andUIViewController:(UIViewController *)controller{
-    UIAlertController *alertController = [AlertControllerFactory alertControllerWithTitle:title andMessage:message];
+    UIAlertController *alertController = [TMAlertControllerFactory alertControllerWithTitle:title andMessage:message];
     
     [controller presentViewController:alertController animated:YES completion:nil];
 }

@@ -7,12 +7,12 @@
 //
 
 #import "LoginViewController.h"
-#import "UserLoginRequestModel.h"
-#import "Requester.h"
-#import "AlertControllerFactory.h"
-#import "ActivityIndicatorFactory.h"
-#import "UserLoginResponseModel.h"
-#import "Constants.h"
+#import "TMUserLoginRequestModel.h"
+#import "TMRequester.h"
+#import "TMAlertControllerFactory.h"
+#import "TMActivityIndicatorFactory.h"
+#import "TMUserLoginResponseModel.h"
+#import "TMConstants.h"
 
 @interface LoginViewController ()
 - (IBAction)btnLoginTap:(id)sender;
@@ -44,14 +44,14 @@
 */
 
 - (IBAction)btnLoginTap:(id)sender {
-    UIActivityIndicatorView *progressIndicator = [ActivityIndicatorFactory activityIndicatorWithParentView:self.view];
+    UIActivityIndicatorView *progressIndicator = [TMActivityIndicatorFactory activityIndicatorWithParentView:self.view];
     [progressIndicator startAnimating];
     
     NSString *name = self.tfUsername.text;
     NSString *password = self.tfPassword.text;
     
-    UserLoginRequestModel *user = [UserLoginRequestModel userLoginRequestModelWithUsername:name andPassword:password];
-    Requester *requester = [[Requester alloc] init];
+    TMUserLoginRequestModel *user = [TMUserLoginRequestModel userLoginRequestModelWithUsername:name andPassword:password];
+    TMRequester *requester = [[TMRequester alloc] init];
     
     __weak UIViewController *weakSelf = self;
     
@@ -59,17 +59,17 @@
         [progressIndicator stopAnimating];
         
         if (err) {
-            [AlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Unsuccessfull login." andUIViewController: weakSelf];
+            [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Unsuccessfull login." andUIViewController: weakSelf];
             return;
         }
         
-        UserLoginResponseModel *responseUser = [[UserLoginResponseModel alloc] initWithDictionary:result error:nil];
+        TMUserLoginResponseModel *responseUser = [[TMUserLoginResponseModel alloc] initWithDictionary:result error:nil];
         
         NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
         
         [settings setObject:responseUser.access_token forKey: CURRENT_USER_TOKEN_KEY];
         
-        [AlertControllerFactory showAlertDialogWithTitle:@"Success" message:@"Login successfull!" andUIViewController:weakSelf];
+        [TMAlertControllerFactory showAlertDialogWithTitle:@"Success" message:@"Login successfull!" andUIViewController:weakSelf];
     }];
 }
 @end

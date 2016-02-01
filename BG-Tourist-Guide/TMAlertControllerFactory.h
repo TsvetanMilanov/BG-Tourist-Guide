@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface AlertControllerFactory : NSObject
+@interface TMAlertControllerFactory : NSObject
 +(UIAlertController*) alertControllerWithTitle: (NSString*) title
                                     andMessage: (NSString*) message;
 
