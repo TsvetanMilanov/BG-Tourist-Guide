@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CEFFEDBE3844813CFAB6698E'
+               BlueprintIdentifier = '5B9DFEB8602475C238ED914F'
                BlueprintName = 'Pods-BG-Tourist-Guide'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-BG-Tourist-Guide.a'>
+               BuildableName = 'Pods_BG_Tourist_Guide.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

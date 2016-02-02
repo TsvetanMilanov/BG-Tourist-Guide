@@ -82,3 +82,14 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-BG-Tourist-Guide/AFNetworking.framework"
+  install_framework "Pods-BG-Tourist-Guide/JSONModel.framework"
+  install_framework "Pods-BG-Tourist-Guide/QRCodeReader.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-BG-Tourist-Guide/AFNetworking.framework"
+  install_framework "Pods-BG-Tourist-Guide/JSONModel.framework"
+  install_framework "Pods-BG-Tourist-Guide/QRCodeReader.framework"
+fi

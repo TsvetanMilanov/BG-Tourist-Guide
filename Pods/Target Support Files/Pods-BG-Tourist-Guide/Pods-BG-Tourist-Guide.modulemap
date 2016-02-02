@@ -1,0 +1,6 @@
+framework module Pods_BG_Tourist_Guide {
+  umbrella header "Pods-BG-Tourist-Guide-umbrella.h"
+
+  export *
+  module * { export * }
+}

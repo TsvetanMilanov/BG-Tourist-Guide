@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F4AE667A7F5708A6C166E25 /* libPods-BG-Tourist-Guide.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A69391C216757CF77DB5CDB0 /* libPods-BG-Tourist-Guide.a */; };
+		624F9636D6604FE555AD22BC /* Pods_BG_Tourist_Guide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A354B58C9D7A83B4340F360B /* Pods_BG_Tourist_Guide.framework */; };
+		C9016DAC1C6165AF00798C07 /* TMParentTouristSiteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9016DAB1C6165AF00798C07 /* TMParentTouristSiteModel.m */; };
+		C9016DAF1C6166E200798C07 /* TMTouristSiteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9016DAE1C6166E200798C07 /* TMTouristSiteModel.m */; };
 		C954C7B81C6015AA00E12996 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7B31C6015AA00E12996 /* LoginViewController.m */; };
 		C954C7B91C6015AA00E12996 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7B51C6015AA00E12996 /* MainViewController.m */; };
 		C954C7BA1C6015AA00E12996 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7B71C6015AA00E12996 /* RegisterViewController.m */; };
@@ -31,7 +33,11 @@
 /* Begin PBXFileReference section */
 		099F8884153F349DFE1BC24A /* Pods-BG-Tourist-Guide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BG-Tourist-Guide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BG-Tourist-Guide/Pods-BG-Tourist-Guide.debug.xcconfig"; sourceTree = "<group>"; };
 		8C6557488B28C9E673BA445F /* Pods-BG-Tourist-Guide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BG-Tourist-Guide.release.xcconfig"; path = "Pods/Target Support Files/Pods-BG-Tourist-Guide/Pods-BG-Tourist-Guide.release.xcconfig"; sourceTree = "<group>"; };
-		A69391C216757CF77DB5CDB0 /* libPods-BG-Tourist-Guide.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BG-Tourist-Guide.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A354B58C9D7A83B4340F360B /* Pods_BG_Tourist_Guide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BG_Tourist_Guide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9016DAA1C6165AF00798C07 /* TMParentTouristSiteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMParentTouristSiteModel.h; path = Data/Models/TMParentTouristSiteModel.h; sourceTree = "<group>"; };
+		C9016DAB1C6165AF00798C07 /* TMParentTouristSiteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMParentTouristSiteModel.m; path = Data/Models/TMParentTouristSiteModel.m; sourceTree = "<group>"; };
+		C9016DAD1C6166E200798C07 /* TMTouristSiteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTouristSiteModel.h; path = Data/Models/TMTouristSiteModel.h; sourceTree = "<group>"; };
+		C9016DAE1C6166E200798C07 /* TMTouristSiteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTouristSiteModel.m; path = Data/Models/TMTouristSiteModel.m; sourceTree = "<group>"; };
 		C954C7B21C6015AA00E12996 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ViewControllers/LoginViewController.h; sourceTree = "<group>"; };
 		C954C7B31C6015AA00E12996 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ViewControllers/LoginViewController.m; sourceTree = "<group>"; };
 		C954C7B41C6015AA00E12996 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ViewControllers/MainViewController.h; sourceTree = "<group>"; };
@@ -71,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F4AE667A7F5708A6C166E25 /* libPods-BG-Tourist-Guide.a in Frameworks */,
+				624F9636D6604FE555AD22BC /* Pods_BG_Tourist_Guide.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +87,7 @@
 		1526F26BE47602D5D7DD86F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A69391C216757CF77DB5CDB0 /* libPods-BG-Tourist-Guide.a */,
+				A354B58C9D7A83B4340F360B /* Pods_BG_Tourist_Guide.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -93,6 +99,17 @@
 				8C6557488B28C9E673BA445F /* Pods-BG-Tourist-Guide.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C9016DA91C61657C00798C07 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C9016DAA1C6165AF00798C07 /* TMParentTouristSiteModel.h */,
+				C9016DAB1C6165AF00798C07 /* TMParentTouristSiteModel.m */,
+				C9016DAD1C6166E200798C07 /* TMTouristSiteModel.h */,
+				C9016DAE1C6166E200798C07 /* TMTouristSiteModel.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		C954C7B11C60159000E12996 /* ViewControllers */ = {
@@ -181,6 +198,7 @@
 		C97DB6D81C5D38FA00ED629F /* BG-Tourist-Guide */ = {
 			isa = PBXGroup;
 			children = (
+				C9E86B0D1C60D44F00B87456 /* Data */,
 				C9ED0B6D1C6035450085EBF2 /* Views */,
 				C954C7BB1C6015D400E12996 /* Common */,
 				C954C7C81C6015EC00E12996 /* Web */,
@@ -203,6 +221,14 @@
 				C97DB6DA1C5D38FA00ED629F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9E86B0D1C60D44F00B87456 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C9016DA91C61657C00798C07 /* Models */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		C9ED0B671C6019080085EBF2 /* Resources */ = {
@@ -355,8 +381,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9016DAC1C6165AF00798C07 /* TMParentTouristSiteModel.m in Sources */,
 				C954C7BA1C6015AA00E12996 /* RegisterViewController.m in Sources */,
 				C97DB6DE1C5D38FA00ED629F /* AppDelegate.m in Sources */,
+				C9016DAF1C6166E200798C07 /* TMTouristSiteModel.m in Sources */,
 				C954C7CE1C60162200E12996 /* TMUserLoginResponseModel.m in Sources */,
 				C954C7D31C60163B00E12996 /* TMUserLoginRequestModel.m in Sources */,
 				C954C7D71C60165C00E12996 /* TMRequester.m in Sources */,
