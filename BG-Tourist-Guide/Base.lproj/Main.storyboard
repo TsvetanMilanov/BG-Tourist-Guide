@@ -254,16 +254,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQT-6Q-Xrd">
-                                <rect key="frame" x="254" y="303" width="92" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Register"/>
-                                <connections>
-                                    <segue destination="d3i-eq-oFV" kind="show" id="ksA-4D-Aum"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkN-4a-Pb8">
-                                <rect key="frame" x="261" y="403" width="78" height="42"/>
+                                <rect key="frame" x="261" y="453" width="78" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
@@ -271,12 +263,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usd-V1-ZjL">
-                                <rect key="frame" x="265" y="453" width="70" height="42"/>
+                                <rect key="frame" x="265" y="503" width="70" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Profile"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDc-lU-pB6">
-                                <rect key="frame" x="272" y="503" width="56" height="42"/>
+                                <rect key="frame" x="272" y="303" width="56" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Sync"/>
                             </button>
@@ -291,8 +283,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Tourist Sites"/>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SlimLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="0VS-H6-wQD">
+                                <rect key="frame" x="0.0" y="64" width="600" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="cFf-Sd-YKV"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIa-BT-vFR">
-                                <rect key="frame" x="269" y="353" width="62" height="42"/>
+                                <rect key="frame" x="269" y="403" width="62" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
@@ -304,34 +302,36 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Administration"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SlimLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="0VS-H6-wQD">
-                                <rect key="frame" x="0.0" y="64" width="600" height="77"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="77" id="cFf-Sd-YKV"/>
-                                </constraints>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQT-6Q-Xrd">
+                                <rect key="frame" x="254" y="353" width="92" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <segue destination="d3i-eq-oFV" kind="show" id="ksA-4D-Aum"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0VS-H6-wQD" firstAttribute="centerX" secondItem="I21-Yq-N5e" secondAttribute="centerX" id="0dH-CV-6VM"/>
                             <constraint firstItem="0VS-H6-wQD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2rb-ZU-bUu"/>
-                            <constraint firstItem="0VS-H6-wQD" firstAttribute="centerX" secondItem="KQT-6Q-Xrd" secondAttribute="centerX" id="5Os-1i-ir9"/>
-                            <constraint firstItem="KQT-6Q-Xrd" firstAttribute="top" secondItem="CnV-ck-kp0" secondAttribute="bottom" constant="8" symbolic="YES" id="93N-Jw-m35"/>
+                            <constraint firstItem="jIa-BT-vFR" firstAttribute="top" secondItem="KQT-6Q-Xrd" secondAttribute="bottom" constant="8" symbolic="YES" id="4Z0-3c-EBt"/>
                             <constraint firstItem="Usd-V1-ZjL" firstAttribute="top" secondItem="xkN-4a-Pb8" secondAttribute="bottom" constant="8" symbolic="YES" id="9ML-tR-BMI"/>
-                            <constraint firstItem="aDc-lU-pB6" firstAttribute="top" secondItem="Usd-V1-ZjL" secondAttribute="bottom" constant="8" symbolic="YES" id="HSs-wd-9t7"/>
-                            <constraint firstItem="jIa-BT-vFR" firstAttribute="centerX" secondItem="KQT-6Q-Xrd" secondAttribute="centerX" id="IaI-Oe-2ci"/>
+                            <constraint firstItem="KQT-6Q-Xrd" firstAttribute="top" secondItem="aDc-lU-pB6" secondAttribute="bottom" constant="8" symbolic="YES" id="9zT-R8-Ehz"/>
+                            <constraint firstItem="aDc-lU-pB6" firstAttribute="top" secondItem="CnV-ck-kp0" secondAttribute="bottom" constant="8" symbolic="YES" id="CmO-nZ-nsH"/>
+                            <constraint firstItem="Usd-V1-ZjL" firstAttribute="centerX" secondItem="04j-AQ-zjw" secondAttribute="centerX" id="DfA-1b-8uj"/>
                             <constraint firstItem="CnV-ck-kp0" firstAttribute="top" secondItem="I21-Yq-N5e" secondAttribute="bottom" constant="8" symbolic="YES" id="LHW-fn-eoo"/>
                             <constraint firstItem="xkN-4a-Pb8" firstAttribute="centerX" secondItem="jIa-BT-vFR" secondAttribute="centerX" id="Ldi-S7-PHe"/>
                             <constraint firstItem="0VS-H6-wQD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="TNb-NQ-TB8"/>
+                            <constraint firstItem="04j-AQ-zjw" firstAttribute="top" secondItem="Usd-V1-ZjL" secondAttribute="bottom" constant="8" symbolic="YES" id="YdT-G7-dKu"/>
+                            <constraint firstItem="aDc-lU-pB6" firstAttribute="centerX" secondItem="KQT-6Q-Xrd" secondAttribute="centerX" id="Zvo-vz-q2t"/>
                             <constraint firstItem="Usd-V1-ZjL" firstAttribute="centerX" secondItem="xkN-4a-Pb8" secondAttribute="centerX" id="cAs-Cq-vQy"/>
-                            <constraint firstItem="04j-AQ-zjw" firstAttribute="centerX" secondItem="aDc-lU-pB6" secondAttribute="centerX" id="gAR-fZ-wG6"/>
-                            <constraint firstItem="aDc-lU-pB6" firstAttribute="centerX" secondItem="Usd-V1-ZjL" secondAttribute="centerX" id="iqo-Ps-EAw"/>
                             <constraint firstItem="xkN-4a-Pb8" firstAttribute="top" secondItem="jIa-BT-vFR" secondAttribute="bottom" constant="8" symbolic="YES" id="lPz-t4-YuO"/>
-                            <constraint firstItem="jIa-BT-vFR" firstAttribute="top" secondItem="KQT-6Q-Xrd" secondAttribute="bottom" constant="8" symbolic="YES" id="o3h-4Y-JBZ"/>
-                            <constraint firstItem="04j-AQ-zjw" firstAttribute="top" secondItem="aDc-lU-pB6" secondAttribute="bottom" constant="8" symbolic="YES" id="pIL-fb-G9E"/>
                             <constraint firstItem="CnV-ck-kp0" firstAttribute="centerX" secondItem="I21-Yq-N5e" secondAttribute="centerX" id="pvf-Ms-zRf"/>
                             <constraint firstItem="0VS-H6-wQD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="20" id="w3q-gM-9Z0"/>
+                            <constraint firstItem="KQT-6Q-Xrd" firstAttribute="centerX" secondItem="jIa-BT-vFR" secondAttribute="centerX" id="wwo-PE-TGm"/>
                             <constraint firstItem="I21-Yq-N5e" firstAttribute="top" secondItem="0VS-H6-wQD" secondAttribute="bottom" constant="50" id="xQM-BN-IAa"/>
+                            <constraint firstItem="aDc-lU-pB6" firstAttribute="centerX" secondItem="CnV-ck-kp0" secondAttribute="centerX" id="yaL-WA-cWm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5ok-Ay-RsY"/>
@@ -342,7 +342,7 @@
                         <outlet property="btnLogoutTopConstraint" destination="lPz-t4-YuO" id="F8L-YG-9y2"/>
                         <outlet property="btnProfile" destination="Usd-V1-ZjL" id="7BT-kR-z1O"/>
                         <outlet property="btnRegister" destination="KQT-6Q-Xrd" id="OLp-jW-oAP"/>
-                        <outlet property="btnSyncTopConstraint" destination="HSs-wd-9t7" id="5tu-dY-q2F"/>
+                        <outlet property="btnRegisterTopConstraint" destination="9zT-R8-Ehz" id="HWJ-tE-gbK"/>
                         <outlet property="btnTouristSites" destination="CnV-ck-kp0" id="6Wy-7K-xR4"/>
                     </connections>
                 </viewController>
