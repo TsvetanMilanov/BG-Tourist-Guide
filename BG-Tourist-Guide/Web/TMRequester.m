@@ -27,6 +27,7 @@
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestUrl];
     
+    [request setTimeoutInterval: 60*3];
     request.HTTPMethod = @"POST";
     [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
@@ -50,6 +51,7 @@
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestUrl];
     
+    [request setTimeoutInterval: 60*3];
     request.HTTPMethod = @"POST";
     [request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     

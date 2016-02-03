@@ -72,6 +72,14 @@
         return;
     }
     
+    if (firstName.length == 0) {
+        firstName = nil;
+    }
+    
+    if (lastName.length == 0) {
+        lastName = nil;
+    }
+    
     TMUserRegisterRequestModel *user = [TMUserRegisterRequestModel userRegisterRequestModelWithEmail:email username:username firstName:firstName lastName:lastName password:password andConfirmPassword:confirmPassword];
     
     TMRequester* requester = [[TMRequester alloc]init];
@@ -85,8 +93,7 @@
         }
         
         [TMAlertControllerFactory showAlertDialogWithTitle:@"Success" message:@"Registration successfull. Now You can login." uiViewController:weakSelf andHandler:^(UIAlertAction * _Nonnull action) {
-            [weakSelf.navigationController popToRootViewControllerAnimated:NO];
-            [weakSelf.navigationController pushViewController:[[MainViewController alloc] init] animated:YES];
+            [weakSelf.navigationController popViewControllerAnimated:YES];
         }];
     }];
 }

@@ -14,6 +14,7 @@
 #import "TMActivityIndicatorFactory.h"
 #import "TMUserLoginResponseModel.h"
 #import "TMConstants.h"
+#import "TMProgressAlertDialog.h"
 
 @interface LoginViewController ()
 - (IBAction)btnLoginTap:(id)sender;
@@ -35,18 +36,18 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)btnLoginTap:(id)sender {
-    UIActivityIndicatorView *progressIndicator = [TMActivityIndicatorFactory activityIndicatorWithParentView:self.view];
-    [progressIndicator startAnimating];
+    TMProgressAlertDialog *progress = [TMAlertControllerFactory progressAlertDialogWithTitle:@"Please wait..."];
+    [progress showInViewController:self];
     
     NSString *name = self.tfUsername.text;
     NSString *password = self.tfPassword.text;
@@ -57,22 +58,23 @@
     __weak UIViewController *weakSelf = self;
     
     [requester postFormUrlEncodedWithUrl:@"/Token" data:[user toDictionary] andBlock:^(NSError *err, id result) {
-        [progressIndicator stopAnimating];
-        
-        if (err) {
-            [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Unsuccessfull login." uiViewController: weakSelf andHandler:nil];
-            return;
-        }
-        
-        TMUserLoginResponseModel *responseUser = [[TMUserLoginResponseModel alloc] initWithDictionary:result error:nil];
-        
-        NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
-        
-        [settings setObject:responseUser.access_token forKey: CURRENT_USER_TOKEN_KEY];
-        [settings setObject:responseUser.roles forKey: CURRENT_USER_ROLES_KEY];
-        
-        [TMAlertControllerFactory showAlertDialogWithTitle:@"Success" message:@"Login successfull!" uiViewController:weakSelf andHandler:^(UIAlertAction * _Nonnull action) {
-            [weakSelf.navigationController popViewControllerAnimated:YES];
+        [progress hideWithCompletion:^{
+            if (err) {
+                [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Unsuccessfull login." uiViewController: weakSelf andHandler:nil];
+                return;
+            }
+            
+            TMUserLoginResponseModel *responseUser = [[TMUserLoginResponseModel alloc] initWithDictionary:result error:nil];
+            
+            NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
+            
+            [settings setObject:responseUser.access_token forKey: CURRENT_USER_TOKEN_KEY];
+            [settings setObject:responseUser.roles forKey: CURRENT_USER_ROLES_KEY];
+            
+            [TMAlertControllerFactory showAlertDialogWithTitle:@"Success" message:@"Login successfull!" uiViewController:weakSelf andHandler:^(UIAlertAction * _Nonnull action) {
+                [weakSelf.navigationController popViewControllerAnimated:YES];
+            }];
+            
         }];
     }];
 }

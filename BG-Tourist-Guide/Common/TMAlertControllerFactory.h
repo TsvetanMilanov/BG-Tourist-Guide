@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "TMProgressAlertDialog.h"
 
 @interface TMAlertControllerFactory : NSObject
 +(UIAlertController* _Nonnull) alertControllerWithTitle: (NSString* _Nullable) title
@@ -18,4 +19,7 @@
                          message: (NSString* _Nullable) message
                 uiViewController: (UIViewController* _Nonnull) controller
                       andHandler: (void (^ __nullable)(UIAlertAction* _Nonnull action))handler;
+
++(TMProgressAlertDialog* _Nonnull) progressAlertDialogWithTitle: (NSString* _Nullable) title;
+
 @end

@@ -29,4 +29,14 @@
     
     [controller presentViewController:alertController animated:YES completion: nil];
 }
+
++(TMProgressAlertDialog *)progressAlertDialogWithTitle:(NSString *)title{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle: title message: @"\n" preferredStyle: UIAlertControllerStyleAlert];
+    
+    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    
+    TMProgressAlertDialog *customProgressDialog = [[TMProgressAlertDialog alloc] initWithAlertController:alertController andActivityIndicator:indicator];
+    
+    return customProgressDialog;
+}
 @end

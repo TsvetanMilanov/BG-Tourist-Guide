@@ -24,6 +24,7 @@
 		C954C7D41C60163B00E12996 /* TMUserRegisterRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7D21C60163B00E12996 /* TMUserRegisterRequestModel.m */; };
 		C954C7D71C60165C00E12996 /* TMRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7D61C60165C00E12996 /* TMRequester.m */; };
 		C96066DB1C622BD00070D36E /* Bulgarian-Gerb.gif in Resources */ = {isa = PBXBuildFile; fileRef = C96066DA1C622BD00070D36E /* Bulgarian-Gerb.gif */; };
+		C96066DE1C6256E10070D36E /* TMProgressAlertDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C96066DD1C6256E10070D36E /* TMProgressAlertDialog.m */; };
 		C97DB6DB1C5D38FA00ED629F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB6DA1C5D38FA00ED629F /* main.m */; };
 		C97DB6DE1C5D38FA00ED629F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB6DD1C5D38FA00ED629F /* AppDelegate.m */; };
 		C97DB6E41C5D38FB00ED629F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97DB6E21C5D38FB00ED629F /* Main.storyboard */; };
@@ -69,6 +70,8 @@
 		C954C7D51C60165C00E12996 /* TMRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMRequester.h; path = Web/TMRequester.h; sourceTree = "<group>"; };
 		C954C7D61C60165C00E12996 /* TMRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMRequester.m; path = Web/TMRequester.m; sourceTree = "<group>"; };
 		C96066DA1C622BD00070D36E /* Bulgarian-Gerb.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Bulgarian-Gerb.gif"; path = "Images/Bulgarian-Gerb.gif"; sourceTree = "<group>"; };
+		C96066DC1C6256E10070D36E /* TMProgressAlertDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMProgressAlertDialog.h; path = Common/TMProgressAlertDialog.h; sourceTree = "<group>"; };
+		C96066DD1C6256E10070D36E /* TMProgressAlertDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMProgressAlertDialog.m; path = Common/TMProgressAlertDialog.m; sourceTree = "<group>"; };
 		C97DB6D61C5D38FA00ED629F /* BG-Tourist-Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BG-Tourist-Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97DB6DA1C5D38FA00ED629F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C97DB6DC1C5D38FA00ED629F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 				C954C7BF1C6015E300E12996 /* TMAlertControllerFactory.m */,
 				C954C7C01C6015E300E12996 /* TMConstants.h */,
 				C954C7C11C6015E300E12996 /* TMConstants.m */,
+				C96066DC1C6256E10070D36E /* TMProgressAlertDialog.h */,
+				C96066DD1C6256E10070D36E /* TMProgressAlertDialog.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -420,6 +425,7 @@
 				C954C7B81C6015AA00E12996 /* LoginViewController.m in Sources */,
 				C9016DB21C616C3C00798C07 /* TMSQLiteDatabaseHandler.m in Sources */,
 				C954C7C51C6015E300E12996 /* TMAlertControllerFactory.m in Sources */,
+				C96066DE1C6256E10070D36E /* TMProgressAlertDialog.m in Sources */,
 				C954C7C41C6015E300E12996 /* TMActivityIndicatorFactory.m in Sources */,
 				C954C7C61C6015E300E12996 /* TMConstants.m in Sources */,
 				C954C7D41C60163B00E12996 /* TMUserRegisterRequestModel.m in Sources */,
