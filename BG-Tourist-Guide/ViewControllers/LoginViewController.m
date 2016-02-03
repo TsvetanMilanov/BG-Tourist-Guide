@@ -72,8 +72,7 @@
         [settings setObject:responseUser.roles forKey: CURRENT_USER_ROLES_KEY];
         
         [TMAlertControllerFactory showAlertDialogWithTitle:@"Success" message:@"Login successfull!" uiViewController:weakSelf andHandler:^(UIAlertAction * _Nonnull action) {
-            [weakSelf.navigationController popToRootViewControllerAnimated:NO];
-            [weakSelf.navigationController pushViewController:[[MainViewController alloc] init] animated:YES];
+            [weakSelf.navigationController popViewControllerAnimated:YES];
         }];
     }];
 }

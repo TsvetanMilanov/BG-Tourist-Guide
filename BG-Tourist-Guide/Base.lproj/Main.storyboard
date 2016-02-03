@@ -254,6 +254,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bulgarian-Gerb.gif" translatesAutoresizingMaskIntoConstraints="NO" id="xjz-dn-IRO">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQT-6Q-Xrd" customClass="RoundedCornersButton">
                                 <rect key="frame" x="20" y="353" width="560" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -310,11 +313,12 @@
                                 <state key="normal" title="Check In"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0VS-H6-wQD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2rb-ZU-bUu"/>
                             <constraint firstItem="jIa-BT-vFR" firstAttribute="trailing" secondItem="KQT-6Q-Xrd" secondAttribute="trailing" id="4fd-yU-lw8"/>
                             <constraint firstItem="Usd-V1-ZjL" firstAttribute="top" secondItem="xkN-4a-Pb8" secondAttribute="bottom" constant="8" symbolic="YES" id="5uE-Gz-iPq"/>
+                            <constraint firstItem="xjz-dn-IRO" firstAttribute="trailing" secondItem="0VS-H6-wQD" secondAttribute="trailing" id="6rD-SY-gih"/>
                             <constraint firstItem="I21-Yq-N5e" firstAttribute="top" secondItem="0VS-H6-wQD" secondAttribute="bottom" constant="50" id="7IM-Aq-1zz"/>
                             <constraint firstItem="KQT-6Q-Xrd" firstAttribute="leading" secondItem="aDc-lU-pB6" secondAttribute="leading" id="BVR-e4-J4C"/>
                             <constraint firstItem="04j-AQ-zjw" firstAttribute="leading" secondItem="Usd-V1-ZjL" secondAttribute="leading" id="E8R-8z-qzQ"/>
@@ -325,14 +329,17 @@
                             <constraint firstItem="Usd-V1-ZjL" firstAttribute="trailing" secondItem="xkN-4a-Pb8" secondAttribute="trailing" id="Ogg-Yw-qUH"/>
                             <constraint firstItem="Usd-V1-ZjL" firstAttribute="leading" secondItem="xkN-4a-Pb8" secondAttribute="leading" id="QGi-iI-P91"/>
                             <constraint firstItem="aDc-lU-pB6" firstAttribute="leading" secondItem="CnV-ck-kp0" secondAttribute="leading" id="QHb-8L-iAr"/>
+                            <constraint firstItem="xjz-dn-IRO" firstAttribute="leading" secondItem="0VS-H6-wQD" secondAttribute="leading" id="QpD-wZ-n3H"/>
                             <constraint firstItem="KQT-6Q-Xrd" firstAttribute="top" secondItem="aDc-lU-pB6" secondAttribute="bottom" constant="8" symbolic="YES" id="R3N-Br-ohF"/>
                             <constraint firstItem="CnV-ck-kp0" firstAttribute="leading" secondItem="I21-Yq-N5e" secondAttribute="leading" id="ROz-Va-TDN"/>
                             <constraint firstItem="I21-Yq-N5e" firstAttribute="centerX" secondItem="0VS-H6-wQD" secondAttribute="centerX" id="SGl-Wl-vQY"/>
+                            <constraint firstItem="xjz-dn-IRO" firstAttribute="top" secondItem="0VS-H6-wQD" secondAttribute="top" id="Src-1c-ZNU"/>
                             <constraint firstItem="0VS-H6-wQD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="TNb-NQ-TB8"/>
                             <constraint firstItem="CnV-ck-kp0" firstAttribute="top" secondItem="I21-Yq-N5e" secondAttribute="bottom" constant="8" symbolic="YES" id="YaY-E3-i5A"/>
                             <constraint firstItem="jIa-BT-vFR" firstAttribute="top" secondItem="KQT-6Q-Xrd" secondAttribute="bottom" constant="8" symbolic="YES" id="aZT-F0-PaV"/>
                             <constraint firstItem="xkN-4a-Pb8" firstAttribute="leading" secondItem="jIa-BT-vFR" secondAttribute="leading" id="b3C-yU-bnC"/>
                             <constraint firstItem="CnV-ck-kp0" firstAttribute="trailing" secondItem="I21-Yq-N5e" secondAttribute="trailing" id="iPO-ey-pdK"/>
+                            <constraint firstItem="xjz-dn-IRO" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="oNz-db-wOI"/>
                             <constraint firstItem="aDc-lU-pB6" firstAttribute="trailing" secondItem="CnV-ck-kp0" secondAttribute="trailing" id="qDN-T2-x3p"/>
                             <constraint firstItem="04j-AQ-zjw" firstAttribute="trailing" secondItem="Usd-V1-ZjL" secondAttribute="trailing" id="tZ9-fL-He9"/>
                             <constraint firstItem="xkN-4a-Pb8" firstAttribute="top" secondItem="jIa-BT-vFR" secondAttribute="bottom" constant="8" symbolic="YES" id="tbf-fK-k5J"/>
@@ -377,6 +384,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Bulgarian-Gerb.gif" width="617" height="525"/>
         <image name="SlimLogo.png" width="350" height="50"/>
     </resources>
 </document>

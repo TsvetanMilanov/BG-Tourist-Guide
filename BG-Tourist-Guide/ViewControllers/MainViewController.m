@@ -18,8 +18,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnProfile;
 @property (weak, nonatomic) IBOutlet UIButton *btnTouristSites;
 @property (weak, nonatomic) IBOutlet UIButton *btnAdministration;
-//@property (weak, nonatomic) IBOutlet NSLayoutConstraint *btnLogoutTopConstraint;
-//@property (weak, nonatomic) IBOutlet NSLayoutConstraint *btnRegisterTopConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *btnRegisterTopConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *btnLogoutTopConstraint;
 
@@ -32,6 +30,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.btnLogoutTopConstraint.constant = - (2 * self.btnTouristSites.frame.size.height + self.btnLogoutTopConstraint.constant);
+    
+//    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Bulgarian-Gerb.gif"]]];
     
     [self.view setNeedsUpdateConstraints];
     // Do any additional setup after loading the view, typically from a nib.

@@ -23,6 +23,7 @@
 		C954C7D31C60163B00E12996 /* TMUserLoginRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7D01C60163B00E12996 /* TMUserLoginRequestModel.m */; };
 		C954C7D41C60163B00E12996 /* TMUserRegisterRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7D21C60163B00E12996 /* TMUserRegisterRequestModel.m */; };
 		C954C7D71C60165C00E12996 /* TMRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7D61C60165C00E12996 /* TMRequester.m */; };
+		C96066DB1C622BD00070D36E /* Bulgarian-Gerb.gif in Resources */ = {isa = PBXBuildFile; fileRef = C96066DA1C622BD00070D36E /* Bulgarian-Gerb.gif */; };
 		C97DB6DB1C5D38FA00ED629F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB6DA1C5D38FA00ED629F /* main.m */; };
 		C97DB6DE1C5D38FA00ED629F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C97DB6DD1C5D38FA00ED629F /* AppDelegate.m */; };
 		C97DB6E41C5D38FB00ED629F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97DB6E21C5D38FB00ED629F /* Main.storyboard */; };
@@ -67,6 +68,7 @@
 		C954C7D21C60163B00E12996 /* TMUserRegisterRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMUserRegisterRequestModel.m; path = Web/UserModels/RequestModels/TMUserRegisterRequestModel.m; sourceTree = "<group>"; };
 		C954C7D51C60165C00E12996 /* TMRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMRequester.h; path = Web/TMRequester.h; sourceTree = "<group>"; };
 		C954C7D61C60165C00E12996 /* TMRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMRequester.m; path = Web/TMRequester.m; sourceTree = "<group>"; };
+		C96066DA1C622BD00070D36E /* Bulgarian-Gerb.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Bulgarian-Gerb.gif"; path = "Images/Bulgarian-Gerb.gif"; sourceTree = "<group>"; };
 		C97DB6D61C5D38FA00ED629F /* BG-Tourist-Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BG-Tourist-Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97DB6DA1C5D38FA00ED629F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C97DB6DC1C5D38FA00ED629F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 		C9ED0B681C6019120085EBF2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C96066DA1C622BD00070D36E /* Bulgarian-Gerb.gif */,
 				C9ED0B691C6019660085EBF2 /* Logo.png */,
 				C9ED0B6A1C6019660085EBF2 /* SlimLogo.png */,
 			);
@@ -341,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C96066DB1C622BD00070D36E /* Bulgarian-Gerb.gif in Resources */,
 				C97DB6E91C5D38FB00ED629F /* LaunchScreen.storyboard in Resources */,
 				C9ED0B6B1C6019660085EBF2 /* Logo.png in Resources */,
 				C97DB6E61C5D38FB00ED629F /* Assets.xcassets in Resources */,
