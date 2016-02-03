@@ -17,4 +17,5 @@
 @property NSInteger status;
 @property (strong, nonatomic) NSString *address;
 @property NSInteger rating;
+@property NSInteger parentTouristSiteId;
 @end

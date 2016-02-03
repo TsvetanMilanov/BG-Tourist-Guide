@@ -20,16 +20,21 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - FMDB (2.6):
+    - FMDB/standard (= 2.6)
+  - FMDB/standard (2.6)
   - JSONModel (1.2.0)
   - QRCodeReader.swift (5.3.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6)
+  - FMDB
   - JSONModel
   - QRCodeReader.swift (~> 5.3.1)
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  FMDB: c1968bab3ab0aed38f66cb778ae1e7fa9a652b6e
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
   QRCodeReader.swift: 6aa05e4b9123f5bbbe1e7f1d5df28d590cc56775
 

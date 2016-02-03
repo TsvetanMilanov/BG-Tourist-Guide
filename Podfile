@@ -10,4 +10,5 @@ target 'BG-Tourist-Guide' do
 pod 'AFNetworking', '~> 2.6'
 pod 'JSONModel'
 pod 'QRCodeReader.swift', '~> 5.3.1'
+pod 'FMDB'
 end

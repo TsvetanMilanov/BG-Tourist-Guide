@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "TMSQLiteDatabaseHandler.h"
+#import "TMParentTouristSiteModel.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    TMSQLiteDatabaseHandler *dbHandler = [TMSQLiteDatabaseHandler new];
+    
+    [dbHandler createDatabase];
+//    NSArray *result = [dbHandler getAllParentTouristSitesNames];
+//    NSString *a = result[0];
+//    NSLog(@"%@", a);
+    
+//    TMParentTouristSiteModel *site = [TMParentTouristSiteModel new];
+//    site.name = @"test";
+//    site.modelDescription = @"descr";
+//    site.type = 0;
+//    
+//    BOOL result = [dbHandler addParentTouristSite:site];
     return YES;
 }
 

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FMDB.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>JSONModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,17 +37,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>23CF27B2BA6AC7125EFFEDA8C5AA819F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>364D54B329384D1F6C8B0640BD61656A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4878C70B21CA37D7CB8A476BF986741B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>78CB82BF6DB3FBE34D7EB25B7913E43D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F8E2AD56C35E5871B80E301F0F58A246</key>
+		<key>495C811EDDFB486B7431C45E7CA4B812</key>
 		<dict>
 			<key>primary</key>
 			<true/>
