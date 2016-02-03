@@ -18,19 +18,37 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    TMSQLiteDatabaseHandler *dbHandler = [TMSQLiteDatabaseHandler new];
-    
-    [dbHandler createDatabase];
-//    NSArray *result = [dbHandler getAllParentTouristSitesNames];
-//    NSString *a = result[0];
-//    NSLog(@"%@", a);
-    
+//    TMSQLiteDatabaseHandler *dbHandler = [TMSQLiteDatabaseHandler new];
+//    
+//    [dbHandler createDatabase];
 //    TMParentTouristSiteModel *site = [TMParentTouristSiteModel new];
 //    site.name = @"test";
 //    site.modelDescription = @"descr";
 //    site.type = 0;
 //    
 //    BOOL result = [dbHandler addParentTouristSite:site];
+//    
+//    TMParentTouristSiteModel *site1 = [TMParentTouristSiteModel new];
+//    site1.name = @"test1";
+//    site1.modelDescription = @"descr1";
+//    site1.type = 0;
+//    
+//    TMParentTouristSiteModel *site2 = [TMParentTouristSiteModel new];
+//    site2.name = @"test2";
+//    site2.modelDescription = @"descr2";
+//    site2.type = 0;
+//    
+//    TMParentTouristSiteModel *site3 = [TMParentTouristSiteModel new];
+//    site3.name = @"test3";
+//    site3.modelDescription = @"descr3";
+//    site3.type = 0;
+//    
+//    [dbHandler batchAddParentTouristSites:@[site1, site2, site3]];
+//    
+//    NSArray *result = [dbHandler getAllParentTouristSitesNames];
+//    for (NSString *name in result) {
+//        NSLog(@"%@", name);
+//    }
     return YES;
 }
 

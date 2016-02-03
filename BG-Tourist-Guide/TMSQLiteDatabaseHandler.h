@@ -18,6 +18,8 @@
 
 -(BOOL) addParentTouristSite: (TMParentTouristSiteModel*) parentTouristSite;
 
+-(BOOL) batchAddParentTouristSites: (NSArray*) parentTouristSites;
+
 -(NSArray*) getAllParentTouristSitesNames;
 
 +(TMSQLiteDatabaseHandler*) sqliteDatabaseHandler;

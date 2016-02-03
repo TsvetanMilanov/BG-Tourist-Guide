@@ -67,6 +67,25 @@
     return hasSuccessfullyAddedParentTouristSite;
 }
 
+-(BOOL)batchAddParentTouristSites:(NSArray *)parentTouristSites{
+    FMDatabase *db = [FMDatabase databaseWithPath:self.databasePath];
+    
+    if (![db open]) {
+        [db close];
+        return NO;
+    }
+    
+    NSMutableString *query = [NSMutableString new];
+    for (TMParentTouristSiteModel *parentTouristSite in parentTouristSites) {
+        [query appendString:[NSString stringWithFormat:@"INSERT INTO %@ (%@, %@, %@) VALUES ('%@', '%@', '%@');", [TMParentTouristSiteContracts tableName], [TMParentTouristSiteContracts columnName], [TMParentTouristSiteContracts columnDescription], [TMParentTouristSiteContracts columnType], parentTouristSite.name, parentTouristSite.modelDescription, @(parentTouristSite.type)]];
+    }
+    
+    BOOL hasSuccessfullyAddedParentTouristSites = [db executeStatements:query];
+    
+    [db close];
+    return hasSuccessfullyAddedParentTouristSites;
+}
+
 -(NSArray *)getAllParentTouristSitesNames{
     FMDatabase *db = [FMDatabase databaseWithPath:self.databasePath];
     
