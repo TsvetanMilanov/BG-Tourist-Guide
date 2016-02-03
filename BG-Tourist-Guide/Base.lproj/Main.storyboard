@@ -226,6 +226,47 @@
             </objects>
             <point key="canvasLocation" x="1282" y="-381"/>
         </scene>
+        <!--Official-->
+        <scene sceneID="XeX-fa-j5e">
+            <objects>
+                <viewController title="Official" id="vek-IQ-iFt" customClass="OfficialTouristSitesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="emB-dp-9Oi"/>
+                        <viewControllerLayoutGuide type="bottom" id="cIA-m4-FQc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5cG-lr-s8S">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcs-lm-7UH">
+                                <rect key="frame" x="243" y="502" width="114" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Load More"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CGo-Zz-mM5">
+                                <rect key="frame" x="20" y="72" width="560" height="422"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CGo-Zz-mM5" firstAttribute="top" secondItem="emB-dp-9Oi" secondAttribute="bottom" constant="8" symbolic="YES" id="0Np-sV-od5"/>
+                            <constraint firstItem="Zcs-lm-7UH" firstAttribute="centerX" secondItem="CGo-Zz-mM5" secondAttribute="centerX" id="KHD-LN-NTr"/>
+                            <constraint firstItem="CGo-Zz-mM5" firstAttribute="trailing" secondItem="5cG-lr-s8S" secondAttribute="trailingMargin" id="KwR-W1-eot"/>
+                            <constraint firstItem="CGo-Zz-mM5" firstAttribute="leading" secondItem="5cG-lr-s8S" secondAttribute="leadingMargin" id="hjA-3f-6re"/>
+                            <constraint firstItem="Zcs-lm-7UH" firstAttribute="top" secondItem="CGo-Zz-mM5" secondAttribute="bottom" constant="8" id="mJH-N3-lRV"/>
+                            <constraint firstItem="cIA-m4-FQc" firstAttribute="top" secondItem="CGo-Zz-mM5" secondAttribute="bottom" constant="57" id="sYj-rL-N1W"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Official" id="cG9-Jr-QDt" customClass="CustomTabBarItem"/>
+                    <connections>
+                        <outlet property="tabBarItemOfficial" destination="cG9-Jr-QDt" id="oaK-DR-Kha"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JWb-ip-7X3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2829" y="310"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -271,6 +312,9 @@
                                 <rect key="frame" x="20" y="253" width="560" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Tourist Sites"/>
+                                <connections>
+                                    <segue destination="Kkf-wf-ay7" kind="show" id="l66-Pe-06n"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SlimLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="0VS-H6-wQD">
                                 <rect key="frame" x="0.0" y="64" width="600" height="77"/>
@@ -365,6 +409,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jfa-Qd-0oe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="490" y="310"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="gha-jk-h7t">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="Kkf-wf-ay7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="rJa-2C-LZm">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vek-IQ-iFt" kind="relationship" relationship="viewControllers" id="k0W-ie-J2S"/>
+                        <segue destination="d2K-1f-FHY" kind="relationship" relationship="viewControllers" id="zri-Nr-Hzi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OM6-i9-0it" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2118" y="310"/>
+        </scene>
+        <!--Rate-->
+        <scene sceneID="ep5-Sq-Veo">
+            <objects>
+                <viewController title="Rate" id="d2K-1f-FHY" customClass="RateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aVU-dP-d9g"/>
+                        <viewControllerLayoutGuide type="bottom" id="HjR-zn-gqh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0eu-Su-hlt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Rate" id="Awe-j9-1ru" customClass="CustomTabBarItem"/>
+                    <connections>
+                        <outlet property="tabBarItemRate" destination="Awe-j9-1ru" id="YRP-fH-tvj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m3l-DB-0YF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2118" y="1023"/>
         </scene>
     </scenes>
     <resources>
