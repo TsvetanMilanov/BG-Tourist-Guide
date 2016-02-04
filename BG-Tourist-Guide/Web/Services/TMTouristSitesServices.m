@@ -21,9 +21,17 @@
     return self;
 }
 
--(void) getParentTouristSitesNamesForPage: (NSInteger*) page andBlock: (void(^)(NSError*, NSArray<NSString*>*)) block{
-    [_requester getJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/Parents/Names?page=%@", [NSNumber numberWithInteger:*page]] andBlock:^(NSError *err, id result) {
-            block(err, result);
+-(void) getParentTouristSitesNamesForPage: (NSInteger*) page andBlock: (void(^)(NSError*, NSArray<TMSimpleParentTouristSiteResponseModel*>*)) block{
+    [_requester getJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/Parents/Simple?page=%@&type=%i", [NSNumber numberWithInteger:*page], 0] andBlock:^(NSError *err, id result) {
+        NSMutableArray *mappedResult = [NSMutableArray new];
+        
+        for (NSDictionary *item in result) {
+            TMSimpleParentTouristSiteResponseModel *currentParentTouristSite = [[TMSimpleParentTouristSiteResponseModel alloc] initWithDictionary:item error:nil];
+            
+            [mappedResult addObject: currentParentTouristSite];
+        }
+        
+        block(err, mappedResult);
     }];
 }
 

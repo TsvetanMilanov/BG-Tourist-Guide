@@ -9,6 +9,7 @@
 #import "OfficialTouristSitesViewController.h"
 #import "TMTouristSitesServices.h"
 #import "ParentDetailsViewController.h"
+#import "TMSimpleParentTouristSiteResponseModel.h"
 
 @interface OfficialTouristSitesViewController ()
 
@@ -24,6 +25,7 @@
 {
     NSMutableArray *_items;
     NSInteger _currentPage;
+    NSInteger _type;
 }
 
 - (void)viewDidLoad {
@@ -32,7 +34,7 @@
     __weak OfficialTouristSitesViewController *weakSelf = self;
     
     TMTouristSitesServices *touristSites = [[TMTouristSitesServices alloc] init];
-    [touristSites getParentTouristSitesNamesForPage: &(_currentPage) andBlock:^(NSError *err, NSArray<NSString *> *result) {
+    [touristSites getParentTouristSitesNamesForPage: &(_currentPage) andBlock:^(NSError *err, NSArray<TMSimpleParentTouristSiteResponseModel*> *result) {
         weakSelf.btnLoadMore.hidden = NO;
         
         if (err != nil) {
@@ -56,11 +58,6 @@
     [self.tvItems setDelegate:self];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellIdentifier"];
     
@@ -68,7 +65,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CellIdentifier"];
     }
     
-    cell.textLabel.text = _items[indexPath.row];
+    cell.textLabel.text = ((TMSimpleParentTouristSiteResponseModel*)_items[indexPath.row]).name;
     
     return cell;
 }
@@ -78,10 +75,11 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *parentName = _items[indexPath.row];
     ParentDetailsViewController *destination = [self.storyboard instantiateViewControllerWithIdentifier:@"ParentDetailsController"];
     
-    destination.parentTouristSite = parentName;
+    TMSimpleParentTouristSiteResponseModel *parent = (TMSimpleParentTouristSiteResponseModel*)_items[indexPath.row];
+    
+    destination.parentTouristSite = parent;
     
     [self.navigationController pushViewController:destination animated:YES];
 }

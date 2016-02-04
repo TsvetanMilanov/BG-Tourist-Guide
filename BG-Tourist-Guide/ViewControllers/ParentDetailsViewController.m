@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = self.parentTouristSite;
+    self.title = [NSString stringWithFormat:@"%ld", (long)self.parentTouristSite.modelId];
 }
 
 - (void)didReceiveMemoryWarning {
