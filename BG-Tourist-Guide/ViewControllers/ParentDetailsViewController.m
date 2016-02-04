@@ -1,21 +1,22 @@
 //
-//  RateViewController.m
+//  ParentDetailsViewController.m
 //  BG-Tourist-Guide
 //
-//  Created by Hakintosh on 2/3/16.
+//  Created by Hakintosh on 2/4/16.
 //  Copyright © 2016 Hakintosh. All rights reserved.
 //
 
-#import "RateViewController.h"
+#import "ParentDetailsViewController.h"
 
-@interface RateViewController ()
+@interface ParentDetailsViewController ()
+
 @end
 
-@implementation RateViewController
+@implementation ParentDetailsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = self.parentTouristSite;
 }
 
 - (void)didReceiveMemoryWarning {

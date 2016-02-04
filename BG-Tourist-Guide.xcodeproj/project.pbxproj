@@ -36,6 +36,9 @@
 		C9FDE0581C62AE39005D0FDB /* OfficialTouristSitesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FDE0571C62AE39005D0FDB /* OfficialTouristSitesViewController.m */; };
 		C9FDE05B1C62AFC2005D0FDB /* RateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FDE05A1C62AFC2005D0FDB /* RateViewController.m */; };
 		C9FDE0611C62B8CD005D0FDB /* CustomTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FDE0601C62B8CD005D0FDB /* CustomTabBarItem.m */; };
+		C9FDE0671C62BDA1005D0FDB /* TMParentTouristSiteResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FDE0661C62BDA1005D0FDB /* TMParentTouristSiteResponseModel.m */; };
+		C9FDE06B1C62BE4B005D0FDB /* TMTouristSitesServices.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FDE06A1C62BE4B005D0FDB /* TMTouristSitesServices.m */; };
+		C9FDE0721C62D804005D0FDB /* ParentDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FDE0711C62D804005D0FDB /* ParentDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +96,12 @@
 		C9FDE05A1C62AFC2005D0FDB /* RateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RateViewController.m; path = ViewControllers/RateViewController.m; sourceTree = "<group>"; };
 		C9FDE05F1C62B8CD005D0FDB /* CustomTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTabBarItem.h; path = Views/CustomTabBarItem.h; sourceTree = "<group>"; };
 		C9FDE0601C62B8CD005D0FDB /* CustomTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTabBarItem.m; path = Views/CustomTabBarItem.m; sourceTree = "<group>"; };
+		C9FDE0651C62BDA1005D0FDB /* TMParentTouristSiteResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMParentTouristSiteResponseModel.h; path = Web/TouristSiteModels/ResponseModels/TMParentTouristSiteResponseModel.h; sourceTree = "<group>"; };
+		C9FDE0661C62BDA1005D0FDB /* TMParentTouristSiteResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMParentTouristSiteResponseModel.m; path = Web/TouristSiteModels/ResponseModels/TMParentTouristSiteResponseModel.m; sourceTree = "<group>"; };
+		C9FDE0691C62BE4B005D0FDB /* TMTouristSitesServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTouristSitesServices.h; path = Web/Services/TMTouristSitesServices.h; sourceTree = "<group>"; };
+		C9FDE06A1C62BE4B005D0FDB /* TMTouristSitesServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTouristSitesServices.m; path = Web/Services/TMTouristSitesServices.m; sourceTree = "<group>"; };
+		C9FDE0701C62D804005D0FDB /* ParentDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParentDetailsViewController.h; path = ViewControllers/ParentDetailsViewController.h; sourceTree = "<group>"; };
+		C9FDE0711C62D804005D0FDB /* ParentDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParentDetailsViewController.m; path = ViewControllers/ParentDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +168,8 @@
 				C9FDE0571C62AE39005D0FDB /* OfficialTouristSitesViewController.m */,
 				C9FDE0591C62AFC2005D0FDB /* RateViewController.h */,
 				C9FDE05A1C62AFC2005D0FDB /* RateViewController.m */,
+				C9FDE0701C62D804005D0FDB /* ParentDetailsViewController.h */,
+				C9FDE0711C62D804005D0FDB /* ParentDetailsViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -181,6 +192,8 @@
 		C954C7C81C6015EC00E12996 /* Web */ = {
 			isa = PBXGroup;
 			children = (
+				C9FDE0681C62BE0D005D0FDB /* Services */,
+				C9FDE0621C62BCDC005D0FDB /* TouristSiteModels */,
 				C954C7C91C6015F300E12996 /* UserModels */,
 				C954C7D51C60165C00E12996 /* TMRequester.h */,
 				C954C7D61C60165C00E12996 /* TMRequester.m */,
@@ -301,6 +314,32 @@
 				C9FDE0601C62B8CD005D0FDB /* CustomTabBarItem.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		C9FDE0621C62BCDC005D0FDB /* TouristSiteModels */ = {
+			isa = PBXGroup;
+			children = (
+				C9FDE0631C62BD6C005D0FDB /* ResponseModels */,
+			);
+			name = TouristSiteModels;
+			sourceTree = "<group>";
+		};
+		C9FDE0631C62BD6C005D0FDB /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				C9FDE0651C62BDA1005D0FDB /* TMParentTouristSiteResponseModel.h */,
+				C9FDE0661C62BDA1005D0FDB /* TMParentTouristSiteResponseModel.m */,
+			);
+			name = ResponseModels;
+			sourceTree = "<group>";
+		};
+		C9FDE0681C62BE0D005D0FDB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C9FDE0691C62BE4B005D0FDB /* TMTouristSitesServices.h */,
+				C9FDE06A1C62BE4B005D0FDB /* TMTouristSitesServices.m */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,6 +469,8 @@
 			files = (
 				C9016DAC1C6165AF00798C07 /* TMParentTouristSiteModel.m in Sources */,
 				C954C7BA1C6015AA00E12996 /* RegisterViewController.m in Sources */,
+				C9FDE0721C62D804005D0FDB /* ParentDetailsViewController.m in Sources */,
+				C9FDE06B1C62BE4B005D0FDB /* TMTouristSitesServices.m in Sources */,
 				C97DB6DE1C5D38FA00ED629F /* AppDelegate.m in Sources */,
 				C9016DAF1C6166E200798C07 /* TMTouristSiteModel.m in Sources */,
 				C954C7CE1C60162200E12996 /* TMUserLoginResponseModel.m in Sources */,
@@ -440,6 +481,7 @@
 				C9FDE0581C62AE39005D0FDB /* OfficialTouristSitesViewController.m in Sources */,
 				C954C7B81C6015AA00E12996 /* LoginViewController.m in Sources */,
 				C9FDE05B1C62AFC2005D0FDB /* RateViewController.m in Sources */,
+				C9FDE0671C62BDA1005D0FDB /* TMParentTouristSiteResponseModel.m in Sources */,
 				C9016DB21C616C3C00798C07 /* TMSQLiteDatabaseHandler.m in Sources */,
 				C954C7C51C6015E300E12996 /* TMAlertControllerFactory.m in Sources */,
 				C96066DE1C6256E10070D36E /* TMProgressAlertDialog.m in Sources */,

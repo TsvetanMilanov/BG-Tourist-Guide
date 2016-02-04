@@ -13,10 +13,13 @@
 -(instancetype)init;
 
 -(void) postJSONWithUrl: (NSString*) url
-                 data: (NSString*) data
-              andBlock: (void (^)(NSError *err, id result)) block;
+                   data: (NSString*) data
+               andBlock: (void (^)(NSError *err, id result)) block;
 
 -(void) postFormUrlEncodedWithUrl: (NSString*) url
-                   data: (NSDictionary*) data
-               andBlock: (void (^)(NSError *err, id result)) block;
+                             data: (NSDictionary*) data
+                         andBlock: (void (^)(NSError *err, id result)) block;
+
+-(void)getJSONWithUrl:(NSString *)url
+             andBlock:(void (^)(NSError*, id))block;
 @end

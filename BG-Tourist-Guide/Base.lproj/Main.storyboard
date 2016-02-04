@@ -238,14 +238,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcs-lm-7UH">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcs-lm-7UH">
                                 <rect key="frame" x="243" y="502" width="114" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Load More"/>
+                                <connections>
+                                    <action selector="btnLoadMoreTap:" destination="vek-IQ-iFt" eventType="touchUpInside" id="Ei8-Y7-0o2"/>
+                                </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CGo-Zz-mM5">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CGo-Zz-mM5">
                                 <rect key="frame" x="20" y="72" width="560" height="422"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vek-IQ-iFt" id="xVG-qj-abS"/>
+                                    <outlet property="delegate" destination="vek-IQ-iFt" id="sVU-cL-2eY"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -260,12 +268,31 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Official" id="cG9-Jr-QDt" customClass="CustomTabBarItem"/>
                     <connections>
-                        <outlet property="tabBarItemOfficial" destination="cG9-Jr-QDt" id="oaK-DR-Kha"/>
+                        <outlet property="btnLoadMore" destination="Zcs-lm-7UH" id="YyK-A1-nqp"/>
+                        <outlet property="tvItems" destination="CGo-Zz-mM5" id="Sn6-sg-lPg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JWb-ip-7X3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2829" y="310"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="5R5-ht-72f">
+            <objects>
+                <viewController storyboardIdentifier="ParentDetailsController" title="Details" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x0i-9h-uMn" customClass="ParentDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5gy-75-kkZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="5nM-60-jcK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BF0-ps-rZ2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JPG-Ct-kdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3456" y="310"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -442,9 +469,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Rate" id="Awe-j9-1ru" customClass="CustomTabBarItem"/>
-                    <connections>
-                        <outlet property="tabBarItemRate" destination="Awe-j9-1ru" id="YRP-fH-tvj"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m3l-DB-0YF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

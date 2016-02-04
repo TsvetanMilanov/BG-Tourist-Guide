@@ -7,16 +7,53 @@
 //
 
 #import "OfficialTouristSitesViewController.h"
+#import "TMTouristSitesServices.h"
+#import "ParentDetailsViewController.h"
 
 @interface OfficialTouristSitesViewController ()
-@property (weak, nonatomic) IBOutlet UITabBarItem *tabBarItemOfficial;
+
+@property (weak, nonatomic) IBOutlet UITableView *tvItems;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnLoadMore;
+
+- (IBAction)btnLoadMoreTap:(id)sender;
+
 @end
 
 @implementation OfficialTouristSitesViewController
+{
+    NSMutableArray *_items;
+    NSInteger _currentPage;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"Verdana" size:24.0], NSFontAttributeName, nil] forState:UIControlStateNormal];
+    _currentPage = 1;
+    __weak OfficialTouristSitesViewController *weakSelf = self;
+    
+    TMTouristSitesServices *touristSites = [[TMTouristSitesServices alloc] init];
+    [touristSites getParentTouristSitesNamesForPage: &(_currentPage) andBlock:^(NSError *err, NSArray<NSString *> *result) {
+        weakSelf.btnLoadMore.hidden = NO;
+        
+        if (err != nil) {
+            return;
+        }
+        
+        if (_items == nil) {
+            _items = [NSMutableArray new];
+        }
+        
+        [_items addObjectsFromArray:result];
+        [weakSelf.tvItems reloadData];
+        _currentPage += 1;
+    }];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self.tvItems setDataSource:self];
+    [self.tvItems setDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +61,45 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellIdentifier"];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CellIdentifier"];
+    }
+    
+    cell.textLabel.text = _items[indexPath.row];
+    
+    return cell;
+}
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return _items.count;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *parentName = _items[indexPath.row];
+    ParentDetailsViewController *destination = [self.storyboard instantiateViewControllerWithIdentifier:@"ParentDetailsController"];
+    
+    destination.parentTouristSite = parentName;
+    
+    [self.navigationController pushViewController:destination animated:YES];
+}
+
+- (IBAction)btnLoadMoreTap:(id)sender {
+    __weak OfficialTouristSitesViewController *weakSelf = self;
+    
+    TMTouristSitesServices *touristSites = [[TMTouristSitesServices alloc] init];
+    [touristSites getParentTouristSitesNamesForPage: &(_currentPage) andBlock:^(NSError *err, NSArray<NSString *> *result) {
+        if (_items == nil) {
+            _items = [NSMutableArray new];
+        }
+        
+        [_items addObjectsFromArray:result];
+        
+        [weakSelf.tvItems reloadData];
+        
+        _currentPage += 1;
+    }];
+}
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OfficialTouristSitesViewController : UIViewController
+@interface OfficialTouristSitesViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @end
