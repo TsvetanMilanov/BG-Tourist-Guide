@@ -11,6 +11,7 @@
 #import "TMTouristSitesServices.h"
 #import "TMSimpleParentTouristSiteResponseModel.h"
 #import "TMAlertControllerFactory.h"
+#import "TMActivityIndicatorFactory.h"
 
 @interface OfficialTouristSitesViewController ()
 
@@ -35,10 +36,14 @@
     _currentPage = 1;
     __weak OfficialTouristSitesViewController *weakSelf = self;
     
+    __weak UIActivityIndicatorView *loadingBar = [TMActivityIndicatorFactory activityIndicatorWithParentView:self.view];
+    
+    [loadingBar startAnimating];
+    
     TMTouristSitesServices *touristSites = [[TMTouristSitesServices alloc] init];
     [touristSites getParentTouristSitesForPage:&(_currentPage) type:&(_type) andBlock:^(NSError *err, NSArray<TMSimpleParentTouristSiteResponseModel *> *result) {
         weakSelf.btnLoadMore.hidden = NO;
-        
+        [loadingBar stopAnimating];
         if (err != nil) {
             [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Cannot load the information for the official tourist sites from the server. Please try again later." uiViewController:self andHandler:nil];
             return;

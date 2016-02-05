@@ -12,6 +12,7 @@
 #import "TMParentTouristSiteInfoResponseModel.h"
 #import "TMTouristSiteResponseModel.h"
 #import "TMAlertControllerFactory.h"
+#import "TMActivityIndicatorFactory.h"
 
 @interface ParentDetailsViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *tvDescription;
@@ -37,8 +38,12 @@
     [super viewDidLoad];
     self.title = self.parentTouristSite.name;
     __weak ParentDetailsViewController *weakSelf = self;
+    __weak UIActivityIndicatorView *loadingBar = [TMActivityIndicatorFactory activityIndicatorWithParentView:self.view];
+    
+    [loadingBar startAnimating];
     
     [_touristSites getParentTouristSiteInfoById:self.parentTouristSite.modelId andBlock:^(NSError *err, TMParentTouristSiteInfoResponseModel *response) {
+        [loadingBar stopAnimating];
         if (err != nil) {
             [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:[NSString stringWithFormat:@"Cannot load the information for %@ from the server. Please try agin later.", weakSelf.parentTouristSite.name ] uiViewController:self andHandler:nil];
         }
