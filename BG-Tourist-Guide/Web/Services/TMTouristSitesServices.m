@@ -69,4 +69,17 @@
     }];
 }
 
+-(void) addParentTouristSite: (TMParentTouristSiteRequestModel*) model andBlock: (void(^)(NSError* err, TMSimpleParentTouristSiteResponseModel *result)) block {
+    [_requester postJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites"] data: [model toJSONString] andBlock:^(NSError *err, id result) {
+        if (err != nil) {
+            block(err, nil);
+            return;
+        }
+        
+        TMSimpleParentTouristSiteResponseModel * mappedResult = [[TMSimpleParentTouristSiteResponseModel alloc] initWithDictionary:result error:nil];
+        
+        block(err, mappedResult);
+    }];
+}
+
 @end

@@ -10,6 +10,7 @@
 #import "TMParentTouristSiteResponseModel.h"
 #import "TMSimpleParentTouristSiteResponseModel.h"
 #import "TMParentTouristSiteInfoResponseModel.h"
+#import "TMParentTouristSiteRequestModel.h"
 
 @interface TMTouristSitesServices : NSObject
 
@@ -20,4 +21,6 @@
 -(void) getParentTouristSiteInfoById: (NSInteger) modelId andBlock: (void(^)(NSError* err, TMParentTouristSiteInfoResponseModel* result)) block;
 
 -(void) getTouristSitesNearMeForPage: (NSInteger) page andBlock: (void(^)(NSError *err, NSArray<TMTouristSiteResponseModel*> *result)) block;
+
+-(void) addParentTouristSite: (TMParentTouristSiteRequestModel*) model andBlock: (void(^)(NSError* err, TMSimpleParentTouristSiteResponseModel *result)) block;
 @end

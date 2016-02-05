@@ -39,6 +39,9 @@
 		C97DB6E41C5D38FB00ED629F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97DB6E21C5D38FB00ED629F /* Main.storyboard */; };
 		C97DB6E61C5D38FB00ED629F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97DB6E51C5D38FB00ED629F /* Assets.xcassets */; };
 		C97DB6E91C5D38FB00ED629F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97DB6E71C5D38FB00ED629F /* LaunchScreen.storyboard */; };
+		C99496671C65581500EBF25D /* AddParentTouristSiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496661C65581500EBF25D /* AddParentTouristSiteViewController.m */; };
+		C994966B1C655A9A00EBF25D /* TMParentTouristSiteRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C994966A1C655A9900EBF25D /* TMParentTouristSiteRequestModel.m */; };
+		C994966E1C65642400EBF25D /* TMTouristSiteRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C994966D1C65642400EBF25D /* TMTouristSiteRequestModel.m */; };
 		C9ED0B6B1C6019660085EBF2 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9ED0B691C6019660085EBF2 /* Logo.png */; };
 		C9ED0B6C1C6019660085EBF2 /* SlimLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9ED0B6A1C6019660085EBF2 /* SlimLogo.png */; };
 		C9ED0B721C6035BD0085EBF2 /* RoundedCornersButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ED0B711C6035BD0085EBF2 /* RoundedCornersButton.m */; };
@@ -110,6 +113,12 @@
 		C97DB6E51C5D38FB00ED629F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C97DB6E81C5D38FB00ED629F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C97DB6EA1C5D38FB00ED629F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C99496651C65581500EBF25D /* AddParentTouristSiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddParentTouristSiteViewController.h; path = ViewControllers/TouristSites/AddParentTouristSiteViewController.h; sourceTree = "<group>"; };
+		C99496661C65581500EBF25D /* AddParentTouristSiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddParentTouristSiteViewController.m; path = ViewControllers/TouristSites/AddParentTouristSiteViewController.m; sourceTree = "<group>"; };
+		C99496691C655A9900EBF25D /* TMParentTouristSiteRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMParentTouristSiteRequestModel.h; path = Web/TouristSiteModels/RequestModels/TMParentTouristSiteRequestModel.h; sourceTree = "<group>"; };
+		C994966A1C655A9900EBF25D /* TMParentTouristSiteRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMParentTouristSiteRequestModel.m; path = Web/TouristSiteModels/RequestModels/TMParentTouristSiteRequestModel.m; sourceTree = "<group>"; };
+		C994966C1C65642400EBF25D /* TMTouristSiteRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTouristSiteRequestModel.h; path = Web/TouristSiteModels/RequestModels/TMTouristSiteRequestModel.h; sourceTree = "<group>"; };
+		C994966D1C65642400EBF25D /* TMTouristSiteRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTouristSiteRequestModel.m; path = Web/TouristSiteModels/RequestModels/TMTouristSiteRequestModel.m; sourceTree = "<group>"; };
 		C9ED0B691C6019660085EBF2 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = Images/Logo.png; sourceTree = "<group>"; };
 		C9ED0B6A1C6019660085EBF2 /* SlimLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SlimLogo.png; path = Images/SlimLogo.png; sourceTree = "<group>"; };
 		C9ED0B701C6035BD0085EBF2 /* RoundedCornersButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoundedCornersButton.h; path = Views/RoundedCornersButton.h; sourceTree = "<group>"; };
@@ -186,6 +195,8 @@
 				C9041B541C64A2CF004B5708 /* TouristSiteDetailsViewController.m */,
 				C9041B5F1C64CEC9004B5708 /* NearMeViewController.h */,
 				C9041B601C64CEC9004B5708 /* NearMeViewController.m */,
+				C99496651C65581500EBF25D /* AddParentTouristSiteViewController.h */,
+				C99496661C65581500EBF25D /* AddParentTouristSiteViewController.m */,
 			);
 			name = TouristSites;
 			sourceTree = "<group>";
@@ -314,6 +325,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C99496681C655A5B00EBF25D /* RequestModels */ = {
+			isa = PBXGroup;
+			children = (
+				C99496691C655A9900EBF25D /* TMParentTouristSiteRequestModel.h */,
+				C994966A1C655A9900EBF25D /* TMParentTouristSiteRequestModel.m */,
+				C994966C1C65642400EBF25D /* TMTouristSiteRequestModel.h */,
+				C994966D1C65642400EBF25D /* TMTouristSiteRequestModel.m */,
+			);
+			name = RequestModels;
+			sourceTree = "<group>";
+		};
 		C9E86B0D1C60D44F00B87456 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +379,7 @@
 		C9FDE0621C62BCDC005D0FDB /* TouristSiteModels */ = {
 			isa = PBXGroup;
 			children = (
+				C99496681C655A5B00EBF25D /* RequestModels */,
 				C9FDE0631C62BD6C005D0FDB /* ResponseModels */,
 			);
 			name = TouristSiteModels;
@@ -513,9 +536,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C99496671C65581500EBF25D /* AddParentTouristSiteViewController.m in Sources */,
 				C9016DAC1C6165AF00798C07 /* TMParentTouristSiteModel.m in Sources */,
 				C904C1E31C63A8D100A40D57 /* TMParentTouristSiteInfoResponseModel.m in Sources */,
 				C9FDE06B1C62BE4B005D0FDB /* TMTouristSitesServices.m in Sources */,
+				C994966E1C65642400EBF25D /* TMTouristSiteRequestModel.m in Sources */,
 				C97DB6DE1C5D38FA00ED629F /* AppDelegate.m in Sources */,
 				C9041B501C64A2AC004B5708 /* OfficialTouristSitesViewController.m in Sources */,
 				C9041B521C64A2AC004B5708 /* RateViewController.m in Sources */,
@@ -526,6 +551,7 @@
 				C954C7D71C60165C00E12996 /* TMRequester.m in Sources */,
 				C9041B491C64A29D004B5708 /* RegisterViewController.m in Sources */,
 				C9ED0B721C6035BD0085EBF2 /* RoundedCornersButton.m in Sources */,
+				C994966B1C655A9A00EBF25D /* TMParentTouristSiteRequestModel.m in Sources */,
 				C97DB6DB1C5D38FA00ED629F /* main.m in Sources */,
 				C904C1E01C637CE300A40D57 /* TMSimpleTouristSiteResponseModel.m in Sources */,
 				C904C1DD1C637B5C00A40D57 /* TMSimpleParentTouristSiteResponseModel.m in Sources */,

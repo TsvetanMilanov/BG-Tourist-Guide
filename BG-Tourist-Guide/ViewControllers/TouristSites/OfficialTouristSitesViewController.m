@@ -7,6 +7,7 @@
 //
 
 #import "OfficialTouristSitesViewController.h"
+#import "AddParentTouristSiteViewController.h"
 #import "ParentDetailsViewController.h"
 #import "TMTouristSitesServices.h"
 #import "TMSimpleParentTouristSiteResponseModel.h"
@@ -54,7 +55,8 @@
 }
 
 -(void) navigateToAddParentTouristSiteScene {
-    
+    AddParentTouristSiteViewController *target = [self.storyboard instantiateViewControllerWithIdentifier:@"AddParentController"];
+    [self.navigationController pushViewController:target animated:YES];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -115,20 +117,4 @@
     }];
 }
 
-//- (IBAction)btnLoadMoreTap:(id)sender {
-//    __weak OfficialTouristSitesViewController *weakSelf = self;
-//    
-//    TMTouristSitesServices *touristSites = [[TMTouristSitesServices alloc] init];
-//    [touristSites getParentTouristSitesForPage: &(_currentPage) type: &(_type) andBlock:^(NSError *err, NSArray<NSString *> *result) {
-//        if (_items == nil) {
-//            _items = [NSMutableArray new];
-//        }
-//        
-//        [_items addObjectsFromArray:result];
-//        
-//        [weakSelf.tvItems reloadData];
-//        
-//        _currentPage += 1;
-//    }];
-//}
 @end
