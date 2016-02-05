@@ -87,7 +87,7 @@
     [operation start];
 }
 
--(void)getJSONWithUrl:(NSString *)url andBlock:(void (^)(NSError*, id))block{
+-(void)getJSONWithUrl:(NSString *)url andBlock:(void (^)(NSError* err, id result))block{
     NSURL *requestUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", self.baseUrl, url]];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestUrl];

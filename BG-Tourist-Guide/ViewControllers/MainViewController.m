@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnLogin;
 @property (weak, nonatomic) IBOutlet UIButton *btnLogout;
 @property (weak, nonatomic) IBOutlet UIButton *btnProfile;
+@property (weak, nonatomic) IBOutlet UIButton *btnCheckIn;
 @property (weak, nonatomic) IBOutlet UIButton *btnTouristSites;
 @property (weak, nonatomic) IBOutlet UIButton *btnAdministration;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *btnRegisterTopConstraint;
@@ -31,15 +32,7 @@
     [super viewDidLoad];
     self.btnLogoutTopConstraint.constant = - (2 * self.btnTouristSites.frame.size.height + self.btnLogoutTopConstraint.constant);
     
-//    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Bulgarian-Gerb.gif"]]];
-    
     [self.view setNeedsUpdateConstraints];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -73,6 +66,7 @@ void hideProfileControls(MainViewController *controller){
     controller.btnLogout.hidden = YES;
     controller.btnProfile.hidden = YES;
     controller.btnAdministration.hidden = YES;
+    controller.btnCheckIn.hidden = YES;
 }
 
 void hideAuthenticationControls(MainViewController *controller){
@@ -80,6 +74,7 @@ void hideAuthenticationControls(MainViewController *controller){
     controller.btnRegister.hidden = YES;
     controller.btnLogout.hidden = NO;
     controller.btnProfile.hidden = NO;
+    controller.btnCheckIn.hidden = NO;
     
     NSString* currenUserRoles = [[NSUserDefaults standardUserDefaults] valueForKey: CURRENT_USER_ROLES_KEY];
     

@@ -53,4 +53,20 @@
     }];
 }
 
+
+-(void) getTouristSitesNearMeForPage: (NSInteger) page andBlock: (void(^)(NSError *err, NSArray<TMTouristSiteResponseModel*> *result)) block {
+    double latitude = 0;
+    double longitude = 0;
+    
+    [_requester getJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/NearMe?latitude=%f&longitude=%f&page=%ld", latitude, longitude, (long)page] andBlock:^(NSError *err, id result) {
+        NSMutableArray<TMTouristSiteResponseModel*> *mappedResult = [NSMutableArray new];
+        
+        for (id item in result) {
+            [mappedResult addObject:[[TMTouristSiteResponseModel alloc] initWithDictionary: item error: nil]];
+        }
+        
+        block(err, mappedResult);
+    }];
+}
+
 @end

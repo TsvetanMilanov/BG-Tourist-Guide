@@ -240,6 +240,46 @@
             </objects>
             <point key="canvasLocation" x="1282" y="-381"/>
         </scene>
+        <!--Near Me-->
+        <scene sceneID="CZ1-P0-DqO">
+            <objects>
+                <viewController title="Near Me" id="PDE-Zb-kJL" customClass="NearMeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jv3-yi-ywS"/>
+                        <viewControllerLayoutGuide type="bottom" id="2BC-LJ-Tr1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JmP-Yg-7jJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bulgarian-Gerb.gif" translatesAutoresizingMaskIntoConstraints="NO" id="wIz-mf-8hq">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="myD-xX-RrC">
+                                <rect key="frame" x="25" y="72" width="555" height="508"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wIz-mf-8hq" firstAttribute="bottom" secondItem="2BC-LJ-Tr1" secondAttribute="top" id="4OW-TP-W7n"/>
+                            <constraint firstItem="myD-xX-RrC" firstAttribute="trailing" secondItem="JmP-Yg-7jJ" secondAttribute="trailingMargin" id="738-jx-cNk"/>
+                            <constraint firstAttribute="trailing" secondItem="wIz-mf-8hq" secondAttribute="trailing" id="AUa-sO-ht9"/>
+                            <constraint firstAttribute="bottom" secondItem="myD-xX-RrC" secondAttribute="bottom" constant="20" symbolic="YES" id="Ezb-mI-ZPS"/>
+                            <constraint firstItem="wIz-mf-8hq" firstAttribute="top" secondItem="Jv3-yi-ywS" secondAttribute="bottom" id="I3j-Ko-Fd0"/>
+                            <constraint firstItem="wIz-mf-8hq" firstAttribute="leading" secondItem="JmP-Yg-7jJ" secondAttribute="leading" id="LmX-Vp-dnd"/>
+                            <constraint firstItem="myD-xX-RrC" firstAttribute="leading" secondItem="JmP-Yg-7jJ" secondAttribute="leadingMargin" constant="5" id="ahG-4I-YR6"/>
+                            <constraint firstItem="myD-xX-RrC" firstAttribute="top" secondItem="Jv3-yi-ywS" secondAttribute="bottom" constant="8" symbolic="YES" id="yPL-FU-0Tb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tvTouristSites" destination="myD-xX-RrC" id="Q2h-1C-AmC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qLA-VS-1Pp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="490" y="-381"/>
+        </scene>
         <!--Official-->
         <scene sceneID="XeX-fa-j5e">
             <objects>
@@ -473,11 +513,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Profile"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDc-lU-pB6" customClass="RoundedCornersButton">
-                                <rect key="frame" x="20" y="309" width="560" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Sync"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnV-ck-kp0" customClass="RoundedCornersButton">
                                 <rect key="frame" x="20" y="253" width="560" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -503,6 +538,14 @@
                                 <rect key="frame" x="20" y="191" width="560" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Check In"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDc-lU-pB6" customClass="RoundedCornersButton">
+                                <rect key="frame" x="20" y="309" width="560" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Near Me"/>
+                                <connections>
+                                    <segue destination="PDE-Zb-kJL" kind="show" id="L6d-NW-g4G"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -543,6 +586,7 @@
                     <navigationItem key="navigationItem" id="5ok-Ay-RsY"/>
                     <connections>
                         <outlet property="btnAdministration" destination="04j-AQ-zjw" id="Kx5-nP-xa2"/>
+                        <outlet property="btnCheckIn" destination="I21-Yq-N5e" id="phz-3i-BP5"/>
                         <outlet property="btnLogin" destination="jIa-BT-vFR" id="NEf-bK-qhu"/>
                         <outlet property="btnLogout" destination="xkN-4a-Pb8" id="0HB-Hh-Am4"/>
                         <outlet property="btnLogoutTopConstraint" destination="tbf-fK-k5J" id="WKr-FS-9Je"/>

@@ -19,6 +19,7 @@
 		C9041B581C64A34C004B5708 /* TMSQLiteDatabaseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C9041B571C64A34C004B5708 /* TMSQLiteDatabaseHandler.m */; };
 		C9041B5D1C64A361004B5708 /* TMParentTouristSiteContracts.m in Sources */ = {isa = PBXBuildFile; fileRef = C9041B5A1C64A361004B5708 /* TMParentTouristSiteContracts.m */; };
 		C9041B5E1C64A361004B5708 /* TMTouristSiteContracts.m in Sources */ = {isa = PBXBuildFile; fileRef = C9041B5C1C64A361004B5708 /* TMTouristSiteContracts.m */; };
+		C9041B611C64CEC9004B5708 /* NearMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9041B601C64CEC9004B5708 /* NearMeViewController.m */; };
 		C904C1DD1C637B5C00A40D57 /* TMSimpleParentTouristSiteResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C904C1DC1C637B5C00A40D57 /* TMSimpleParentTouristSiteResponseModel.m */; };
 		C904C1E01C637CE300A40D57 /* TMSimpleTouristSiteResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C904C1DF1C637CE300A40D57 /* TMSimpleTouristSiteResponseModel.m */; };
 		C904C1E31C63A8D100A40D57 /* TMParentTouristSiteInfoResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C904C1E21C63A8D100A40D57 /* TMParentTouristSiteInfoResponseModel.m */; };
@@ -72,6 +73,8 @@
 		C9041B5A1C64A361004B5708 /* TMParentTouristSiteContracts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMParentTouristSiteContracts.m; path = Data/Contracts/TMParentTouristSiteContracts.m; sourceTree = "<group>"; };
 		C9041B5B1C64A361004B5708 /* TMTouristSiteContracts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTouristSiteContracts.h; path = Data/Contracts/TMTouristSiteContracts.h; sourceTree = "<group>"; };
 		C9041B5C1C64A361004B5708 /* TMTouristSiteContracts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTouristSiteContracts.m; path = Data/Contracts/TMTouristSiteContracts.m; sourceTree = "<group>"; };
+		C9041B5F1C64CEC9004B5708 /* NearMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NearMeViewController.h; path = ViewControllers/TouristSites/NearMeViewController.h; sourceTree = "<group>"; };
+		C9041B601C64CEC9004B5708 /* NearMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NearMeViewController.m; path = ViewControllers/TouristSites/NearMeViewController.m; sourceTree = "<group>"; };
 		C904C1DB1C637B5C00A40D57 /* TMSimpleParentTouristSiteResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMSimpleParentTouristSiteResponseModel.h; path = Web/TouristSiteModels/ResponseModels/TMSimpleParentTouristSiteResponseModel.h; sourceTree = "<group>"; };
 		C904C1DC1C637B5C00A40D57 /* TMSimpleParentTouristSiteResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMSimpleParentTouristSiteResponseModel.m; path = Web/TouristSiteModels/ResponseModels/TMSimpleParentTouristSiteResponseModel.m; sourceTree = "<group>"; };
 		C904C1DE1C637CE300A40D57 /* TMSimpleTouristSiteResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMSimpleTouristSiteResponseModel.h; path = Web/TouristSiteModels/ResponseModels/TMSimpleTouristSiteResponseModel.h; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				C9041B4F1C64A2AC004B5708 /* RateViewController.m */,
 				C9041B531C64A2CF004B5708 /* TouristSiteDetailsViewController.h */,
 				C9041B541C64A2CF004B5708 /* TouristSiteDetailsViewController.m */,
+				C9041B5F1C64CEC9004B5708 /* NearMeViewController.h */,
+				C9041B601C64CEC9004B5708 /* NearMeViewController.m */,
 			);
 			name = TouristSites;
 			sourceTree = "<group>";
@@ -528,6 +533,7 @@
 				C904C1E61C63AA4500A40D57 /* TMTouristSiteResponseModel.m in Sources */,
 				C9FDE0671C62BDA1005D0FDB /* TMParentTouristSiteResponseModel.m in Sources */,
 				C954C7C51C6015E300E12996 /* TMAlertControllerFactory.m in Sources */,
+				C9041B611C64CEC9004B5708 /* NearMeViewController.m in Sources */,
 				C9041B511C64A2AC004B5708 /* ParentDetailsViewController.m in Sources */,
 				C9041B551C64A2CF004B5708 /* TouristSiteDetailsViewController.m in Sources */,
 				C96066DE1C6256E10070D36E /* TMProgressAlertDialog.m in Sources */,

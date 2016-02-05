@@ -21,5 +21,5 @@
                          andBlock: (void (^)(NSError *err, id result)) block;
 
 -(void)getJSONWithUrl:(NSString *)url
-             andBlock:(void (^)(NSError*, id))block;
+             andBlock:(void (^)(NSError* err, id result))block;
 @end
