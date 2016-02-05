@@ -276,10 +276,10 @@
             </objects>
             <point key="canvasLocation" x="2829" y="310"/>
         </scene>
-        <!--Details-->
+        <!--Parent Details-->
         <scene sceneID="5R5-ht-72f">
             <objects>
-                <viewController storyboardIdentifier="ParentDetailsController" title="Details" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x0i-9h-uMn" customClass="ParentDetailsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ParentDetailsController" title="Parent Details" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x0i-9h-uMn" customClass="ParentDetailsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5gy-75-kkZ"/>
                         <viewControllerLayoutGuide type="bottom" id="5nM-60-jcK"/>
@@ -287,12 +287,66 @@
                     <view key="view" contentMode="scaleToFill" id="BF0-ps-rZ2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bulgarian-Gerb.gif" translatesAutoresizingMaskIntoConstraints="NO" id="tfC-Ks-wt2">
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPH-q5-8yV">
+                                <rect key="frame" x="20" y="28" width="560" height="275"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="275" id="6Qj-ff-J5q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eFM-KB-gQO">
+                                <rect key="frame" x="20" y="311" width="560" height="269"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.92827634160000005" green="0.92827634160000005" blue="0.92827634160000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dPH-q5-8yV" firstAttribute="leading" secondItem="BF0-ps-rZ2" secondAttribute="leadingMargin" id="2Hr-UO-WSI"/>
+                            <constraint firstItem="tfC-Ks-wt2" firstAttribute="top" secondItem="5gy-75-kkZ" secondAttribute="bottom" constant="50" id="47g-nh-WzI"/>
+                            <constraint firstItem="dPH-q5-8yV" firstAttribute="trailing" secondItem="eFM-KB-gQO" secondAttribute="trailing" id="4UF-wP-tUq"/>
+                            <constraint firstItem="eFM-KB-gQO" firstAttribute="top" secondItem="dPH-q5-8yV" secondAttribute="bottom" constant="8" id="9hz-nB-MtT"/>
+                            <constraint firstItem="dPH-q5-8yV" firstAttribute="centerX" secondItem="tfC-Ks-wt2" secondAttribute="centerX" id="Bsf-Dc-vyr"/>
+                            <constraint firstItem="5nM-60-jcK" firstAttribute="top" secondItem="eFM-KB-gQO" secondAttribute="bottom" constant="20" id="QLw-O5-gYX"/>
+                            <constraint firstAttribute="trailing" secondItem="tfC-Ks-wt2" secondAttribute="trailing" id="TKe-tH-LFg"/>
+                            <constraint firstItem="dPH-q5-8yV" firstAttribute="top" secondItem="5gy-75-kkZ" secondAttribute="bottom" constant="8" symbolic="YES" id="dsf-yI-vi9"/>
+                            <constraint firstItem="tfC-Ks-wt2" firstAttribute="bottom" secondItem="5nM-60-jcK" secondAttribute="top" id="gW3-RG-1aO"/>
+                            <constraint firstItem="dPH-q5-8yV" firstAttribute="leading" secondItem="eFM-KB-gQO" secondAttribute="leading" id="nMN-mm-Z8Y"/>
+                            <constraint firstItem="tfC-Ks-wt2" firstAttribute="leading" secondItem="BF0-ps-rZ2" secondAttribute="leading" id="yUD-rK-mBs"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableSubTouristSites" destination="eFM-KB-gQO" id="rIa-Wc-qi0"/>
+                        <outlet property="tvDescription" destination="dPH-q5-8yV" id="iY2-Ba-9vA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JPG-Ct-kdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3456" y="310"/>
+            <point key="canvasLocation" x="3457" y="310"/>
+        </scene>
+        <!--Tuorist Site Details-->
+        <scene sceneID="YPE-nY-iTb">
+            <objects>
+                <viewController storyboardIdentifier="TouristSiteDetailsScene" title="Tuorist Site Details" id="JEz-Xu-9Ct" customClass="TouristSiteDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i70-N3-Hwj"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Fu-VD-nQc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iRk-bY-hj2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yHZ-Fn-G6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4120" y="310"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -349,14 +403,6 @@
                                     <constraint firstAttribute="height" constant="77" id="cFf-Sd-YKV"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIa-BT-vFR" customClass="RoundedCornersButton">
-                                <rect key="frame" x="20" y="403" width="560" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <segue destination="CgL-gq-0cn" kind="show" id="hZ7-In-ZZq"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04j-AQ-zjw" customClass="RoundedCornersButton">
                                 <rect key="frame" x="20" y="553" width="560" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -366,6 +412,14 @@
                                 <rect key="frame" x="20" y="191" width="560" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Check In"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIa-BT-vFR" customClass="RoundedCornersButton">
+                                <rect key="frame" x="20" y="403" width="560" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <segue destination="CgL-gq-0cn" kind="show" id="hZ7-In-ZZq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

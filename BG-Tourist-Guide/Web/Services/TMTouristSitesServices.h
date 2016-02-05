@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "TMParentTouristSiteResponseModel.h"
 #import "TMSimpleParentTouristSiteResponseModel.h"
+#import "TMParentTouristSiteInfoResponseModel.h"
 
 @interface TMTouristSitesServices : NSObject
 
 -(instancetype)init;
 
--(void) getParentTouristSitesNamesForPage: (NSInteger*) page andBlock: (void(^)(NSError *err, NSArray<TMSimpleParentTouristSiteResponseModel*> *result)) block;
+-(void) getParentTouristSitesForPage: (NSInteger*) page type: (NSInteger*) type andBlock: (void(^)(NSError *err, NSArray<TMSimpleParentTouristSiteResponseModel*> *result)) block;
+
+-(void) getParentTouristSiteInfoById: (NSInteger) modelId andBlock: (void(^)(NSError* err, TMParentTouristSiteInfoResponseModel* result)) block;
 @end

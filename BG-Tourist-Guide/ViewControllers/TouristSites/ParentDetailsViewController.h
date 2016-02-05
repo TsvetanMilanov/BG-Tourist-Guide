@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "TMSimpleParentTouristSiteResponseModel.h"
 
-@interface ParentDetailsViewController : UIViewController
+@interface ParentDetailsViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) TMSimpleParentTouristSiteResponseModel* parentTouristSite;
 @end

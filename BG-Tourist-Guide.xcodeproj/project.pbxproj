@@ -10,14 +10,20 @@
 		624F9636D6604FE555AD22BC /* Pods_BG_Tourist_Guide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A354B58C9D7A83B4340F360B /* Pods_BG_Tourist_Guide.framework */; };
 		C9016DAC1C6165AF00798C07 /* TMParentTouristSiteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9016DAB1C6165AF00798C07 /* TMParentTouristSiteModel.m */; };
 		C9016DAF1C6166E200798C07 /* TMTouristSiteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9016DAE1C6166E200798C07 /* TMTouristSiteModel.m */; };
-		C9016DB21C616C3C00798C07 /* TMSQLiteDatabaseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C9016DB11C616C3C00798C07 /* TMSQLiteDatabaseHandler.m */; };
-		C9016DB61C616F1400798C07 /* TMParentTouristSiteContracts.m in Sources */ = {isa = PBXBuildFile; fileRef = C9016DB51C616F1400798C07 /* TMParentTouristSiteContracts.m */; };
-		C9016DB91C616FDD00798C07 /* TMTouristSiteContracts.m in Sources */ = {isa = PBXBuildFile; fileRef = C9016DB81C616FDD00798C07 /* TMTouristSiteContracts.m */; };
+		C9041B481C64A29D004B5708 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9041B451C64A29D004B5708 /* LoginViewController.m */; };
+		C9041B491C64A29D004B5708 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9041B471C64A29D004B5708 /* RegisterViewController.m */; };
+		C9041B501C64A2AC004B5708 /* OfficialTouristSitesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9041B4B1C64A2AC004B5708 /* OfficialTouristSitesViewController.m */; };
+		C9041B511C64A2AC004B5708 /* ParentDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9041B4D1C64A2AC004B5708 /* ParentDetailsViewController.m */; };
+		C9041B521C64A2AC004B5708 /* RateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9041B4F1C64A2AC004B5708 /* RateViewController.m */; };
+		C9041B551C64A2CF004B5708 /* TouristSiteDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9041B541C64A2CF004B5708 /* TouristSiteDetailsViewController.m */; };
+		C9041B581C64A34C004B5708 /* TMSQLiteDatabaseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C9041B571C64A34C004B5708 /* TMSQLiteDatabaseHandler.m */; };
+		C9041B5D1C64A361004B5708 /* TMParentTouristSiteContracts.m in Sources */ = {isa = PBXBuildFile; fileRef = C9041B5A1C64A361004B5708 /* TMParentTouristSiteContracts.m */; };
+		C9041B5E1C64A361004B5708 /* TMTouristSiteContracts.m in Sources */ = {isa = PBXBuildFile; fileRef = C9041B5C1C64A361004B5708 /* TMTouristSiteContracts.m */; };
 		C904C1DD1C637B5C00A40D57 /* TMSimpleParentTouristSiteResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C904C1DC1C637B5C00A40D57 /* TMSimpleParentTouristSiteResponseModel.m */; };
 		C904C1E01C637CE300A40D57 /* TMSimpleTouristSiteResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C904C1DF1C637CE300A40D57 /* TMSimpleTouristSiteResponseModel.m */; };
-		C954C7B81C6015AA00E12996 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7B31C6015AA00E12996 /* LoginViewController.m */; };
+		C904C1E31C63A8D100A40D57 /* TMParentTouristSiteInfoResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C904C1E21C63A8D100A40D57 /* TMParentTouristSiteInfoResponseModel.m */; };
+		C904C1E61C63AA4500A40D57 /* TMTouristSiteResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C904C1E51C63AA4500A40D57 /* TMTouristSiteResponseModel.m */; };
 		C954C7B91C6015AA00E12996 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7B51C6015AA00E12996 /* MainViewController.m */; };
-		C954C7BA1C6015AA00E12996 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7B71C6015AA00E12996 /* RegisterViewController.m */; };
 		C954C7C41C6015E300E12996 /* TMActivityIndicatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7BD1C6015E300E12996 /* TMActivityIndicatorFactory.m */; };
 		C954C7C51C6015E300E12996 /* TMAlertControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7BF1C6015E300E12996 /* TMAlertControllerFactory.m */; };
 		C954C7C61C6015E300E12996 /* TMConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7C11C6015E300E12996 /* TMConstants.m */; };
@@ -35,12 +41,9 @@
 		C9ED0B6B1C6019660085EBF2 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9ED0B691C6019660085EBF2 /* Logo.png */; };
 		C9ED0B6C1C6019660085EBF2 /* SlimLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9ED0B6A1C6019660085EBF2 /* SlimLogo.png */; };
 		C9ED0B721C6035BD0085EBF2 /* RoundedCornersButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ED0B711C6035BD0085EBF2 /* RoundedCornersButton.m */; };
-		C9FDE0581C62AE39005D0FDB /* OfficialTouristSitesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FDE0571C62AE39005D0FDB /* OfficialTouristSitesViewController.m */; };
-		C9FDE05B1C62AFC2005D0FDB /* RateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FDE05A1C62AFC2005D0FDB /* RateViewController.m */; };
 		C9FDE0611C62B8CD005D0FDB /* CustomTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FDE0601C62B8CD005D0FDB /* CustomTabBarItem.m */; };
 		C9FDE0671C62BDA1005D0FDB /* TMParentTouristSiteResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FDE0661C62BDA1005D0FDB /* TMParentTouristSiteResponseModel.m */; };
 		C9FDE06B1C62BE4B005D0FDB /* TMTouristSitesServices.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FDE06A1C62BE4B005D0FDB /* TMTouristSitesServices.m */; };
-		C9FDE0721C62D804005D0FDB /* ParentDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FDE0711C62D804005D0FDB /* ParentDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,22 +54,34 @@
 		C9016DAB1C6165AF00798C07 /* TMParentTouristSiteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMParentTouristSiteModel.m; path = Data/Models/TMParentTouristSiteModel.m; sourceTree = "<group>"; };
 		C9016DAD1C6166E200798C07 /* TMTouristSiteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTouristSiteModel.h; path = Data/Models/TMTouristSiteModel.h; sourceTree = "<group>"; };
 		C9016DAE1C6166E200798C07 /* TMTouristSiteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTouristSiteModel.m; path = Data/Models/TMTouristSiteModel.m; sourceTree = "<group>"; };
-		C9016DB01C616C3C00798C07 /* TMSQLiteDatabaseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSQLiteDatabaseHandler.h; sourceTree = "<group>"; };
-		C9016DB11C616C3C00798C07 /* TMSQLiteDatabaseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSQLiteDatabaseHandler.m; sourceTree = "<group>"; };
-		C9016DB41C616F1400798C07 /* TMParentTouristSiteContracts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMParentTouristSiteContracts.h; sourceTree = "<group>"; };
-		C9016DB51C616F1400798C07 /* TMParentTouristSiteContracts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMParentTouristSiteContracts.m; sourceTree = "<group>"; };
-		C9016DB71C616FDD00798C07 /* TMTouristSiteContracts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMTouristSiteContracts.h; sourceTree = "<group>"; };
-		C9016DB81C616FDD00798C07 /* TMTouristSiteContracts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTouristSiteContracts.m; sourceTree = "<group>"; };
+		C9041B441C64A29D004B5708 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ViewControllers/Account/LoginViewController.h; sourceTree = "<group>"; };
+		C9041B451C64A29D004B5708 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ViewControllers/Account/LoginViewController.m; sourceTree = "<group>"; };
+		C9041B461C64A29D004B5708 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController.h; path = ViewControllers/Account/RegisterViewController.h; sourceTree = "<group>"; };
+		C9041B471C64A29D004B5708 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController.m; path = ViewControllers/Account/RegisterViewController.m; sourceTree = "<group>"; };
+		C9041B4A1C64A2AC004B5708 /* OfficialTouristSitesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OfficialTouristSitesViewController.h; path = ViewControllers/TouristSites/OfficialTouristSitesViewController.h; sourceTree = "<group>"; };
+		C9041B4B1C64A2AC004B5708 /* OfficialTouristSitesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OfficialTouristSitesViewController.m; path = ViewControllers/TouristSites/OfficialTouristSitesViewController.m; sourceTree = "<group>"; };
+		C9041B4C1C64A2AC004B5708 /* ParentDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParentDetailsViewController.h; path = ViewControllers/TouristSites/ParentDetailsViewController.h; sourceTree = "<group>"; };
+		C9041B4D1C64A2AC004B5708 /* ParentDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParentDetailsViewController.m; path = ViewControllers/TouristSites/ParentDetailsViewController.m; sourceTree = "<group>"; };
+		C9041B4E1C64A2AC004B5708 /* RateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RateViewController.h; path = ViewControllers/TouristSites/RateViewController.h; sourceTree = "<group>"; };
+		C9041B4F1C64A2AC004B5708 /* RateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RateViewController.m; path = ViewControllers/TouristSites/RateViewController.m; sourceTree = "<group>"; };
+		C9041B531C64A2CF004B5708 /* TouristSiteDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouristSiteDetailsViewController.h; path = ViewControllers/TouristSites/TouristSiteDetailsViewController.h; sourceTree = "<group>"; };
+		C9041B541C64A2CF004B5708 /* TouristSiteDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouristSiteDetailsViewController.m; path = ViewControllers/TouristSites/TouristSiteDetailsViewController.m; sourceTree = "<group>"; };
+		C9041B561C64A34C004B5708 /* TMSQLiteDatabaseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMSQLiteDatabaseHandler.h; path = Data/TMSQLiteDatabaseHandler.h; sourceTree = "<group>"; };
+		C9041B571C64A34C004B5708 /* TMSQLiteDatabaseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMSQLiteDatabaseHandler.m; path = Data/TMSQLiteDatabaseHandler.m; sourceTree = "<group>"; };
+		C9041B591C64A361004B5708 /* TMParentTouristSiteContracts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMParentTouristSiteContracts.h; path = Data/Contracts/TMParentTouristSiteContracts.h; sourceTree = "<group>"; };
+		C9041B5A1C64A361004B5708 /* TMParentTouristSiteContracts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMParentTouristSiteContracts.m; path = Data/Contracts/TMParentTouristSiteContracts.m; sourceTree = "<group>"; };
+		C9041B5B1C64A361004B5708 /* TMTouristSiteContracts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTouristSiteContracts.h; path = Data/Contracts/TMTouristSiteContracts.h; sourceTree = "<group>"; };
+		C9041B5C1C64A361004B5708 /* TMTouristSiteContracts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTouristSiteContracts.m; path = Data/Contracts/TMTouristSiteContracts.m; sourceTree = "<group>"; };
 		C904C1DB1C637B5C00A40D57 /* TMSimpleParentTouristSiteResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMSimpleParentTouristSiteResponseModel.h; path = Web/TouristSiteModels/ResponseModels/TMSimpleParentTouristSiteResponseModel.h; sourceTree = "<group>"; };
 		C904C1DC1C637B5C00A40D57 /* TMSimpleParentTouristSiteResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMSimpleParentTouristSiteResponseModel.m; path = Web/TouristSiteModels/ResponseModels/TMSimpleParentTouristSiteResponseModel.m; sourceTree = "<group>"; };
 		C904C1DE1C637CE300A40D57 /* TMSimpleTouristSiteResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMSimpleTouristSiteResponseModel.h; path = Web/TouristSiteModels/ResponseModels/TMSimpleTouristSiteResponseModel.h; sourceTree = "<group>"; };
 		C904C1DF1C637CE300A40D57 /* TMSimpleTouristSiteResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMSimpleTouristSiteResponseModel.m; path = Web/TouristSiteModels/ResponseModels/TMSimpleTouristSiteResponseModel.m; sourceTree = "<group>"; };
-		C954C7B21C6015AA00E12996 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ViewControllers/LoginViewController.h; sourceTree = "<group>"; };
-		C954C7B31C6015AA00E12996 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ViewControllers/LoginViewController.m; sourceTree = "<group>"; };
+		C904C1E11C63A8D100A40D57 /* TMParentTouristSiteInfoResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMParentTouristSiteInfoResponseModel.h; path = Web/TouristSiteModels/ResponseModels/TMParentTouristSiteInfoResponseModel.h; sourceTree = "<group>"; };
+		C904C1E21C63A8D100A40D57 /* TMParentTouristSiteInfoResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMParentTouristSiteInfoResponseModel.m; path = Web/TouristSiteModels/ResponseModels/TMParentTouristSiteInfoResponseModel.m; sourceTree = "<group>"; };
+		C904C1E41C63AA4500A40D57 /* TMTouristSiteResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTouristSiteResponseModel.h; path = Web/TouristSiteModels/ResponseModels/TMTouristSiteResponseModel.h; sourceTree = "<group>"; };
+		C904C1E51C63AA4500A40D57 /* TMTouristSiteResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTouristSiteResponseModel.m; path = Web/TouristSiteModels/ResponseModels/TMTouristSiteResponseModel.m; sourceTree = "<group>"; };
 		C954C7B41C6015AA00E12996 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ViewControllers/MainViewController.h; sourceTree = "<group>"; };
 		C954C7B51C6015AA00E12996 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ViewControllers/MainViewController.m; sourceTree = "<group>"; };
-		C954C7B61C6015AA00E12996 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController.h; path = ViewControllers/RegisterViewController.h; sourceTree = "<group>"; };
-		C954C7B71C6015AA00E12996 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController.m; path = ViewControllers/RegisterViewController.m; sourceTree = "<group>"; };
 		C954C7BC1C6015E300E12996 /* TMActivityIndicatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMActivityIndicatorFactory.h; path = Common/TMActivityIndicatorFactory.h; sourceTree = "<group>"; };
 		C954C7BD1C6015E300E12996 /* TMActivityIndicatorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMActivityIndicatorFactory.m; path = Common/TMActivityIndicatorFactory.m; sourceTree = "<group>"; };
 		C954C7BE1C6015E300E12996 /* TMAlertControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMAlertControllerFactory.h; path = Common/TMAlertControllerFactory.h; sourceTree = "<group>"; };
@@ -96,18 +111,12 @@
 		C9ED0B6A1C6019660085EBF2 /* SlimLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SlimLogo.png; path = Images/SlimLogo.png; sourceTree = "<group>"; };
 		C9ED0B701C6035BD0085EBF2 /* RoundedCornersButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoundedCornersButton.h; path = Views/RoundedCornersButton.h; sourceTree = "<group>"; };
 		C9ED0B711C6035BD0085EBF2 /* RoundedCornersButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoundedCornersButton.m; path = Views/RoundedCornersButton.m; sourceTree = "<group>"; };
-		C9FDE0561C62AE39005D0FDB /* OfficialTouristSitesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OfficialTouristSitesViewController.h; path = ViewControllers/OfficialTouristSitesViewController.h; sourceTree = "<group>"; };
-		C9FDE0571C62AE39005D0FDB /* OfficialTouristSitesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OfficialTouristSitesViewController.m; path = ViewControllers/OfficialTouristSitesViewController.m; sourceTree = "<group>"; };
-		C9FDE0591C62AFC2005D0FDB /* RateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RateViewController.h; path = ViewControllers/RateViewController.h; sourceTree = "<group>"; };
-		C9FDE05A1C62AFC2005D0FDB /* RateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RateViewController.m; path = ViewControllers/RateViewController.m; sourceTree = "<group>"; };
 		C9FDE05F1C62B8CD005D0FDB /* CustomTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTabBarItem.h; path = Views/CustomTabBarItem.h; sourceTree = "<group>"; };
 		C9FDE0601C62B8CD005D0FDB /* CustomTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTabBarItem.m; path = Views/CustomTabBarItem.m; sourceTree = "<group>"; };
 		C9FDE0651C62BDA1005D0FDB /* TMParentTouristSiteResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMParentTouristSiteResponseModel.h; path = Web/TouristSiteModels/ResponseModels/TMParentTouristSiteResponseModel.h; sourceTree = "<group>"; };
 		C9FDE0661C62BDA1005D0FDB /* TMParentTouristSiteResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMParentTouristSiteResponseModel.m; path = Web/TouristSiteModels/ResponseModels/TMParentTouristSiteResponseModel.m; sourceTree = "<group>"; };
 		C9FDE0691C62BE4B005D0FDB /* TMTouristSitesServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTouristSitesServices.h; path = Web/Services/TMTouristSitesServices.h; sourceTree = "<group>"; };
 		C9FDE06A1C62BE4B005D0FDB /* TMTouristSitesServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTouristSitesServices.m; path = Web/Services/TMTouristSitesServices.m; sourceTree = "<group>"; };
-		C9FDE0701C62D804005D0FDB /* ParentDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParentDetailsViewController.h; path = ViewControllers/ParentDetailsViewController.h; sourceTree = "<group>"; };
-		C9FDE0711C62D804005D0FDB /* ParentDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParentDetailsViewController.m; path = ViewControllers/ParentDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,29 +162,47 @@
 		C9016DB31C616EFC00798C07 /* Contracts */ = {
 			isa = PBXGroup;
 			children = (
-				C9016DB41C616F1400798C07 /* TMParentTouristSiteContracts.h */,
-				C9016DB51C616F1400798C07 /* TMParentTouristSiteContracts.m */,
-				C9016DB71C616FDD00798C07 /* TMTouristSiteContracts.h */,
-				C9016DB81C616FDD00798C07 /* TMTouristSiteContracts.m */,
+				C9041B591C64A361004B5708 /* TMParentTouristSiteContracts.h */,
+				C9041B5A1C64A361004B5708 /* TMParentTouristSiteContracts.m */,
+				C9041B5B1C64A361004B5708 /* TMTouristSiteContracts.h */,
+				C9041B5C1C64A361004B5708 /* TMTouristSiteContracts.m */,
 			);
 			name = Contracts;
+			sourceTree = "<group>";
+		};
+		C9041B2D1C64A227004B5708 /* TouristSites */ = {
+			isa = PBXGroup;
+			children = (
+				C9041B4A1C64A2AC004B5708 /* OfficialTouristSitesViewController.h */,
+				C9041B4B1C64A2AC004B5708 /* OfficialTouristSitesViewController.m */,
+				C9041B4C1C64A2AC004B5708 /* ParentDetailsViewController.h */,
+				C9041B4D1C64A2AC004B5708 /* ParentDetailsViewController.m */,
+				C9041B4E1C64A2AC004B5708 /* RateViewController.h */,
+				C9041B4F1C64A2AC004B5708 /* RateViewController.m */,
+				C9041B531C64A2CF004B5708 /* TouristSiteDetailsViewController.h */,
+				C9041B541C64A2CF004B5708 /* TouristSiteDetailsViewController.m */,
+			);
+			name = TouristSites;
+			sourceTree = "<group>";
+		};
+		C9041B2E1C64A235004B5708 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				C9041B441C64A29D004B5708 /* LoginViewController.h */,
+				C9041B451C64A29D004B5708 /* LoginViewController.m */,
+				C9041B461C64A29D004B5708 /* RegisterViewController.h */,
+				C9041B471C64A29D004B5708 /* RegisterViewController.m */,
+			);
+			name = Account;
 			sourceTree = "<group>";
 		};
 		C954C7B11C60159000E12996 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C954C7B21C6015AA00E12996 /* LoginViewController.h */,
-				C954C7B31C6015AA00E12996 /* LoginViewController.m */,
+				C9041B2E1C64A235004B5708 /* Account */,
+				C9041B2D1C64A227004B5708 /* TouristSites */,
 				C954C7B41C6015AA00E12996 /* MainViewController.h */,
 				C954C7B51C6015AA00E12996 /* MainViewController.m */,
-				C954C7B61C6015AA00E12996 /* RegisterViewController.h */,
-				C954C7B71C6015AA00E12996 /* RegisterViewController.m */,
-				C9FDE0561C62AE39005D0FDB /* OfficialTouristSitesViewController.h */,
-				C9FDE0571C62AE39005D0FDB /* OfficialTouristSitesViewController.m */,
-				C9FDE0591C62AFC2005D0FDB /* RateViewController.h */,
-				C9FDE05A1C62AFC2005D0FDB /* RateViewController.m */,
-				C9FDE0701C62D804005D0FDB /* ParentDetailsViewController.h */,
-				C9FDE0711C62D804005D0FDB /* ParentDetailsViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -287,8 +314,8 @@
 			children = (
 				C9016DB31C616EFC00798C07 /* Contracts */,
 				C9016DA91C61657C00798C07 /* Models */,
-				C9016DB01C616C3C00798C07 /* TMSQLiteDatabaseHandler.h */,
-				C9016DB11C616C3C00798C07 /* TMSQLiteDatabaseHandler.m */,
+				C9041B561C64A34C004B5708 /* TMSQLiteDatabaseHandler.h */,
+				C9041B571C64A34C004B5708 /* TMSQLiteDatabaseHandler.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -339,6 +366,10 @@
 				C904C1DC1C637B5C00A40D57 /* TMSimpleParentTouristSiteResponseModel.m */,
 				C904C1DE1C637CE300A40D57 /* TMSimpleTouristSiteResponseModel.h */,
 				C904C1DF1C637CE300A40D57 /* TMSimpleTouristSiteResponseModel.m */,
+				C904C1E11C63A8D100A40D57 /* TMParentTouristSiteInfoResponseModel.h */,
+				C904C1E21C63A8D100A40D57 /* TMParentTouristSiteInfoResponseModel.m */,
+				C904C1E41C63AA4500A40D57 /* TMTouristSiteResponseModel.h */,
+				C904C1E51C63AA4500A40D57 /* TMTouristSiteResponseModel.m */,
 			);
 			name = ResponseModels;
 			sourceTree = "<group>";
@@ -478,31 +509,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9016DAC1C6165AF00798C07 /* TMParentTouristSiteModel.m in Sources */,
-				C954C7BA1C6015AA00E12996 /* RegisterViewController.m in Sources */,
-				C9FDE0721C62D804005D0FDB /* ParentDetailsViewController.m in Sources */,
+				C904C1E31C63A8D100A40D57 /* TMParentTouristSiteInfoResponseModel.m in Sources */,
 				C9FDE06B1C62BE4B005D0FDB /* TMTouristSitesServices.m in Sources */,
 				C97DB6DE1C5D38FA00ED629F /* AppDelegate.m in Sources */,
+				C9041B501C64A2AC004B5708 /* OfficialTouristSitesViewController.m in Sources */,
+				C9041B521C64A2AC004B5708 /* RateViewController.m in Sources */,
+				C9041B481C64A29D004B5708 /* LoginViewController.m in Sources */,
 				C9016DAF1C6166E200798C07 /* TMTouristSiteModel.m in Sources */,
 				C954C7CE1C60162200E12996 /* TMUserLoginResponseModel.m in Sources */,
 				C954C7D31C60163B00E12996 /* TMUserLoginRequestModel.m in Sources */,
 				C954C7D71C60165C00E12996 /* TMRequester.m in Sources */,
+				C9041B491C64A29D004B5708 /* RegisterViewController.m in Sources */,
 				C9ED0B721C6035BD0085EBF2 /* RoundedCornersButton.m in Sources */,
 				C97DB6DB1C5D38FA00ED629F /* main.m in Sources */,
-				C9FDE0581C62AE39005D0FDB /* OfficialTouristSitesViewController.m in Sources */,
 				C904C1E01C637CE300A40D57 /* TMSimpleTouristSiteResponseModel.m in Sources */,
-				C954C7B81C6015AA00E12996 /* LoginViewController.m in Sources */,
 				C904C1DD1C637B5C00A40D57 /* TMSimpleParentTouristSiteResponseModel.m in Sources */,
-				C9FDE05B1C62AFC2005D0FDB /* RateViewController.m in Sources */,
+				C9041B5E1C64A361004B5708 /* TMTouristSiteContracts.m in Sources */,
+				C904C1E61C63AA4500A40D57 /* TMTouristSiteResponseModel.m in Sources */,
 				C9FDE0671C62BDA1005D0FDB /* TMParentTouristSiteResponseModel.m in Sources */,
-				C9016DB21C616C3C00798C07 /* TMSQLiteDatabaseHandler.m in Sources */,
 				C954C7C51C6015E300E12996 /* TMAlertControllerFactory.m in Sources */,
+				C9041B511C64A2AC004B5708 /* ParentDetailsViewController.m in Sources */,
+				C9041B551C64A2CF004B5708 /* TouristSiteDetailsViewController.m in Sources */,
 				C96066DE1C6256E10070D36E /* TMProgressAlertDialog.m in Sources */,
 				C954C7C41C6015E300E12996 /* TMActivityIndicatorFactory.m in Sources */,
 				C954C7C61C6015E300E12996 /* TMConstants.m in Sources */,
+				C9041B5D1C64A361004B5708 /* TMParentTouristSiteContracts.m in Sources */,
 				C9FDE0611C62B8CD005D0FDB /* CustomTabBarItem.m in Sources */,
 				C954C7D41C60163B00E12996 /* TMUserRegisterRequestModel.m in Sources */,
-				C9016DB61C616F1400798C07 /* TMParentTouristSiteContracts.m in Sources */,
-				C9016DB91C616FDD00798C07 /* TMTouristSiteContracts.m in Sources */,
+				C9041B581C64A34C004B5708 /* TMSQLiteDatabaseHandler.m in Sources */,
 				C954C7B91C6015AA00E12996 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

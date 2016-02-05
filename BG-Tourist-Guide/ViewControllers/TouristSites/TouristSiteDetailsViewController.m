@@ -1,22 +1,22 @@
 //
-//  ParentDetailsViewController.m
+//  TouristSiteDetailsViewController.m
 //  BG-Tourist-Guide
 //
-//  Created by Hakintosh on 2/4/16.
+//  Created by Hakintosh on 2/5/16.
 //  Copyright © 2016 Hakintosh. All rights reserved.
 //
 
-#import "ParentDetailsViewController.h"
+#import "TouristSiteDetailsViewController.h"
 
-@interface ParentDetailsViewController ()
+@interface TouristSiteDetailsViewController ()
 
 @end
 
-@implementation ParentDetailsViewController
+@implementation TouristSiteDetailsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = [NSString stringWithFormat:@"%ld", (long)self.parentTouristSite.modelId];
+    self.title = self.touristSite.name;
 }
 
 - (void)didReceiveMemoryWarning {

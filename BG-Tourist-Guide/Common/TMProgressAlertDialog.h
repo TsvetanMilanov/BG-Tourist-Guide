@@ -10,10 +10,10 @@
 
 @interface TMProgressAlertDialog : NSObject
 
--(instancetype)initWithAlertController: (UIAlertController*) controller
-                  andActivityIndicator: (UIActivityIndicatorView*) indicator;
+-(instancetype _Nullable)initWithAlertController: (UIAlertController* _Nonnull) controller
+                  andActivityIndicator: (UIActivityIndicatorView* _Nonnull) indicator;
 
--(void) showInViewController: (UIViewController*) parentController;
+-(void) showInViewController: (UIViewController* _Nonnull) parentController;
 
 -(void)hideWithCompletion: (void (^ __nullable)(void))completion;
 @end

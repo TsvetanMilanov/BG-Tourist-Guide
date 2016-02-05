@@ -30,11 +30,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     _currentPage = 1;
     __weak OfficialTouristSitesViewController *weakSelf = self;
     
     TMTouristSitesServices *touristSites = [[TMTouristSitesServices alloc] init];
-    [touristSites getParentTouristSitesNamesForPage: &(_currentPage) andBlock:^(NSError *err, NSArray<TMSimpleParentTouristSiteResponseModel*> *result) {
+    [touristSites getParentTouristSitesForPage:&(_currentPage) type:&(_type) andBlock:^(NSError *err, NSArray<TMSimpleParentTouristSiteResponseModel *> *result) {
         weakSelf.btnLoadMore.hidden = NO;
         
         if (err != nil) {
@@ -66,6 +67,8 @@
     }
     
     cell.textLabel.text = ((TMSimpleParentTouristSiteResponseModel*)_items[indexPath.row]).name;
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
@@ -88,7 +91,7 @@
     __weak OfficialTouristSitesViewController *weakSelf = self;
     
     TMTouristSitesServices *touristSites = [[TMTouristSitesServices alloc] init];
-    [touristSites getParentTouristSitesNamesForPage: &(_currentPage) andBlock:^(NSError *err, NSArray<NSString *> *result) {
+    [touristSites getParentTouristSitesForPage: &(_currentPage) type: &(_type) andBlock:^(NSError *err, NSArray<NSString *> *result) {
         if (_items == nil) {
             _items = [NSMutableArray new];
         }
