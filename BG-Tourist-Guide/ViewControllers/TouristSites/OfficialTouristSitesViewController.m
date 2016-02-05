@@ -19,44 +19,26 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *btnLoadMore;
 
-- (IBAction)btnLoadMoreTap:(id)sender;
-
 @end
 
 @implementation OfficialTouristSitesViewController
 {
-    NSMutableArray *_items;
+    NSMutableArray<TMSimpleParentTouristSiteResponseModel*> *_items;
     NSInteger _currentPage;
     NSInteger _type;
+    TMTouristSitesServices *_touristSites;
+    BOOL _hasMoreItems;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     _currentPage = 1;
-    __weak OfficialTouristSitesViewController *weakSelf = self;
+    _hasMoreItems = YES;
+    _touristSites = [[TMTouristSitesServices alloc] init];
+    _items = [NSMutableArray new];
     
-    __weak UIActivityIndicatorView *loadingBar = [TMActivityIndicatorFactory activityIndicatorWithParentView:self.view];
-    
-    [loadingBar startAnimating];
-    
-    TMTouristSitesServices *touristSites = [[TMTouristSitesServices alloc] init];
-    [touristSites getParentTouristSitesForPage:&(_currentPage) type:&(_type) andBlock:^(NSError *err, NSArray<TMSimpleParentTouristSiteResponseModel *> *result) {
-        weakSelf.btnLoadMore.hidden = NO;
-        [loadingBar stopAnimating];
-        if (err != nil) {
-            [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Cannot load the information for the official tourist sites from the server. Please try again later." uiViewController:self andHandler:nil];
-            return;
-        }
-        
-        if (_items == nil) {
-            _items = [NSMutableArray new];
-        }
-        
-        [_items addObjectsFromArray:result];
-        [weakSelf.tvItems reloadData];
-        _currentPage += 1;
-    }];
+    [self loadData];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -73,9 +55,13 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CellIdentifier"];
     }
     
-    cell.textLabel.text = ((TMSimpleParentTouristSiteResponseModel*)_items[indexPath.row]).name;
+    cell.textLabel.text = _items[indexPath.row].name;
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    if (indexPath.row >= _items.count - 1 && _items.count > 0 && _hasMoreItems == YES) {
+        [self loadData];
+    }
     
     return cell;
 }
@@ -94,20 +80,46 @@
     [self.navigationController pushViewController:destination animated:YES];
 }
 
-- (IBAction)btnLoadMoreTap:(id)sender {
+-(void) loadData{
     __weak OfficialTouristSitesViewController *weakSelf = self;
+    __weak UIActivityIndicatorView *loading = [TMActivityIndicatorFactory activityIndicatorWithParentView:self.view];
     
-    TMTouristSitesServices *touristSites = [[TMTouristSitesServices alloc] init];
-    [touristSites getParentTouristSitesForPage: &(_currentPage) type: &(_type) andBlock:^(NSError *err, NSArray<NSString *> *result) {
-        if (_items == nil) {
-            _items = [NSMutableArray new];
+    [loading startAnimating];
+    
+    [_touristSites getParentTouristSitesForPage:&(_currentPage) type:&(_type) andBlock:^(NSError *err, NSArray<TMSimpleParentTouristSiteResponseModel *> *result) {
+        [loading stopAnimating];
+        
+        if (err != nil) {
+            [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Cannot load the information for the official tourist sites from the server. Please try again later." uiViewController:self andHandler:nil];
+            return;
         }
         
-        [_items addObjectsFromArray:result];
-        
-        [weakSelf.tvItems reloadData];
+        if (result.count == 0) {
+            _hasMoreItems = NO;
+            return;
+        }
         
         _currentPage += 1;
+        
+        [_items addObjectsFromArray:result];
+        [weakSelf.tvItems reloadData];
     }];
 }
+
+//- (IBAction)btnLoadMoreTap:(id)sender {
+//    __weak OfficialTouristSitesViewController *weakSelf = self;
+//    
+//    TMTouristSitesServices *touristSites = [[TMTouristSitesServices alloc] init];
+//    [touristSites getParentTouristSitesForPage: &(_currentPage) type: &(_type) andBlock:^(NSError *err, NSArray<NSString *> *result) {
+//        if (_items == nil) {
+//            _items = [NSMutableArray new];
+//        }
+//        
+//        [_items addObjectsFromArray:result];
+//        
+//        [weakSelf.tvItems reloadData];
+//        
+//        _currentPage += 1;
+//    }];
+//}
 @end

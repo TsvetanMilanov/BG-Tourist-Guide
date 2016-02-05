@@ -329,7 +329,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Official" id="cG9-Jr-QDt" customClass="CustomTabBarItem"/>
                     <connections>
-                        <outlet property="btnLoadMore" destination="Zcs-lm-7UH" id="YyK-A1-nqp"/>
                         <outlet property="tvItems" destination="CGo-Zz-mM5" id="Sn6-sg-lPg"/>
                     </connections>
                 </viewController>
