@@ -7,10 +7,11 @@
 //
 
 #import "ParentDetailsViewController.h"
+#import "TouristSiteDetailsViewController.h"
 #import "TMTouristSitesServices.h"
 #import "TMParentTouristSiteInfoResponseModel.h"
 #import "TMTouristSiteResponseModel.h"
-#import "TouristSiteDetailsViewController.h"
+#import "TMAlertControllerFactory.h"
 
 @interface ParentDetailsViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *tvDescription;
@@ -35,8 +36,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = self.parentTouristSite.name;
+    __weak ParentDetailsViewController *weakSelf = self;
     
     [_touristSites getParentTouristSiteInfoById:self.parentTouristSite.modelId andBlock:^(NSError *err, TMParentTouristSiteInfoResponseModel *response) {
+        if (err != nil) {
+            [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:[NSString stringWithFormat:@"Cannot load the information for %@ from the server. Please try agin later.", weakSelf.parentTouristSite.name ] uiViewController:self andHandler:nil];
+        }
+        
         _responseParent = response;
         self.tvDescription.text = _responseParent.modelDescription;
         _subtouristSites = _responseParent.subTouristSites;

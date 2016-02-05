@@ -7,9 +7,10 @@
 //
 
 #import "OfficialTouristSitesViewController.h"
-#import "TMTouristSitesServices.h"
 #import "ParentDetailsViewController.h"
+#import "TMTouristSitesServices.h"
 #import "TMSimpleParentTouristSiteResponseModel.h"
+#import "TMAlertControllerFactory.h"
 
 @interface OfficialTouristSitesViewController ()
 
@@ -39,6 +40,7 @@
         weakSelf.btnLoadMore.hidden = NO;
         
         if (err != nil) {
+            [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Cannot load the information for the official tourist sites from the server. Please try again later." uiViewController:self andHandler:nil];
             return;
         }
         
