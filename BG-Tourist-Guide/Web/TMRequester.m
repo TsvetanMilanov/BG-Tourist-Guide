@@ -8,6 +8,7 @@
 
 #import "TMRequester.h"
 #import "AFNetworking.h"
+#import "TMConstants.h"
 
 @interface TMRequester()
 @property NSString *baseUrl;
@@ -95,6 +96,12 @@
     [request setTimeoutInterval: 60*3];
     request.HTTPMethod = @"GET";
     [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *currentUserToken = [userDefaults valueForKey:CURRENT_USER_TOKEN_KEY];
+    
+    [request addValue:[NSString stringWithFormat:@"Bearer %@", currentUserToken] forHTTPHeaderField:@"Authorization"];
         
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];

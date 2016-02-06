@@ -49,6 +49,11 @@
 		C994969F1C65FCD900EBF25D /* TMUserRegisterRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C994969D1C65FCD900EBF25D /* TMUserRegisterRequestModel.m */; };
 		C99496A41C65FD0700EBF25D /* TMScoreboardResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496A31C65FD0700EBF25D /* TMScoreboardResponseModel.m */; };
 		C99496A71C65FDFD00EBF25D /* TMBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496A61C65FDFD00EBF25D /* TMBaseService.m */; };
+		C99496AA1C660F2300EBF25D /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496A91C660F2300EBF25D /* ProfileViewController.m */; };
+		C99496AD1C660F7200EBF25D /* TMProfileResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496AC1C660F7200EBF25D /* TMProfileResponseModel.m */; };
+		C99496B01C66176100EBF25D /* TMAccountServices.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496AF1C66176100EBF25D /* TMAccountServices.m */; };
+		C99496B41C661B4800EBF25D /* TMTableViewBadgesDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496B31C661B4800EBF25D /* TMTableViewBadgesDelegate.m */; };
+		C99496B71C66236200EBF25D /* TMTableViewTouristSitesDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496B61C66236200EBF25D /* TMTableViewTouristSitesDelegate.m */; };
 		C9ED0B6B1C6019660085EBF2 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9ED0B691C6019660085EBF2 /* Logo.png */; };
 		C9ED0B6C1C6019660085EBF2 /* SlimLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9ED0B6A1C6019660085EBF2 /* SlimLogo.png */; };
 		C9ED0B721C6035BD0085EBF2 /* RoundedCornersButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ED0B711C6035BD0085EBF2 /* RoundedCornersButton.m */; };
@@ -139,6 +144,16 @@
 		C99496A31C65FD0700EBF25D /* TMScoreboardResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMScoreboardResponseModel.m; path = Web/Models/Common/ResponseModels/TMScoreboardResponseModel.m; sourceTree = "<group>"; };
 		C99496A51C65FDFD00EBF25D /* TMBaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMBaseService.h; path = Web/Services/TMBaseService.h; sourceTree = "<group>"; };
 		C99496A61C65FDFD00EBF25D /* TMBaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMBaseService.m; path = Web/Services/TMBaseService.m; sourceTree = "<group>"; };
+		C99496A81C660F2300EBF25D /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = ViewControllers/Account/ProfileViewController.h; sourceTree = "<group>"; };
+		C99496A91C660F2300EBF25D /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = ViewControllers/Account/ProfileViewController.m; sourceTree = "<group>"; };
+		C99496AB1C660F7200EBF25D /* TMProfileResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMProfileResponseModel.h; path = Web/Models/UserModels/ResponseModels/TMProfileResponseModel.h; sourceTree = "<group>"; };
+		C99496AC1C660F7200EBF25D /* TMProfileResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMProfileResponseModel.m; path = Web/Models/UserModels/ResponseModels/TMProfileResponseModel.m; sourceTree = "<group>"; };
+		C99496AE1C66176100EBF25D /* TMAccountServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMAccountServices.h; path = Web/Services/TMAccountServices.h; sourceTree = "<group>"; };
+		C99496AF1C66176100EBF25D /* TMAccountServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMAccountServices.m; path = Web/Services/TMAccountServices.m; sourceTree = "<group>"; };
+		C99496B21C661B4800EBF25D /* TMTableViewBadgesDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTableViewBadgesDelegate.h; path = Common/Delegates/TMTableViewBadgesDelegate.h; sourceTree = "<group>"; };
+		C99496B31C661B4800EBF25D /* TMTableViewBadgesDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTableViewBadgesDelegate.m; path = Common/Delegates/TMTableViewBadgesDelegate.m; sourceTree = "<group>"; };
+		C99496B51C66236200EBF25D /* TMTableViewTouristSitesDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTableViewTouristSitesDelegate.h; path = Common/Delegates/TMTableViewTouristSitesDelegate.h; sourceTree = "<group>"; };
+		C99496B61C66236200EBF25D /* TMTableViewTouristSitesDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTableViewTouristSitesDelegate.m; path = Common/Delegates/TMTableViewTouristSitesDelegate.m; sourceTree = "<group>"; };
 		C9ED0B691C6019660085EBF2 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = Images/Logo.png; sourceTree = "<group>"; };
 		C9ED0B6A1C6019660085EBF2 /* SlimLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SlimLogo.png; path = Images/SlimLogo.png; sourceTree = "<group>"; };
 		C9ED0B701C6035BD0085EBF2 /* RoundedCornersButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoundedCornersButton.h; path = Views/RoundedCornersButton.h; sourceTree = "<group>"; };
@@ -230,6 +245,8 @@
 				C9041B451C64A29D004B5708 /* LoginViewController.m */,
 				C9041B461C64A29D004B5708 /* RegisterViewController.h */,
 				C9041B471C64A29D004B5708 /* RegisterViewController.m */,
+				C99496A81C660F2300EBF25D /* ProfileViewController.h */,
+				C99496A91C660F2300EBF25D /* ProfileViewController.m */,
 			);
 			name = Account;
 			sourceTree = "<group>";
@@ -250,6 +267,7 @@
 		C954C7BB1C6015D400E12996 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C99496B11C661B0F00EBF25D /* Delegates */,
 				C954C7BC1C6015E300E12996 /* TMActivityIndicatorFactory.h */,
 				C954C7BD1C6015E300E12996 /* TMActivityIndicatorFactory.m */,
 				C954C7BE1C6015E300E12996 /* TMAlertControllerFactory.h */,
@@ -298,6 +316,8 @@
 			children = (
 				C99496971C65FCCF00EBF25D /* TMUserLoginResponseModel.h */,
 				C99496981C65FCCF00EBF25D /* TMUserLoginResponseModel.m */,
+				C99496AB1C660F7200EBF25D /* TMProfileResponseModel.h */,
+				C99496AC1C660F7200EBF25D /* TMProfileResponseModel.m */,
 			);
 			name = ResponseModels;
 			sourceTree = "<group>";
@@ -386,6 +406,17 @@
 			name = ResponseModels;
 			sourceTree = "<group>";
 		};
+		C99496B11C661B0F00EBF25D /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				C99496B21C661B4800EBF25D /* TMTableViewBadgesDelegate.h */,
+				C99496B31C661B4800EBF25D /* TMTableViewBadgesDelegate.m */,
+				C99496B51C66236200EBF25D /* TMTableViewTouristSitesDelegate.h */,
+				C99496B61C66236200EBF25D /* TMTableViewTouristSitesDelegate.m */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
 		C9E86B0D1C60D44F00B87456 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +492,8 @@
 				C99496791C65FC0500EBF25D /* TMCommonServices.m */,
 				C99496A51C65FDFD00EBF25D /* TMBaseService.h */,
 				C99496A61C65FDFD00EBF25D /* TMBaseService.m */,
+				C99496AE1C66176100EBF25D /* TMAccountServices.h */,
+				C99496AF1C66176100EBF25D /* TMAccountServices.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -590,12 +623,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C99496AD1C660F7200EBF25D /* TMProfileResponseModel.m in Sources */,
 				C99496671C65581500EBF25D /* AddParentTouristSiteViewController.m in Sources */,
 				C99496811C65FC8600EBF25D /* TMTouristSiteRequestModel.m in Sources */,
 				C9016DAC1C6165AF00798C07 /* TMParentTouristSiteModel.m in Sources */,
 				C9FDE06B1C62BE4B005D0FDB /* TMTouristSitesServices.m in Sources */,
 				C99496A41C65FD0700EBF25D /* TMScoreboardResponseModel.m in Sources */,
 				C994967A1C65FC0500EBF25D /* TMCommonServices.m in Sources */,
+				C99496AA1C660F2300EBF25D /* ProfileViewController.m in Sources */,
 				C97DB6DE1C5D38FA00ED629F /* AppDelegate.m in Sources */,
 				C99496771C65FB9E00EBF25D /* ScoreboardViewController.m in Sources */,
 				C994968E1C65FC9200EBF25D /* TMSimpleParentTouristSiteResponseModel.m in Sources */,
@@ -607,10 +642,12 @@
 				C994968C1C65FC9200EBF25D /* TMParentTouristSiteInfoResponseModel.m in Sources */,
 				C994969F1C65FCD900EBF25D /* TMUserRegisterRequestModel.m in Sources */,
 				C954C7D71C60165C00E12996 /* TMRequester.m in Sources */,
+				C99496B71C66236200EBF25D /* TMTableViewTouristSitesDelegate.m in Sources */,
 				C9041B491C64A29D004B5708 /* RegisterViewController.m in Sources */,
 				C99496741C65DF4A00EBF25D /* UnofficialTouristSitesViewController.m in Sources */,
 				C9ED0B721C6035BD0085EBF2 /* RoundedCornersButton.m in Sources */,
 				C99496801C65FC8600EBF25D /* TMParentTouristSiteRequestModel.m in Sources */,
+				C99496B01C66176100EBF25D /* TMAccountServices.m in Sources */,
 				C99496711C65689800EBF25D /* AddTouristSiteViewController.m in Sources */,
 				C97DB6DB1C5D38FA00ED629F /* main.m in Sources */,
 				C9041B5E1C64A361004B5708 /* TMTouristSiteContracts.m in Sources */,
@@ -630,6 +667,7 @@
 				C9FDE0611C62B8CD005D0FDB /* CustomTabBarItem.m in Sources */,
 				C9041B581C64A34C004B5708 /* TMSQLiteDatabaseHandler.m in Sources */,
 				C954C7B91C6015AA00E12996 /* MainViewController.m in Sources */,
+				C99496B41C661B4800EBF25D /* TMTableViewBadgesDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
