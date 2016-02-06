@@ -292,14 +292,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcs-lm-7UH">
-                                <rect key="frame" x="243" y="502" width="114" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Load More"/>
-                                <connections>
-                                    <action selector="btnLoadMoreTap:" destination="vek-IQ-iFt" eventType="touchUpInside" id="Ei8-Y7-0o2"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bulgarian-Gerb.gif" translatesAutoresizingMaskIntoConstraints="NO" id="aCu-mE-8sb">
+                                <rect key="frame" x="20" y="35" width="560" height="530"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CGo-Zz-mM5">
                                 <rect key="frame" x="20" y="72" width="560" height="422"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -309,21 +304,16 @@
                                     <outlet property="delegate" destination="vek-IQ-iFt" id="sVU-cL-2eY"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bulgarian-Gerb.gif" translatesAutoresizingMaskIntoConstraints="NO" id="aCu-mE-8sb">
-                                <rect key="frame" x="20" y="35" width="560" height="530"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CGo-Zz-mM5" firstAttribute="top" secondItem="emB-dp-9Oi" secondAttribute="bottom" constant="8" symbolic="YES" id="0Np-sV-od5"/>
-                            <constraint firstItem="Zcs-lm-7UH" firstAttribute="centerX" secondItem="CGo-Zz-mM5" secondAttribute="centerX" id="KHD-LN-NTr"/>
                             <constraint firstItem="CGo-Zz-mM5" firstAttribute="trailing" secondItem="5cG-lr-s8S" secondAttribute="trailingMargin" id="KwR-W1-eot"/>
                             <constraint firstItem="aCu-mE-8sb" firstAttribute="top" secondItem="5cG-lr-s8S" secondAttribute="topMargin" constant="35" id="PUB-Q2-Sdb"/>
                             <constraint firstItem="aCu-mE-8sb" firstAttribute="leading" secondItem="CGo-Zz-mM5" secondAttribute="leading" id="Xz9-M8-6tY"/>
                             <constraint firstItem="aCu-mE-8sb" firstAttribute="trailing" secondItem="CGo-Zz-mM5" secondAttribute="trailing" id="YKj-iJ-GVm"/>
                             <constraint firstItem="aCu-mE-8sb" firstAttribute="centerY" secondItem="5cG-lr-s8S" secondAttribute="centerY" id="YfN-jF-Lpt"/>
                             <constraint firstItem="CGo-Zz-mM5" firstAttribute="leading" secondItem="5cG-lr-s8S" secondAttribute="leadingMargin" id="hjA-3f-6re"/>
-                            <constraint firstItem="Zcs-lm-7UH" firstAttribute="top" secondItem="CGo-Zz-mM5" secondAttribute="bottom" constant="8" id="mJH-N3-lRV"/>
                             <constraint firstItem="cIA-m4-FQc" firstAttribute="top" secondItem="CGo-Zz-mM5" secondAttribute="bottom" constant="57" id="sYj-rL-N1W"/>
                         </constraints>
                     </view>
@@ -849,7 +839,7 @@
         <!--Rate-->
         <scene sceneID="ep5-Sq-Veo">
             <objects>
-                <viewController title="Rate" id="d2K-1f-FHY" customClass="RateViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RateController" title="Rate" id="d2K-1f-FHY" customClass="RateViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aVU-dP-d9g"/>
                         <viewControllerLayoutGuide type="bottom" id="HjR-zn-gqh"/>
@@ -858,19 +848,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bulgarian-Gerb.gif" translatesAutoresizingMaskIntoConstraints="NO" id="SG1-9e-sde">
-                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bulgarian-Gerb.gif" translatesAutoresizingMaskIntoConstraints="NO" id="iPl-1f-j6b">
+                                <rect key="frame" x="20" y="35" width="560" height="530"/>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Um0-gQ-BL3">
+                                <rect key="frame" x="20" y="89" width="560" height="422"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vek-IQ-iFt" id="HJZ-dM-Cmo"/>
+                                    <outlet property="delegate" destination="vek-IQ-iFt" id="WNh-Tp-4VK"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SG1-9e-sde" firstAttribute="leading" secondItem="0eu-Su-hlt" secondAttribute="leading" id="CQ3-X7-3Kh"/>
-                            <constraint firstItem="SG1-9e-sde" firstAttribute="top" secondItem="aVU-dP-d9g" secondAttribute="bottom" constant="6" id="crj-Iz-a0C"/>
-                            <constraint firstAttribute="trailing" secondItem="SG1-9e-sde" secondAttribute="trailing" id="eM9-Rn-bgC"/>
-                            <constraint firstAttribute="bottom" secondItem="SG1-9e-sde" secondAttribute="bottom" id="ffX-6d-5rq"/>
+                            <constraint firstItem="Um0-gQ-BL3" firstAttribute="leading" secondItem="iPl-1f-j6b" secondAttribute="leading" id="8nL-Bl-I1V"/>
+                            <constraint firstItem="iPl-1f-j6b" firstAttribute="leading" secondItem="0eu-Su-hlt" secondAttribute="leadingMargin" id="Lw7-8V-ibT"/>
+                            <constraint firstItem="Um0-gQ-BL3" firstAttribute="centerY" secondItem="iPl-1f-j6b" secondAttribute="centerY" id="Rw8-eQ-lrV"/>
+                            <constraint firstItem="iPl-1f-j6b" firstAttribute="bottom" secondItem="HjR-zn-gqh" secondAttribute="top" constant="14" id="o82-kA-G6J"/>
+                            <constraint firstItem="Um0-gQ-BL3" firstAttribute="trailing" secondItem="iPl-1f-j6b" secondAttribute="trailing" id="qOu-Tw-XYh"/>
+                            <constraint firstItem="iPl-1f-j6b" firstAttribute="top" secondItem="0eu-Su-hlt" secondAttribute="topMargin" constant="35" id="rov-Xt-GZC"/>
+                            <constraint firstItem="Um0-gQ-BL3" firstAttribute="top" secondItem="aVU-dP-d9g" secondAttribute="bottom" constant="25" id="uym-rO-h8r"/>
+                            <constraint firstItem="iPl-1f-j6b" firstAttribute="trailing" secondItem="0eu-Su-hlt" secondAttribute="trailingMargin" id="v0x-HX-8MR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Rate" id="Awe-j9-1ru" customClass="CustomTabBarItem"/>
+                    <connections>
+                        <outlet property="tvItems" destination="Um0-gQ-BL3" id="o76-i4-K5P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m3l-DB-0YF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -69,6 +69,18 @@
     }];
 }
 
+-(void) getTouristSitesForRate: (NSInteger) page andBlock: (void(^)(NSError *err, NSArray<TMTouristSiteResponseModel*> *result)) block {
+    [_requester getJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/ForRating?page=%ld", (long)page] andBlock:^(NSError *err, id result) {
+        NSMutableArray<TMTouristSiteResponseModel*> *mappedResult = [NSMutableArray new];
+        
+        for (id item in result) {
+            [mappedResult addObject:[[TMTouristSiteResponseModel alloc] initWithDictionary: item error: nil]];
+        }
+        
+        block(err, mappedResult);
+    }];
+}
+
 -(void) addParentTouristSite: (TMParentTouristSiteRequestModel*) model andBlock: (void(^)(NSError* err, TMSimpleParentTouristSiteResponseModel *result)) block {
     [_requester postJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/Parents"] data: [model toJSONString] andBlock:^(NSError *err, id result) {
         if (err != nil) {

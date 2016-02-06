@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RateViewController : UIViewController
+@interface RateViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @end

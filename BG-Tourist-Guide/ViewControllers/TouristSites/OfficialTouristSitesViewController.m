@@ -40,17 +40,17 @@
     _touristSites = [[TMTouristSitesServices alloc] init];
     _items = [NSMutableArray new];
     
-    UIBarButtonItem *navigateToAddParentTouristSiteButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(navigateToAddParentTouristSiteScene)];
-    
-    self.tabBarController.navigationItem.rightBarButtonItem = navigateToAddParentTouristSiteButton;
-    self.tabBarController.title = @"Official";
-    
     [self loadData];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
+    UIBarButtonItem *navigateToAddParentTouristSiteButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(navigateToAddParentTouristSiteScene)];
+    
+    self.tabBarController.navigationItem.rightBarButtonItem = navigateToAddParentTouristSiteButton;
+    
+    self.tabBarController.title = @"Official";
     [self.tvItems setDataSource:self];
     [self.tvItems setDelegate:self];
 }
