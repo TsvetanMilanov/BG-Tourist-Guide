@@ -7,24 +7,12 @@
 //
 
 #import "TMTouristSitesServices.h"
-#import "TMRequester.h"
 #import "TMSimpleTouristSiteResponseModel.h"
 
 @implementation TMTouristSitesServices
-{
-    TMRequester *_requester;
-}
-
--(instancetype)init{
-    if (self = [super init]) {
-        _requester = [[TMRequester alloc] init];
-    }
-    
-    return self;
-}
 
 -(void) getParentTouristSitesForPage: (NSInteger) page type: (NSInteger) type andBlock: (void(^)(NSError*, NSArray<TMSimpleParentTouristSiteResponseModel*>*)) block {
-    [_requester getJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/Parents/Simple?page=%@&type=%ld", [NSNumber numberWithInteger: page], (long)type] andBlock:^(NSError *err, id result) {
+    [self.requester getJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/Parents/Simple?page=%@&type=%ld", [NSNumber numberWithInteger: page], (long)type] andBlock:^(NSError *err, id result) {
         NSMutableArray *mappedResult = [NSMutableArray new];
         
         for (NSDictionary *item in result) {
@@ -38,7 +26,7 @@
 }
 
 -(void) getParentTouristSiteInfoById: (NSInteger) modelId andBlock: (void(^)(NSError* err, TMParentTouristSiteInfoResponseModel* result)) block {
-    [_requester getJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/Parents?id=%ld", (long) modelId] andBlock:^(NSError * err, id result) {
+    [self.requester getJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/Parents?id=%ld", (long) modelId] andBlock:^(NSError * err, id result) {
         TMParentTouristSiteInfoResponseModel *mappedResponse = [[TMParentTouristSiteInfoResponseModel alloc] initWithDictionary:result error:nil];
         
         NSMutableArray *subTouristSitesArray = [NSMutableArray new];
@@ -58,7 +46,7 @@
     double latitude = 0;
     double longitude = 0;
     
-    [_requester getJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/NearMe?latitude=%f&longitude=%f&page=%ld", latitude, longitude, (long)page] andBlock:^(NSError *err, id result) {
+    [self.requester getJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/NearMe?latitude=%f&longitude=%f&page=%ld", latitude, longitude, (long)page] andBlock:^(NSError *err, id result) {
         NSMutableArray<TMTouristSiteResponseModel*> *mappedResult = [NSMutableArray new];
         
         for (id item in result) {
@@ -70,7 +58,7 @@
 }
 
 -(void) getTouristSitesForRate: (NSInteger) page andBlock: (void(^)(NSError *err, NSArray<TMTouristSiteResponseModel*> *result)) block {
-    [_requester getJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/ForRating?page=%ld", (long)page] andBlock:^(NSError *err, id result) {
+    [self.requester getJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/ForRating?page=%ld", (long)page] andBlock:^(NSError *err, id result) {
         NSMutableArray<TMTouristSiteResponseModel*> *mappedResult = [NSMutableArray new];
         
         for (id item in result) {
@@ -82,7 +70,7 @@
 }
 
 -(void) addParentTouristSite: (TMParentTouristSiteRequestModel*) model andBlock: (void(^)(NSError* err, TMSimpleParentTouristSiteResponseModel *result)) block {
-    [_requester postJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/Parents"] data: [model toJSONString] andBlock:^(NSError *err, id result) {
+    [self.requester postJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/Parents"] data: [model toJSONString] andBlock:^(NSError *err, id result) {
         if (err != nil) {
             block(err, nil);
             return;
@@ -95,7 +83,7 @@
 }
 
 -(void) addTouristSite: (TMTouristSiteRequestModel*) model andBlock: (void(^)(NSError* err, TMSimpleTouristSiteResponseModel *result)) block {
-    [_requester postJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites"] data: [model toJSONString] andBlock:^(NSError *err, id result) {
+    [self.requester postJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites"] data: [model toJSONString] andBlock:^(NSError *err, id result) {
         if (err != nil) {
             block(err, nil);
             return;

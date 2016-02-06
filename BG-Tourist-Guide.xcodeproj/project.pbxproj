@@ -20,17 +20,10 @@
 		C9041B5D1C64A361004B5708 /* TMParentTouristSiteContracts.m in Sources */ = {isa = PBXBuildFile; fileRef = C9041B5A1C64A361004B5708 /* TMParentTouristSiteContracts.m */; };
 		C9041B5E1C64A361004B5708 /* TMTouristSiteContracts.m in Sources */ = {isa = PBXBuildFile; fileRef = C9041B5C1C64A361004B5708 /* TMTouristSiteContracts.m */; };
 		C9041B611C64CEC9004B5708 /* NearMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9041B601C64CEC9004B5708 /* NearMeViewController.m */; };
-		C904C1DD1C637B5C00A40D57 /* TMSimpleParentTouristSiteResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C904C1DC1C637B5C00A40D57 /* TMSimpleParentTouristSiteResponseModel.m */; };
-		C904C1E01C637CE300A40D57 /* TMSimpleTouristSiteResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C904C1DF1C637CE300A40D57 /* TMSimpleTouristSiteResponseModel.m */; };
-		C904C1E31C63A8D100A40D57 /* TMParentTouristSiteInfoResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C904C1E21C63A8D100A40D57 /* TMParentTouristSiteInfoResponseModel.m */; };
-		C904C1E61C63AA4500A40D57 /* TMTouristSiteResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C904C1E51C63AA4500A40D57 /* TMTouristSiteResponseModel.m */; };
 		C954C7B91C6015AA00E12996 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7B51C6015AA00E12996 /* MainViewController.m */; };
 		C954C7C41C6015E300E12996 /* TMActivityIndicatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7BD1C6015E300E12996 /* TMActivityIndicatorFactory.m */; };
 		C954C7C51C6015E300E12996 /* TMAlertControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7BF1C6015E300E12996 /* TMAlertControllerFactory.m */; };
 		C954C7C61C6015E300E12996 /* TMConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7C11C6015E300E12996 /* TMConstants.m */; };
-		C954C7CE1C60162200E12996 /* TMUserLoginResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7CD1C60162200E12996 /* TMUserLoginResponseModel.m */; };
-		C954C7D31C60163B00E12996 /* TMUserLoginRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7D01C60163B00E12996 /* TMUserLoginRequestModel.m */; };
-		C954C7D41C60163B00E12996 /* TMUserRegisterRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7D21C60163B00E12996 /* TMUserRegisterRequestModel.m */; };
 		C954C7D71C60165C00E12996 /* TMRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = C954C7D61C60165C00E12996 /* TMRequester.m */; };
 		C96066DB1C622BD00070D36E /* Bulgarian-Gerb.gif in Resources */ = {isa = PBXBuildFile; fileRef = C96066DA1C622BD00070D36E /* Bulgarian-Gerb.gif */; };
 		C96066DE1C6256E10070D36E /* TMProgressAlertDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C96066DD1C6256E10070D36E /* TMProgressAlertDialog.m */; };
@@ -40,15 +33,26 @@
 		C97DB6E61C5D38FB00ED629F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97DB6E51C5D38FB00ED629F /* Assets.xcassets */; };
 		C97DB6E91C5D38FB00ED629F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97DB6E71C5D38FB00ED629F /* LaunchScreen.storyboard */; };
 		C99496671C65581500EBF25D /* AddParentTouristSiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496661C65581500EBF25D /* AddParentTouristSiteViewController.m */; };
-		C994966B1C655A9A00EBF25D /* TMParentTouristSiteRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C994966A1C655A9900EBF25D /* TMParentTouristSiteRequestModel.m */; };
-		C994966E1C65642400EBF25D /* TMTouristSiteRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C994966D1C65642400EBF25D /* TMTouristSiteRequestModel.m */; };
 		C99496711C65689800EBF25D /* AddTouristSiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496701C65689800EBF25D /* AddTouristSiteViewController.m */; };
 		C99496741C65DF4A00EBF25D /* UnofficialTouristSitesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496731C65DF4A00EBF25D /* UnofficialTouristSitesViewController.m */; };
+		C99496771C65FB9E00EBF25D /* ScoreboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496761C65FB9E00EBF25D /* ScoreboardViewController.m */; };
+		C994967A1C65FC0500EBF25D /* TMCommonServices.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496791C65FC0500EBF25D /* TMCommonServices.m */; };
+		C99496801C65FC8600EBF25D /* TMParentTouristSiteRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C994967D1C65FC8600EBF25D /* TMParentTouristSiteRequestModel.m */; };
+		C99496811C65FC8600EBF25D /* TMTouristSiteRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C994967F1C65FC8600EBF25D /* TMTouristSiteRequestModel.m */; };
+		C994968C1C65FC9200EBF25D /* TMParentTouristSiteInfoResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496831C65FC9200EBF25D /* TMParentTouristSiteInfoResponseModel.m */; };
+		C994968D1C65FC9200EBF25D /* TMParentTouristSiteResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496851C65FC9200EBF25D /* TMParentTouristSiteResponseModel.m */; };
+		C994968E1C65FC9200EBF25D /* TMSimpleParentTouristSiteResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496871C65FC9200EBF25D /* TMSimpleParentTouristSiteResponseModel.m */; };
+		C994968F1C65FC9200EBF25D /* TMSimpleTouristSiteResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496891C65FC9200EBF25D /* TMSimpleTouristSiteResponseModel.m */; };
+		C99496901C65FC9200EBF25D /* TMTouristSiteResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C994968B1C65FC9200EBF25D /* TMTouristSiteResponseModel.m */; };
+		C99496991C65FCCF00EBF25D /* TMUserLoginResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496981C65FCCF00EBF25D /* TMUserLoginResponseModel.m */; };
+		C994969E1C65FCD900EBF25D /* TMUserLoginRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C994969B1C65FCD900EBF25D /* TMUserLoginRequestModel.m */; };
+		C994969F1C65FCD900EBF25D /* TMUserRegisterRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C994969D1C65FCD900EBF25D /* TMUserRegisterRequestModel.m */; };
+		C99496A41C65FD0700EBF25D /* TMScoreboardResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496A31C65FD0700EBF25D /* TMScoreboardResponseModel.m */; };
+		C99496A71C65FDFD00EBF25D /* TMBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496A61C65FDFD00EBF25D /* TMBaseService.m */; };
 		C9ED0B6B1C6019660085EBF2 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9ED0B691C6019660085EBF2 /* Logo.png */; };
 		C9ED0B6C1C6019660085EBF2 /* SlimLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9ED0B6A1C6019660085EBF2 /* SlimLogo.png */; };
 		C9ED0B721C6035BD0085EBF2 /* RoundedCornersButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ED0B711C6035BD0085EBF2 /* RoundedCornersButton.m */; };
 		C9FDE0611C62B8CD005D0FDB /* CustomTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FDE0601C62B8CD005D0FDB /* CustomTabBarItem.m */; };
-		C9FDE0671C62BDA1005D0FDB /* TMParentTouristSiteResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FDE0661C62BDA1005D0FDB /* TMParentTouristSiteResponseModel.m */; };
 		C9FDE06B1C62BE4B005D0FDB /* TMTouristSitesServices.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FDE06A1C62BE4B005D0FDB /* TMTouristSitesServices.m */; };
 /* End PBXBuildFile section */
 
@@ -80,14 +84,6 @@
 		C9041B5C1C64A361004B5708 /* TMTouristSiteContracts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTouristSiteContracts.m; path = Data/Contracts/TMTouristSiteContracts.m; sourceTree = "<group>"; };
 		C9041B5F1C64CEC9004B5708 /* NearMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NearMeViewController.h; path = ViewControllers/TouristSites/NearMeViewController.h; sourceTree = "<group>"; };
 		C9041B601C64CEC9004B5708 /* NearMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NearMeViewController.m; path = ViewControllers/TouristSites/NearMeViewController.m; sourceTree = "<group>"; };
-		C904C1DB1C637B5C00A40D57 /* TMSimpleParentTouristSiteResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMSimpleParentTouristSiteResponseModel.h; path = Web/TouristSiteModels/ResponseModels/TMSimpleParentTouristSiteResponseModel.h; sourceTree = "<group>"; };
-		C904C1DC1C637B5C00A40D57 /* TMSimpleParentTouristSiteResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMSimpleParentTouristSiteResponseModel.m; path = Web/TouristSiteModels/ResponseModels/TMSimpleParentTouristSiteResponseModel.m; sourceTree = "<group>"; };
-		C904C1DE1C637CE300A40D57 /* TMSimpleTouristSiteResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMSimpleTouristSiteResponseModel.h; path = Web/TouristSiteModels/ResponseModels/TMSimpleTouristSiteResponseModel.h; sourceTree = "<group>"; };
-		C904C1DF1C637CE300A40D57 /* TMSimpleTouristSiteResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMSimpleTouristSiteResponseModel.m; path = Web/TouristSiteModels/ResponseModels/TMSimpleTouristSiteResponseModel.m; sourceTree = "<group>"; };
-		C904C1E11C63A8D100A40D57 /* TMParentTouristSiteInfoResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMParentTouristSiteInfoResponseModel.h; path = Web/TouristSiteModels/ResponseModels/TMParentTouristSiteInfoResponseModel.h; sourceTree = "<group>"; };
-		C904C1E21C63A8D100A40D57 /* TMParentTouristSiteInfoResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMParentTouristSiteInfoResponseModel.m; path = Web/TouristSiteModels/ResponseModels/TMParentTouristSiteInfoResponseModel.m; sourceTree = "<group>"; };
-		C904C1E41C63AA4500A40D57 /* TMTouristSiteResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTouristSiteResponseModel.h; path = Web/TouristSiteModels/ResponseModels/TMTouristSiteResponseModel.h; sourceTree = "<group>"; };
-		C904C1E51C63AA4500A40D57 /* TMTouristSiteResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTouristSiteResponseModel.m; path = Web/TouristSiteModels/ResponseModels/TMTouristSiteResponseModel.m; sourceTree = "<group>"; };
 		C954C7B41C6015AA00E12996 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ViewControllers/MainViewController.h; sourceTree = "<group>"; };
 		C954C7B51C6015AA00E12996 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ViewControllers/MainViewController.m; sourceTree = "<group>"; };
 		C954C7BC1C6015E300E12996 /* TMActivityIndicatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMActivityIndicatorFactory.h; path = Common/TMActivityIndicatorFactory.h; sourceTree = "<group>"; };
@@ -96,12 +92,6 @@
 		C954C7BF1C6015E300E12996 /* TMAlertControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMAlertControllerFactory.m; path = Common/TMAlertControllerFactory.m; sourceTree = "<group>"; };
 		C954C7C01C6015E300E12996 /* TMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMConstants.h; path = Common/TMConstants.h; sourceTree = "<group>"; };
 		C954C7C11C6015E300E12996 /* TMConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMConstants.m; path = Common/TMConstants.m; sourceTree = "<group>"; };
-		C954C7CC1C60162200E12996 /* TMUserLoginResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMUserLoginResponseModel.h; path = Web/UserModels/ResponseModels/TMUserLoginResponseModel.h; sourceTree = "<group>"; };
-		C954C7CD1C60162200E12996 /* TMUserLoginResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMUserLoginResponseModel.m; path = Web/UserModels/ResponseModels/TMUserLoginResponseModel.m; sourceTree = "<group>"; };
-		C954C7CF1C60163B00E12996 /* TMUserLoginRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMUserLoginRequestModel.h; path = Web/UserModels/RequestModels/TMUserLoginRequestModel.h; sourceTree = "<group>"; };
-		C954C7D01C60163B00E12996 /* TMUserLoginRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMUserLoginRequestModel.m; path = Web/UserModels/RequestModels/TMUserLoginRequestModel.m; sourceTree = "<group>"; };
-		C954C7D11C60163B00E12996 /* TMUserRegisterRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMUserRegisterRequestModel.h; path = Web/UserModels/RequestModels/TMUserRegisterRequestModel.h; sourceTree = "<group>"; };
-		C954C7D21C60163B00E12996 /* TMUserRegisterRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMUserRegisterRequestModel.m; path = Web/UserModels/RequestModels/TMUserRegisterRequestModel.m; sourceTree = "<group>"; };
 		C954C7D51C60165C00E12996 /* TMRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMRequester.h; path = Web/TMRequester.h; sourceTree = "<group>"; };
 		C954C7D61C60165C00E12996 /* TMRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMRequester.m; path = Web/TMRequester.m; sourceTree = "<group>"; };
 		C96066DA1C622BD00070D36E /* Bulgarian-Gerb.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Bulgarian-Gerb.gif"; path = "Images/Bulgarian-Gerb.gif"; sourceTree = "<group>"; };
@@ -117,22 +107,44 @@
 		C97DB6EA1C5D38FB00ED629F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C99496651C65581500EBF25D /* AddParentTouristSiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddParentTouristSiteViewController.h; path = ViewControllers/TouristSites/AddParentTouristSiteViewController.h; sourceTree = "<group>"; };
 		C99496661C65581500EBF25D /* AddParentTouristSiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddParentTouristSiteViewController.m; path = ViewControllers/TouristSites/AddParentTouristSiteViewController.m; sourceTree = "<group>"; };
-		C99496691C655A9900EBF25D /* TMParentTouristSiteRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMParentTouristSiteRequestModel.h; path = Web/TouristSiteModels/RequestModels/TMParentTouristSiteRequestModel.h; sourceTree = "<group>"; };
-		C994966A1C655A9900EBF25D /* TMParentTouristSiteRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMParentTouristSiteRequestModel.m; path = Web/TouristSiteModels/RequestModels/TMParentTouristSiteRequestModel.m; sourceTree = "<group>"; };
-		C994966C1C65642400EBF25D /* TMTouristSiteRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTouristSiteRequestModel.h; path = Web/TouristSiteModels/RequestModels/TMTouristSiteRequestModel.h; sourceTree = "<group>"; };
-		C994966D1C65642400EBF25D /* TMTouristSiteRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTouristSiteRequestModel.m; path = Web/TouristSiteModels/RequestModels/TMTouristSiteRequestModel.m; sourceTree = "<group>"; };
 		C994966F1C65689800EBF25D /* AddTouristSiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddTouristSiteViewController.h; path = ViewControllers/TouristSites/AddTouristSiteViewController.h; sourceTree = "<group>"; };
 		C99496701C65689800EBF25D /* AddTouristSiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddTouristSiteViewController.m; path = ViewControllers/TouristSites/AddTouristSiteViewController.m; sourceTree = "<group>"; };
 		C99496721C65DF4A00EBF25D /* UnofficialTouristSitesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnofficialTouristSitesViewController.h; path = ViewControllers/TouristSites/UnofficialTouristSitesViewController.h; sourceTree = "<group>"; };
 		C99496731C65DF4A00EBF25D /* UnofficialTouristSitesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnofficialTouristSitesViewController.m; path = ViewControllers/TouristSites/UnofficialTouristSitesViewController.m; sourceTree = "<group>"; };
+		C99496751C65FB9E00EBF25D /* ScoreboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreboardViewController.h; path = ViewControllers/ScoreboardViewController.h; sourceTree = "<group>"; };
+		C99496761C65FB9E00EBF25D /* ScoreboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreboardViewController.m; path = ViewControllers/ScoreboardViewController.m; sourceTree = "<group>"; };
+		C99496781C65FC0500EBF25D /* TMCommonServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMCommonServices.h; path = Web/Services/TMCommonServices.h; sourceTree = "<group>"; };
+		C99496791C65FC0500EBF25D /* TMCommonServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMCommonServices.m; path = Web/Services/TMCommonServices.m; sourceTree = "<group>"; };
+		C994967C1C65FC8600EBF25D /* TMParentTouristSiteRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMParentTouristSiteRequestModel.h; path = Web/Models/TouristSiteModels/RequestModels/TMParentTouristSiteRequestModel.h; sourceTree = "<group>"; };
+		C994967D1C65FC8600EBF25D /* TMParentTouristSiteRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMParentTouristSiteRequestModel.m; path = Web/Models/TouristSiteModels/RequestModels/TMParentTouristSiteRequestModel.m; sourceTree = "<group>"; };
+		C994967E1C65FC8600EBF25D /* TMTouristSiteRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTouristSiteRequestModel.h; path = Web/Models/TouristSiteModels/RequestModels/TMTouristSiteRequestModel.h; sourceTree = "<group>"; };
+		C994967F1C65FC8600EBF25D /* TMTouristSiteRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTouristSiteRequestModel.m; path = Web/Models/TouristSiteModels/RequestModels/TMTouristSiteRequestModel.m; sourceTree = "<group>"; };
+		C99496821C65FC9200EBF25D /* TMParentTouristSiteInfoResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMParentTouristSiteInfoResponseModel.h; path = Web/Models/TouristSiteModels/ResponseModels/TMParentTouristSiteInfoResponseModel.h; sourceTree = "<group>"; };
+		C99496831C65FC9200EBF25D /* TMParentTouristSiteInfoResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMParentTouristSiteInfoResponseModel.m; path = Web/Models/TouristSiteModels/ResponseModels/TMParentTouristSiteInfoResponseModel.m; sourceTree = "<group>"; };
+		C99496841C65FC9200EBF25D /* TMParentTouristSiteResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMParentTouristSiteResponseModel.h; path = Web/Models/TouristSiteModels/ResponseModels/TMParentTouristSiteResponseModel.h; sourceTree = "<group>"; };
+		C99496851C65FC9200EBF25D /* TMParentTouristSiteResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMParentTouristSiteResponseModel.m; path = Web/Models/TouristSiteModels/ResponseModels/TMParentTouristSiteResponseModel.m; sourceTree = "<group>"; };
+		C99496861C65FC9200EBF25D /* TMSimpleParentTouristSiteResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMSimpleParentTouristSiteResponseModel.h; path = Web/Models/TouristSiteModels/ResponseModels/TMSimpleParentTouristSiteResponseModel.h; sourceTree = "<group>"; };
+		C99496871C65FC9200EBF25D /* TMSimpleParentTouristSiteResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMSimpleParentTouristSiteResponseModel.m; path = Web/Models/TouristSiteModels/ResponseModels/TMSimpleParentTouristSiteResponseModel.m; sourceTree = "<group>"; };
+		C99496881C65FC9200EBF25D /* TMSimpleTouristSiteResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMSimpleTouristSiteResponseModel.h; path = Web/Models/TouristSiteModels/ResponseModels/TMSimpleTouristSiteResponseModel.h; sourceTree = "<group>"; };
+		C99496891C65FC9200EBF25D /* TMSimpleTouristSiteResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMSimpleTouristSiteResponseModel.m; path = Web/Models/TouristSiteModels/ResponseModels/TMSimpleTouristSiteResponseModel.m; sourceTree = "<group>"; };
+		C994968A1C65FC9200EBF25D /* TMTouristSiteResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTouristSiteResponseModel.h; path = Web/Models/TouristSiteModels/ResponseModels/TMTouristSiteResponseModel.h; sourceTree = "<group>"; };
+		C994968B1C65FC9200EBF25D /* TMTouristSiteResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTouristSiteResponseModel.m; path = Web/Models/TouristSiteModels/ResponseModels/TMTouristSiteResponseModel.m; sourceTree = "<group>"; };
+		C99496971C65FCCF00EBF25D /* TMUserLoginResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMUserLoginResponseModel.h; path = Web/Models/UserModels/ResponseModels/TMUserLoginResponseModel.h; sourceTree = "<group>"; };
+		C99496981C65FCCF00EBF25D /* TMUserLoginResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMUserLoginResponseModel.m; path = Web/Models/UserModels/ResponseModels/TMUserLoginResponseModel.m; sourceTree = "<group>"; };
+		C994969A1C65FCD900EBF25D /* TMUserLoginRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMUserLoginRequestModel.h; path = Web/Models/UserModels/RequestModels/TMUserLoginRequestModel.h; sourceTree = "<group>"; };
+		C994969B1C65FCD900EBF25D /* TMUserLoginRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMUserLoginRequestModel.m; path = Web/Models/UserModels/RequestModels/TMUserLoginRequestModel.m; sourceTree = "<group>"; };
+		C994969C1C65FCD900EBF25D /* TMUserRegisterRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMUserRegisterRequestModel.h; path = Web/Models/UserModels/RequestModels/TMUserRegisterRequestModel.h; sourceTree = "<group>"; };
+		C994969D1C65FCD900EBF25D /* TMUserRegisterRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMUserRegisterRequestModel.m; path = Web/Models/UserModels/RequestModels/TMUserRegisterRequestModel.m; sourceTree = "<group>"; };
+		C99496A21C65FD0700EBF25D /* TMScoreboardResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMScoreboardResponseModel.h; path = Web/Models/Common/ResponseModels/TMScoreboardResponseModel.h; sourceTree = "<group>"; };
+		C99496A31C65FD0700EBF25D /* TMScoreboardResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMScoreboardResponseModel.m; path = Web/Models/Common/ResponseModels/TMScoreboardResponseModel.m; sourceTree = "<group>"; };
+		C99496A51C65FDFD00EBF25D /* TMBaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMBaseService.h; path = Web/Services/TMBaseService.h; sourceTree = "<group>"; };
+		C99496A61C65FDFD00EBF25D /* TMBaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMBaseService.m; path = Web/Services/TMBaseService.m; sourceTree = "<group>"; };
 		C9ED0B691C6019660085EBF2 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = Images/Logo.png; sourceTree = "<group>"; };
 		C9ED0B6A1C6019660085EBF2 /* SlimLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SlimLogo.png; path = Images/SlimLogo.png; sourceTree = "<group>"; };
 		C9ED0B701C6035BD0085EBF2 /* RoundedCornersButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoundedCornersButton.h; path = Views/RoundedCornersButton.h; sourceTree = "<group>"; };
 		C9ED0B711C6035BD0085EBF2 /* RoundedCornersButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoundedCornersButton.m; path = Views/RoundedCornersButton.m; sourceTree = "<group>"; };
 		C9FDE05F1C62B8CD005D0FDB /* CustomTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTabBarItem.h; path = Views/CustomTabBarItem.h; sourceTree = "<group>"; };
 		C9FDE0601C62B8CD005D0FDB /* CustomTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTabBarItem.m; path = Views/CustomTabBarItem.m; sourceTree = "<group>"; };
-		C9FDE0651C62BDA1005D0FDB /* TMParentTouristSiteResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMParentTouristSiteResponseModel.h; path = Web/TouristSiteModels/ResponseModels/TMParentTouristSiteResponseModel.h; sourceTree = "<group>"; };
-		C9FDE0661C62BDA1005D0FDB /* TMParentTouristSiteResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMParentTouristSiteResponseModel.m; path = Web/TouristSiteModels/ResponseModels/TMParentTouristSiteResponseModel.m; sourceTree = "<group>"; };
 		C9FDE0691C62BE4B005D0FDB /* TMTouristSitesServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTouristSitesServices.h; path = Web/Services/TMTouristSitesServices.h; sourceTree = "<group>"; };
 		C9FDE06A1C62BE4B005D0FDB /* TMTouristSitesServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTouristSitesServices.m; path = Web/Services/TMTouristSitesServices.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -229,6 +241,8 @@
 				C9041B2D1C64A227004B5708 /* TouristSites */,
 				C954C7B41C6015AA00E12996 /* MainViewController.h */,
 				C954C7B51C6015AA00E12996 /* MainViewController.m */,
+				C99496751C65FB9E00EBF25D /* ScoreboardViewController.h */,
+				C99496761C65FB9E00EBF25D /* ScoreboardViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -251,9 +265,8 @@
 		C954C7C81C6015EC00E12996 /* Web */ = {
 			isa = PBXGroup;
 			children = (
+				C994967B1C65FC4400EBF25D /* Models */,
 				C9FDE0681C62BE0D005D0FDB /* Services */,
-				C9FDE0621C62BCDC005D0FDB /* TouristSiteModels */,
-				C954C7C91C6015F300E12996 /* UserModels */,
 				C954C7D51C60165C00E12996 /* TMRequester.h */,
 				C954C7D61C60165C00E12996 /* TMRequester.m */,
 			);
@@ -272,10 +285,10 @@
 		C954C7CA1C6015FA00E12996 /* RequestModels */ = {
 			isa = PBXGroup;
 			children = (
-				C954C7CF1C60163B00E12996 /* TMUserLoginRequestModel.h */,
-				C954C7D01C60163B00E12996 /* TMUserLoginRequestModel.m */,
-				C954C7D11C60163B00E12996 /* TMUserRegisterRequestModel.h */,
-				C954C7D21C60163B00E12996 /* TMUserRegisterRequestModel.m */,
+				C994969A1C65FCD900EBF25D /* TMUserLoginRequestModel.h */,
+				C994969B1C65FCD900EBF25D /* TMUserLoginRequestModel.m */,
+				C994969C1C65FCD900EBF25D /* TMUserRegisterRequestModel.h */,
+				C994969D1C65FCD900EBF25D /* TMUserRegisterRequestModel.m */,
 			);
 			name = RequestModels;
 			sourceTree = "<group>";
@@ -283,8 +296,8 @@
 		C954C7CB1C60160900E12996 /* ResponseModels */ = {
 			isa = PBXGroup;
 			children = (
-				C954C7CC1C60162200E12996 /* TMUserLoginResponseModel.h */,
-				C954C7CD1C60162200E12996 /* TMUserLoginResponseModel.m */,
+				C99496971C65FCCF00EBF25D /* TMUserLoginResponseModel.h */,
+				C99496981C65FCCF00EBF25D /* TMUserLoginResponseModel.m */,
 			);
 			name = ResponseModels;
 			sourceTree = "<group>";
@@ -338,12 +351,39 @@
 		C99496681C655A5B00EBF25D /* RequestModels */ = {
 			isa = PBXGroup;
 			children = (
-				C99496691C655A9900EBF25D /* TMParentTouristSiteRequestModel.h */,
-				C994966A1C655A9900EBF25D /* TMParentTouristSiteRequestModel.m */,
-				C994966C1C65642400EBF25D /* TMTouristSiteRequestModel.h */,
-				C994966D1C65642400EBF25D /* TMTouristSiteRequestModel.m */,
+				C994967C1C65FC8600EBF25D /* TMParentTouristSiteRequestModel.h */,
+				C994967D1C65FC8600EBF25D /* TMParentTouristSiteRequestModel.m */,
+				C994967E1C65FC8600EBF25D /* TMTouristSiteRequestModel.h */,
+				C994967F1C65FC8600EBF25D /* TMTouristSiteRequestModel.m */,
 			);
 			name = RequestModels;
+			sourceTree = "<group>";
+		};
+		C994967B1C65FC4400EBF25D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C99496A01C65FCE300EBF25D /* Common */,
+				C9FDE0621C62BCDC005D0FDB /* TouristSiteModels */,
+				C954C7C91C6015F300E12996 /* UserModels */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C99496A01C65FCE300EBF25D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C99496A11C65FCE800EBF25D /* ResponseModels */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		C99496A11C65FCE800EBF25D /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				C99496A21C65FD0700EBF25D /* TMScoreboardResponseModel.h */,
+				C99496A31C65FD0700EBF25D /* TMScoreboardResponseModel.m */,
+			);
+			name = ResponseModels;
 			sourceTree = "<group>";
 		};
 		C9E86B0D1C60D44F00B87456 /* Data */ = {
@@ -398,16 +438,16 @@
 		C9FDE0631C62BD6C005D0FDB /* ResponseModels */ = {
 			isa = PBXGroup;
 			children = (
-				C9FDE0651C62BDA1005D0FDB /* TMParentTouristSiteResponseModel.h */,
-				C9FDE0661C62BDA1005D0FDB /* TMParentTouristSiteResponseModel.m */,
-				C904C1DB1C637B5C00A40D57 /* TMSimpleParentTouristSiteResponseModel.h */,
-				C904C1DC1C637B5C00A40D57 /* TMSimpleParentTouristSiteResponseModel.m */,
-				C904C1DE1C637CE300A40D57 /* TMSimpleTouristSiteResponseModel.h */,
-				C904C1DF1C637CE300A40D57 /* TMSimpleTouristSiteResponseModel.m */,
-				C904C1E11C63A8D100A40D57 /* TMParentTouristSiteInfoResponseModel.h */,
-				C904C1E21C63A8D100A40D57 /* TMParentTouristSiteInfoResponseModel.m */,
-				C904C1E41C63AA4500A40D57 /* TMTouristSiteResponseModel.h */,
-				C904C1E51C63AA4500A40D57 /* TMTouristSiteResponseModel.m */,
+				C99496821C65FC9200EBF25D /* TMParentTouristSiteInfoResponseModel.h */,
+				C99496831C65FC9200EBF25D /* TMParentTouristSiteInfoResponseModel.m */,
+				C99496841C65FC9200EBF25D /* TMParentTouristSiteResponseModel.h */,
+				C99496851C65FC9200EBF25D /* TMParentTouristSiteResponseModel.m */,
+				C99496861C65FC9200EBF25D /* TMSimpleParentTouristSiteResponseModel.h */,
+				C99496871C65FC9200EBF25D /* TMSimpleParentTouristSiteResponseModel.m */,
+				C99496881C65FC9200EBF25D /* TMSimpleTouristSiteResponseModel.h */,
+				C99496891C65FC9200EBF25D /* TMSimpleTouristSiteResponseModel.m */,
+				C994968A1C65FC9200EBF25D /* TMTouristSiteResponseModel.h */,
+				C994968B1C65FC9200EBF25D /* TMTouristSiteResponseModel.m */,
 			);
 			name = ResponseModels;
 			sourceTree = "<group>";
@@ -417,6 +457,10 @@
 			children = (
 				C9FDE0691C62BE4B005D0FDB /* TMTouristSitesServices.h */,
 				C9FDE06A1C62BE4B005D0FDB /* TMTouristSitesServices.m */,
+				C99496781C65FC0500EBF25D /* TMCommonServices.h */,
+				C99496791C65FC0500EBF25D /* TMCommonServices.m */,
+				C99496A51C65FDFD00EBF25D /* TMBaseService.h */,
+				C99496A61C65FDFD00EBF25D /* TMBaseService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -547,39 +591,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				C99496671C65581500EBF25D /* AddParentTouristSiteViewController.m in Sources */,
+				C99496811C65FC8600EBF25D /* TMTouristSiteRequestModel.m in Sources */,
 				C9016DAC1C6165AF00798C07 /* TMParentTouristSiteModel.m in Sources */,
-				C904C1E31C63A8D100A40D57 /* TMParentTouristSiteInfoResponseModel.m in Sources */,
 				C9FDE06B1C62BE4B005D0FDB /* TMTouristSitesServices.m in Sources */,
-				C994966E1C65642400EBF25D /* TMTouristSiteRequestModel.m in Sources */,
+				C99496A41C65FD0700EBF25D /* TMScoreboardResponseModel.m in Sources */,
+				C994967A1C65FC0500EBF25D /* TMCommonServices.m in Sources */,
 				C97DB6DE1C5D38FA00ED629F /* AppDelegate.m in Sources */,
+				C99496771C65FB9E00EBF25D /* ScoreboardViewController.m in Sources */,
+				C994968E1C65FC9200EBF25D /* TMSimpleParentTouristSiteResponseModel.m in Sources */,
 				C9041B501C64A2AC004B5708 /* OfficialTouristSitesViewController.m in Sources */,
 				C9041B521C64A2AC004B5708 /* RateViewController.m in Sources */,
 				C9041B481C64A29D004B5708 /* LoginViewController.m in Sources */,
+				C994968D1C65FC9200EBF25D /* TMParentTouristSiteResponseModel.m in Sources */,
 				C9016DAF1C6166E200798C07 /* TMTouristSiteModel.m in Sources */,
-				C954C7CE1C60162200E12996 /* TMUserLoginResponseModel.m in Sources */,
-				C954C7D31C60163B00E12996 /* TMUserLoginRequestModel.m in Sources */,
+				C994968C1C65FC9200EBF25D /* TMParentTouristSiteInfoResponseModel.m in Sources */,
+				C994969F1C65FCD900EBF25D /* TMUserRegisterRequestModel.m in Sources */,
 				C954C7D71C60165C00E12996 /* TMRequester.m in Sources */,
 				C9041B491C64A29D004B5708 /* RegisterViewController.m in Sources */,
 				C99496741C65DF4A00EBF25D /* UnofficialTouristSitesViewController.m in Sources */,
 				C9ED0B721C6035BD0085EBF2 /* RoundedCornersButton.m in Sources */,
+				C99496801C65FC8600EBF25D /* TMParentTouristSiteRequestModel.m in Sources */,
 				C99496711C65689800EBF25D /* AddTouristSiteViewController.m in Sources */,
-				C994966B1C655A9A00EBF25D /* TMParentTouristSiteRequestModel.m in Sources */,
 				C97DB6DB1C5D38FA00ED629F /* main.m in Sources */,
-				C904C1E01C637CE300A40D57 /* TMSimpleTouristSiteResponseModel.m in Sources */,
-				C904C1DD1C637B5C00A40D57 /* TMSimpleParentTouristSiteResponseModel.m in Sources */,
 				C9041B5E1C64A361004B5708 /* TMTouristSiteContracts.m in Sources */,
-				C904C1E61C63AA4500A40D57 /* TMTouristSiteResponseModel.m in Sources */,
-				C9FDE0671C62BDA1005D0FDB /* TMParentTouristSiteResponseModel.m in Sources */,
+				C994969E1C65FCD900EBF25D /* TMUserLoginRequestModel.m in Sources */,
 				C954C7C51C6015E300E12996 /* TMAlertControllerFactory.m in Sources */,
+				C99496901C65FC9200EBF25D /* TMTouristSiteResponseModel.m in Sources */,
 				C9041B611C64CEC9004B5708 /* NearMeViewController.m in Sources */,
 				C9041B511C64A2AC004B5708 /* ParentDetailsViewController.m in Sources */,
+				C99496991C65FCCF00EBF25D /* TMUserLoginResponseModel.m in Sources */,
 				C9041B551C64A2CF004B5708 /* TouristSiteDetailsViewController.m in Sources */,
+				C99496A71C65FDFD00EBF25D /* TMBaseService.m in Sources */,
 				C96066DE1C6256E10070D36E /* TMProgressAlertDialog.m in Sources */,
 				C954C7C41C6015E300E12996 /* TMActivityIndicatorFactory.m in Sources */,
+				C994968F1C65FC9200EBF25D /* TMSimpleTouristSiteResponseModel.m in Sources */,
 				C954C7C61C6015E300E12996 /* TMConstants.m in Sources */,
 				C9041B5D1C64A361004B5708 /* TMParentTouristSiteContracts.m in Sources */,
 				C9FDE0611C62B8CD005D0FDB /* CustomTabBarItem.m in Sources */,
-				C954C7D41C60163B00E12996 /* TMUserRegisterRequestModel.m in Sources */,
 				C9041B581C64A34C004B5708 /* TMSQLiteDatabaseHandler.m in Sources */,
 				C954C7B91C6015AA00E12996 /* MainViewController.m in Sources */,
 			);

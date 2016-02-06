@@ -6,6 +6,51 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Scoreboard-->
+        <scene sceneID="YRg-Ye-SVC">
+            <objects>
+                <viewController title="Scoreboard" id="sC6-U9-fqV" customClass="ScoreboardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NuC-GN-Aok"/>
+                        <viewControllerLayoutGuide type="bottom" id="qp1-hO-e6S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1LT-vF-138">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bulgarian-Gerb.gif" translatesAutoresizingMaskIntoConstraints="NO" id="2a1-oU-RBK">
+                                <rect key="frame" x="0.0" y="35" width="600" height="530"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g1v-kg-79D">
+                                <rect key="frame" x="20" y="64" width="560" height="491"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vek-IQ-iFt" id="rDk-hc-aY5"/>
+                                    <outlet property="delegate" destination="vek-IQ-iFt" id="8rm-cO-Ghf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qp1-hO-e6S" firstAttribute="top" secondItem="g1v-kg-79D" secondAttribute="bottom" constant="45" id="Alg-10-1iC"/>
+                            <constraint firstItem="g1v-kg-79D" firstAttribute="leading" secondItem="1LT-vF-138" secondAttribute="leadingMargin" id="FcD-Ts-vRS"/>
+                            <constraint firstItem="g1v-kg-79D" firstAttribute="top" secondItem="NuC-GN-Aok" secondAttribute="bottom" id="G27-yA-OZd"/>
+                            <constraint firstItem="2a1-oU-RBK" firstAttribute="centerY" secondItem="1LT-vF-138" secondAttribute="centerY" id="IZO-2D-D3q"/>
+                            <constraint firstItem="2a1-oU-RBK" firstAttribute="centerX" secondItem="g1v-kg-79D" secondAttribute="centerX" id="MGw-7Z-GE6"/>
+                            <constraint firstItem="qp1-hO-e6S" firstAttribute="top" secondItem="2a1-oU-RBK" secondAttribute="bottom" constant="35" id="O4a-le-6FN"/>
+                            <constraint firstItem="2a1-oU-RBK" firstAttribute="leading" secondItem="1LT-vF-138" secondAttribute="leading" id="Wgb-3c-kfH"/>
+                            <constraint firstAttribute="trailing" secondItem="2a1-oU-RBK" secondAttribute="trailing" id="c5J-za-JvC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tvScoreboard" destination="g1v-kg-79D" id="2Ni-A0-pJf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s4H-nZ-SRJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="490" y="1023"/>
+        </scene>
         <!--Login-->
         <scene sceneID="n9x-7c-Hth">
             <objects>
@@ -670,10 +715,10 @@
             </objects>
             <point key="canvasLocation" x="4120" y="310"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Scoreboard-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController title="Scoreboard" id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -703,6 +748,9 @@
                                 <rect key="frame" x="20" y="323" width="560" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Scoreboard"/>
+                                <connections>
+                                    <segue destination="sC6-U9-fqV" kind="show" id="aYP-VP-7x4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkN-4a-Pb8" customClass="RoundedCornersButton">
                                 <rect key="frame" x="20" y="486" width="560" height="48"/>

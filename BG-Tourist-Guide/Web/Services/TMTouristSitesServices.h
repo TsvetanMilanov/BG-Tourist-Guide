@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TMBaseService.h"
 #import "TMParentTouristSiteResponseModel.h"
 #import "TMSimpleParentTouristSiteResponseModel.h"
 #import "TMParentTouristSiteInfoResponseModel.h"
@@ -14,9 +15,7 @@
 #import "TMParentTouristSiteRequestModel.h"
 #import "TMTouristSiteRequestModel.h"
 
-@interface TMTouristSitesServices : NSObject
-
--(instancetype)init;
+@interface TMTouristSitesServices : TMBaseService
 
 -(void) getParentTouristSitesForPage: (NSInteger) page type: (NSInteger) type andBlock: (void(^)(NSError *err, NSArray<TMSimpleParentTouristSiteResponseModel*> *result)) block;
 
