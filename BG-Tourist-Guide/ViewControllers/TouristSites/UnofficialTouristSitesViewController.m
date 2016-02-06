@@ -1,12 +1,12 @@
 //
-//  OfficialTouristSitesViewController.m
+//  UnofficialTouristSitesViewController.m
 //  BG-Tourist-Guide
 //
-//  Created by Hakintosh on 2/3/16.
+//  Created by Hakintosh on 2/6/16.
 //  Copyright © 2016 Hakintosh. All rights reserved.
 //
 
-#import "OfficialTouristSitesViewController.h"
+#import "UnofficialTouristSitesViewController.h"
 #import "AddParentTouristSiteViewController.h"
 #import "ParentDetailsViewController.h"
 #import "TMTouristSitesServices.h"
@@ -14,15 +14,12 @@
 #import "TMAlertControllerFactory.h"
 #import "TMActivityIndicatorFactory.h"
 
-@interface OfficialTouristSitesViewController ()
-
+@interface UnofficialTouristSitesViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tvItems;
-
-@property (weak, nonatomic) IBOutlet UIButton *btnLoadMore;
 
 @end
 
-@implementation OfficialTouristSitesViewController
+@implementation UnofficialTouristSitesViewController
 {
     NSMutableArray<TMSimpleParentTouristSiteResponseModel*> *_items;
     NSInteger _currentPage;
@@ -34,7 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _type = 0;
+    _type = 1;
     _currentPage = 1;
     _hasMoreItems = YES;
     _touristSites = [[TMTouristSitesServices alloc] init];
@@ -43,7 +40,7 @@
     UIBarButtonItem *navigateToAddParentTouristSiteButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(navigateToAddParentTouristSiteScene)];
     
     self.tabBarController.navigationItem.rightBarButtonItem = navigateToAddParentTouristSiteButton;
-    self.tabBarController.title = @"Official";
+    self.tabBarController.title = @"Unofficial";
     
     [self loadData];
 }
@@ -93,7 +90,7 @@
 }
 
 -(void) loadData{
-    __weak OfficialTouristSitesViewController *weakSelf = self;
+    __weak UnofficialTouristSitesViewController *weakSelf = self;
     __weak UIActivityIndicatorView *loading = [TMActivityIndicatorFactory activityIndicatorWithParentView:self.view];
     
     [loading startAnimating];
@@ -102,7 +99,7 @@
         [loading stopAnimating];
         
         if (err != nil) {
-            [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Cannot load the information for the official tourist sites from the server. Please try again later." uiViewController:self andHandler:nil];
+            [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Cannot load the information for the unofficial tourist sites from the server. Please try again later." uiViewController:self andHandler:nil];
             return;
         }
         
@@ -117,5 +114,6 @@
         [weakSelf.tvItems reloadData];
     }];
 }
+
 
 @end

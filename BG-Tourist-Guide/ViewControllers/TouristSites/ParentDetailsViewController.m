@@ -7,6 +7,7 @@
 //
 
 #import "ParentDetailsViewController.h"
+#import "AddTouristSiteViewController.h"
 #import "TouristSiteDetailsViewController.h"
 #import "TMTouristSitesServices.h"
 #import "TMParentTouristSiteInfoResponseModel.h"
@@ -37,6 +38,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = self.parentTouristSite.name;
+    
+    UIBarButtonItem *navigateToAddTouristSiteButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(navigateToAddTouristSiteScene)];
+    
+    self.navigationItem.rightBarButtonItem = navigateToAddTouristSiteButton;
+    
     __weak ParentDetailsViewController *weakSelf = self;
     __weak UIActivityIndicatorView *loadingBar = [TMActivityIndicatorFactory activityIndicatorWithParentView:self.view];
     
@@ -58,6 +64,13 @@
 -(void)viewWillAppear:(BOOL)animated{
     self.tableSubTouristSites.delegate = self;
     self.tableSubTouristSites.dataSource = self;
+}
+
+-(void) navigateToAddTouristSiteScene {
+    AddTouristSiteViewController *target = [self.storyboard instantiateViewControllerWithIdentifier:@"AddTouristSiteController"];
+    target.parentTouristSiteId = _parentTouristSite.modelId;
+    
+    [self.navigationController pushViewController:target animated:YES];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

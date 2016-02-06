@@ -51,7 +51,7 @@
             ParentDetailsViewController *destination = [self.storyboard instantiateViewControllerWithIdentifier:@"ParentDetailsController"];
             
             destination.parentTouristSite = result;
-                        
+            
             [self.navigationController pushViewController:destination animated:YES];
         }];
     }];

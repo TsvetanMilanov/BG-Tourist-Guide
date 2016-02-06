@@ -42,6 +42,8 @@
 		C99496671C65581500EBF25D /* AddParentTouristSiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496661C65581500EBF25D /* AddParentTouristSiteViewController.m */; };
 		C994966B1C655A9A00EBF25D /* TMParentTouristSiteRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C994966A1C655A9900EBF25D /* TMParentTouristSiteRequestModel.m */; };
 		C994966E1C65642400EBF25D /* TMTouristSiteRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C994966D1C65642400EBF25D /* TMTouristSiteRequestModel.m */; };
+		C99496711C65689800EBF25D /* AddTouristSiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496701C65689800EBF25D /* AddTouristSiteViewController.m */; };
+		C99496741C65DF4A00EBF25D /* UnofficialTouristSitesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496731C65DF4A00EBF25D /* UnofficialTouristSitesViewController.m */; };
 		C9ED0B6B1C6019660085EBF2 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9ED0B691C6019660085EBF2 /* Logo.png */; };
 		C9ED0B6C1C6019660085EBF2 /* SlimLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9ED0B6A1C6019660085EBF2 /* SlimLogo.png */; };
 		C9ED0B721C6035BD0085EBF2 /* RoundedCornersButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ED0B711C6035BD0085EBF2 /* RoundedCornersButton.m */; };
@@ -119,6 +121,10 @@
 		C994966A1C655A9900EBF25D /* TMParentTouristSiteRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMParentTouristSiteRequestModel.m; path = Web/TouristSiteModels/RequestModels/TMParentTouristSiteRequestModel.m; sourceTree = "<group>"; };
 		C994966C1C65642400EBF25D /* TMTouristSiteRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTouristSiteRequestModel.h; path = Web/TouristSiteModels/RequestModels/TMTouristSiteRequestModel.h; sourceTree = "<group>"; };
 		C994966D1C65642400EBF25D /* TMTouristSiteRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTouristSiteRequestModel.m; path = Web/TouristSiteModels/RequestModels/TMTouristSiteRequestModel.m; sourceTree = "<group>"; };
+		C994966F1C65689800EBF25D /* AddTouristSiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddTouristSiteViewController.h; path = ViewControllers/TouristSites/AddTouristSiteViewController.h; sourceTree = "<group>"; };
+		C99496701C65689800EBF25D /* AddTouristSiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddTouristSiteViewController.m; path = ViewControllers/TouristSites/AddTouristSiteViewController.m; sourceTree = "<group>"; };
+		C99496721C65DF4A00EBF25D /* UnofficialTouristSitesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnofficialTouristSitesViewController.h; path = ViewControllers/TouristSites/UnofficialTouristSitesViewController.h; sourceTree = "<group>"; };
+		C99496731C65DF4A00EBF25D /* UnofficialTouristSitesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnofficialTouristSitesViewController.m; path = ViewControllers/TouristSites/UnofficialTouristSitesViewController.m; sourceTree = "<group>"; };
 		C9ED0B691C6019660085EBF2 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = Images/Logo.png; sourceTree = "<group>"; };
 		C9ED0B6A1C6019660085EBF2 /* SlimLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SlimLogo.png; path = Images/SlimLogo.png; sourceTree = "<group>"; };
 		C9ED0B701C6035BD0085EBF2 /* RoundedCornersButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoundedCornersButton.h; path = Views/RoundedCornersButton.h; sourceTree = "<group>"; };
@@ -197,6 +203,10 @@
 				C9041B601C64CEC9004B5708 /* NearMeViewController.m */,
 				C99496651C65581500EBF25D /* AddParentTouristSiteViewController.h */,
 				C99496661C65581500EBF25D /* AddParentTouristSiteViewController.m */,
+				C994966F1C65689800EBF25D /* AddTouristSiteViewController.h */,
+				C99496701C65689800EBF25D /* AddTouristSiteViewController.m */,
+				C99496721C65DF4A00EBF25D /* UnofficialTouristSitesViewController.h */,
+				C99496731C65DF4A00EBF25D /* UnofficialTouristSitesViewController.m */,
 			);
 			name = TouristSites;
 			sourceTree = "<group>";
@@ -550,7 +560,9 @@
 				C954C7D31C60163B00E12996 /* TMUserLoginRequestModel.m in Sources */,
 				C954C7D71C60165C00E12996 /* TMRequester.m in Sources */,
 				C9041B491C64A29D004B5708 /* RegisterViewController.m in Sources */,
+				C99496741C65DF4A00EBF25D /* UnofficialTouristSitesViewController.m in Sources */,
 				C9ED0B721C6035BD0085EBF2 /* RoundedCornersButton.m in Sources */,
+				C99496711C65689800EBF25D /* AddTouristSiteViewController.m in Sources */,
 				C994966B1C655A9A00EBF25D /* TMParentTouristSiteRequestModel.m in Sources */,
 				C97DB6DB1C5D38FA00ED629F /* main.m in Sources */,
 				C904C1E01C637CE300A40D57 /* TMSimpleTouristSiteResponseModel.m in Sources */,

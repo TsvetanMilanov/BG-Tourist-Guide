@@ -8,7 +8,7 @@
 
 #import "TMTouristSitesServices.h"
 #import "TMRequester.h"
-#import "TMTouristSiteResponseModel.h"
+#import "TMSimpleTouristSiteResponseModel.h"
 
 @implementation TMTouristSitesServices
 {
@@ -23,8 +23,8 @@
     return self;
 }
 
--(void) getParentTouristSitesForPage: (NSInteger*) page type: (NSInteger*) type andBlock: (void(^)(NSError*, NSArray<TMSimpleParentTouristSiteResponseModel*>*)) block {
-    [_requester getJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/Parents/Simple?page=%@&type=%ld", [NSNumber numberWithInteger:*page], (long)type] andBlock:^(NSError *err, id result) {
+-(void) getParentTouristSitesForPage: (NSInteger) page type: (NSInteger) type andBlock: (void(^)(NSError*, NSArray<TMSimpleParentTouristSiteResponseModel*>*)) block {
+    [_requester getJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/Parents/Simple?page=%@&type=%ld", [NSNumber numberWithInteger: page], (long)type] andBlock:^(NSError *err, id result) {
         NSMutableArray *mappedResult = [NSMutableArray new];
         
         for (NSDictionary *item in result) {
@@ -70,13 +70,26 @@
 }
 
 -(void) addParentTouristSite: (TMParentTouristSiteRequestModel*) model andBlock: (void(^)(NSError* err, TMSimpleParentTouristSiteResponseModel *result)) block {
-    [_requester postJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites"] data: [model toJSONString] andBlock:^(NSError *err, id result) {
+    [_requester postJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/Parents"] data: [model toJSONString] andBlock:^(NSError *err, id result) {
         if (err != nil) {
             block(err, nil);
             return;
         }
         
         TMSimpleParentTouristSiteResponseModel * mappedResult = [[TMSimpleParentTouristSiteResponseModel alloc] initWithDictionary:result error:nil];
+        
+        block(err, mappedResult);
+    }];
+}
+
+-(void) addTouristSite: (TMTouristSiteRequestModel*) model andBlock: (void(^)(NSError* err, TMSimpleTouristSiteResponseModel *result)) block {
+    [_requester postJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites"] data: [model toJSONString] andBlock:^(NSError *err, id result) {
+        if (err != nil) {
+            block(err, nil);
+            return;
+        }
+        
+        TMSimpleTouristSiteResponseModel * mappedResult = [[TMSimpleTouristSiteResponseModel alloc] initWithDictionary:result error:nil];
         
         block(err, mappedResult);
     }];
