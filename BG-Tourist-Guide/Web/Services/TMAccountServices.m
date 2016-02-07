@@ -29,6 +29,8 @@
             [mappedVisitedTouristSites addObject: [[TMTouristSiteResponseModel alloc] initWithDictionary: item error: nil]];
         }
         
+        mappedResponse.VisitedTouristSites = [NSArray arrayWithArray:mappedVisitedTouristSites];
+        
         NSArray *notMappedBadges = [NSArray arrayWithArray: mappedResponse.Badges];
         
         mappedResponse.Badges = [NSMutableArray new];
