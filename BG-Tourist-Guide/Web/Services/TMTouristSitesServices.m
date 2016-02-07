@@ -96,7 +96,7 @@
 }
 
 -(void) visitTouristSite: (NSInteger) touristSiteId andBlock: (void(^)(NSError *err)) block {
-    [self.requester postJSONWithUrl:@"/api/TouristSites/Visit" data:nil andBlock:^(NSError *err, id result) {
+    [self.requester postJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/Visit?id=%ld", touristSiteId] data:nil andBlock:^(NSError *err, id result) {
         if (err != nil) {
             block(err);
             return;

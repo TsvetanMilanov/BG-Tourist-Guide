@@ -39,8 +39,6 @@
     _visitedTouristSites = [NSMutableArray new];
     _badges = [NSMutableArray new];
     _account = [[TMAccountServices alloc] init];
-    
-    [self loadData];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -49,10 +47,12 @@
     self.tvBadges.delegate = _badgesDelegate;
     self.tvBadges.dataSource = _badgesDelegate;
     
-    _touristSitesDelegate = [[TMTableViewTouristSitesDelegate alloc] init];
+    _touristSitesDelegate = [[TMTableViewTouristSitesDelegate alloc] initWithController:self];
     
     self.tvVisitedTouristSites.delegate = _touristSitesDelegate;
     self.tvVisitedTouristSites.dataSource = _touristSitesDelegate;
+    
+    [self loadData];
 }
 
 -(void) loadData{

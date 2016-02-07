@@ -7,11 +7,13 @@
 //
 
 #import "TMTableViewTouristSitesDelegate.h"
+#import "TouristSiteDetailsViewController.h"
 
 @implementation TMTableViewTouristSitesDelegate
--(instancetype)init {
+-(instancetype)initWithController: (UIViewController*) controller {
     if (self = [super init]) {
         self.items = [NSMutableArray new];
+        self.controller = controller;
     }
     
     return self;
@@ -32,4 +34,15 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.items.count;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    TouristSiteDetailsViewController *destination = [self.controller.storyboard instantiateViewControllerWithIdentifier:@"TouristSiteDetailsScene"];
+    
+    TMTouristSiteResponseModel *touristSite = (TMTouristSiteResponseModel*)self.items[indexPath.row];
+    
+    destination.touristSite = touristSite;
+    
+    [self.controller.navigationController pushViewController:destination animated:YES];
+}
+
 @end

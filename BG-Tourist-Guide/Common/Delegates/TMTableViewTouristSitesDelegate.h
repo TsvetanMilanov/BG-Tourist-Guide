@@ -12,6 +12,7 @@
 
 @interface TMTableViewTouristSitesDelegate : NSObject<UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) NSArray<TMTouristSiteResponseModel*>* items;
+@property (strong, nonatomic) UIViewController* controller;
 
--(instancetype)init;
+-(instancetype)initWithController: (UIViewController*) controller;
 @end
