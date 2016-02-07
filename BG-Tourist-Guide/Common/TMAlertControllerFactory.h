@@ -20,6 +20,9 @@
                 uiViewController: (UIViewController* _Nonnull) controller
                       andHandler: (void (^ __nullable)(UIAlertAction* _Nonnull action))handler;
 
++(void) showEnterCodeDialogWithUiViewController: (UIViewController* _Nonnull) controller
+                      andHandler: (void (^ __nullable)(NSString* _Nonnull textField))handler;
+
 +(TMProgressAlertDialog* _Nonnull) progressAlertDialogWithTitle: (NSString* _Nullable) title;
 
 @end

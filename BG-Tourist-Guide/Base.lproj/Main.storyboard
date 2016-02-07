@@ -18,9 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bulgarian-Gerb.gif" translatesAutoresizingMaskIntoConstraints="NO" id="2a1-oU-RBK">
-                                <rect key="frame" x="0.0" y="35" width="600" height="530"/>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g1v-kg-79D">
                                 <rect key="frame" x="20" y="64" width="560" height="491"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -30,6 +27,9 @@
                                     <outlet property="delegate" destination="vek-IQ-iFt" id="8rm-cO-Ghf"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bulgarian-Gerb.gif" translatesAutoresizingMaskIntoConstraints="NO" id="2a1-oU-RBK">
+                                <rect key="frame" x="0.0" y="35" width="600" height="530"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -297,13 +297,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bulgarian-Gerb.gif" translatesAutoresizingMaskIntoConstraints="NO" id="wIz-mf-8hq">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="myD-xX-RrC">
                                 <rect key="frame" x="25" y="72" width="555" height="508"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bulgarian-Gerb.gif" translatesAutoresizingMaskIntoConstraints="NO" id="wIz-mf-8hq">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -793,6 +793,9 @@
                                 <rect key="frame" x="20" y="149" width="560" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Check In"/>
+                                <connections>
+                                    <segue destination="zL5-Wu-Pxh" kind="show" id="hRD-BG-3AS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDc-lU-pB6" customClass="RoundedCornersButton">
                                 <rect key="frame" x="20" y="267" width="560" height="48"/>
@@ -987,6 +990,64 @@
             </objects>
             <point key="canvasLocation" x="2829" y="-381"/>
         </scene>
+        <!--Check In-->
+        <scene sceneID="XyB-YT-7LL">
+            <objects>
+                <viewController title="Check In" id="zL5-Wu-Pxh" customClass="VisitTouristSiteViewController" customModule="BG_Tourist_Guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ToK-3R-Bgs"/>
+                        <viewControllerLayoutGuide type="bottom" id="UnL-8S-5pf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dWp-8O-fPq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bulgarian-Gerb.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Vkl-hg-5g3">
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHA-Ou-O1V">
+                                <rect key="frame" x="203" y="158" width="195" height="121"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="121" id="anS-nd-e4a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Scan QR Code"/>
+                                <connections>
+                                    <action selector="btnScanQRCodeTap:" destination="zL5-Wu-Pxh" eventType="touchUpInside" id="kFr-Xy-zAt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMw-dK-NXf">
+                                <rect key="frame" x="203" y="320" width="195" height="121"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="121" id="MDY-l5-wMQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Enter Code"/>
+                                <connections>
+                                    <action selector="btnEnterCodeTap:" destination="zL5-Wu-Pxh" eventType="touchUpInside" id="QAx-vm-wPz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="oMw-dK-NXf" secondAttribute="bottom" constant="159" id="5iN-gy-vpQ"/>
+                            <constraint firstItem="Vkl-hg-5g3" firstAttribute="bottom" secondItem="UnL-8S-5pf" secondAttribute="top" id="CAi-E2-NHY"/>
+                            <constraint firstItem="Vkl-hg-5g3" firstAttribute="leading" secondItem="dWp-8O-fPq" secondAttribute="leading" id="PTt-xj-WlD"/>
+                            <constraint firstItem="wHA-Ou-O1V" firstAttribute="centerX" secondItem="Vkl-hg-5g3" secondAttribute="centerX" id="aRe-1T-VNf"/>
+                            <constraint firstItem="wHA-Ou-O1V" firstAttribute="top" secondItem="ToK-3R-Bgs" secondAttribute="bottom" constant="94" id="bRj-og-58p"/>
+                            <constraint firstItem="Vkl-hg-5g3" firstAttribute="top" secondItem="ToK-3R-Bgs" secondAttribute="bottom" constant="6" id="iMl-yg-Sz9"/>
+                            <constraint firstAttribute="trailing" secondItem="Vkl-hg-5g3" secondAttribute="trailing" id="u2s-x6-RxX"/>
+                            <constraint firstItem="wHA-Ou-O1V" firstAttribute="trailing" secondItem="oMw-dK-NXf" secondAttribute="trailing" id="uTt-j5-wNN"/>
+                            <constraint firstItem="wHA-Ou-O1V" firstAttribute="leading" secondItem="oMw-dK-NXf" secondAttribute="leading" id="wex-aM-9i6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k4Z-pm-2Ym" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3457" y="-381"/>
+        </scene>
         <!--Profile View Controller-->
         <scene sceneID="qD5-ld-7Vv">
             <objects>
@@ -999,9 +1060,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Bulgarian-Gerb.gif" translatesAutoresizingMaskIntoConstraints="NO" id="YRQ-r3-9h1">
-                                <rect key="frame" x="20" y="62" width="560" height="530"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirstName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7E-3r-dVE">
                                 <rect key="frame" x="20" y="72" width="560" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -1043,6 +1101,9 @@
                                 <rect key="frame" x="20" y="428" width="560" height="152"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bulgarian-Gerb.gif" translatesAutoresizingMaskIntoConstraints="NO" id="YRQ-r3-9h1">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1051,15 +1112,15 @@
                             <constraint firstItem="zjW-n9-Rn4" firstAttribute="centerX" secondItem="VnL-2W-s4Z" secondAttribute="centerX" id="6gi-26-szQ"/>
                             <constraint firstItem="n3x-aD-zCj" firstAttribute="top" secondItem="zjW-n9-Rn4" secondAttribute="bottom" constant="8" symbolic="YES" id="74s-mo-8Bu"/>
                             <constraint firstItem="Cwg-Vl-wj4" firstAttribute="top" secondItem="zjW-n9-Rn4" secondAttribute="bottom" constant="224" id="CYs-GY-EEf"/>
-                            <constraint firstItem="YRQ-r3-9h1" firstAttribute="leading" secondItem="XGb-0m-dp4" secondAttribute="leadingMargin" id="Ec2-Ei-2wT"/>
+                            <constraint firstItem="YRQ-r3-9h1" firstAttribute="leading" secondItem="XGb-0m-dp4" secondAttribute="leadingMargin" constant="-20" id="Ec2-Ei-2wT"/>
                             <constraint firstItem="28N-SL-LHP" firstAttribute="trailing" secondItem="q3S-l2-9XL" secondAttribute="trailing" id="QRM-HS-5EE"/>
                             <constraint firstItem="28N-SL-LHP" firstAttribute="top" secondItem="q7E-3r-dVE" secondAttribute="bottom" constant="8" symbolic="YES" id="RKe-xU-9NU"/>
-                            <constraint firstItem="q7E-3r-dVE" firstAttribute="leading" secondItem="YRQ-r3-9h1" secondAttribute="leading" id="S5R-AI-C4F"/>
+                            <constraint firstItem="q7E-3r-dVE" firstAttribute="leading" secondItem="YRQ-r3-9h1" secondAttribute="leading" constant="20" id="S5R-AI-C4F"/>
                             <constraint firstAttribute="bottom" secondItem="0qK-hT-tAC" secondAttribute="bottom" constant="20" symbolic="YES" id="Tl8-UT-pw6"/>
                             <constraint firstItem="zjW-n9-Rn4" firstAttribute="top" secondItem="VnL-2W-s4Z" secondAttribute="bottom" constant="8" symbolic="YES" id="V52-Ix-PYT"/>
                             <constraint firstItem="q7E-3r-dVE" firstAttribute="top" secondItem="J4l-1f-IlJ" secondAttribute="bottom" constant="8" symbolic="YES" id="YzJ-bf-4MS"/>
-                            <constraint firstItem="Cwg-Vl-wj4" firstAttribute="top" secondItem="YRQ-r3-9h1" secondAttribute="bottom" constant="8" symbolic="YES" id="aTg-v4-lDi"/>
-                            <constraint firstItem="YRQ-r3-9h1" firstAttribute="top" secondItem="J4l-1f-IlJ" secondAttribute="bottom" constant="42" id="cMa-8W-Y20"/>
+                            <constraint firstItem="Cwg-Vl-wj4" firstAttribute="top" secondItem="YRQ-r3-9h1" secondAttribute="bottom" id="aTg-v4-lDi"/>
+                            <constraint firstItem="YRQ-r3-9h1" firstAttribute="top" secondItem="J4l-1f-IlJ" secondAttribute="bottom" id="cMa-8W-Y20"/>
                             <constraint firstItem="VnL-2W-s4Z" firstAttribute="trailing" secondItem="q3S-l2-9XL" secondAttribute="trailing" id="d4i-Xr-M22"/>
                             <constraint firstItem="n3x-aD-zCj" firstAttribute="leading" secondItem="VnL-2W-s4Z" secondAttribute="leading" id="hCZ-ht-k1W"/>
                             <constraint firstItem="VnL-2W-s4Z" firstAttribute="leading" secondItem="q3S-l2-9XL" secondAttribute="leading" id="hOY-F1-duw"/>
@@ -1070,8 +1131,8 @@
                             <constraint firstItem="q7E-3r-dVE" firstAttribute="trailing" secondItem="28N-SL-LHP" secondAttribute="trailing" id="mbn-cC-eFh"/>
                             <constraint firstItem="q3S-l2-9XL" firstAttribute="top" secondItem="28N-SL-LHP" secondAttribute="bottom" constant="8" symbolic="YES" id="mhw-2t-R8J"/>
                             <constraint firstItem="VnL-2W-s4Z" firstAttribute="top" secondItem="q3S-l2-9XL" secondAttribute="bottom" constant="8" symbolic="YES" id="tbk-kL-lXT"/>
-                            <constraint firstItem="q3S-l2-9XL" firstAttribute="trailing" secondItem="YRQ-r3-9h1" secondAttribute="trailing" id="yYo-Rw-OTh"/>
-                            <constraint firstItem="YRQ-r3-9h1" firstAttribute="trailing" secondItem="XGb-0m-dp4" secondAttribute="trailingMargin" id="zcl-Jv-5tq"/>
+                            <constraint firstItem="q3S-l2-9XL" firstAttribute="trailing" secondItem="YRQ-r3-9h1" secondAttribute="trailing" constant="-20" id="yYo-Rw-OTh"/>
+                            <constraint firstItem="YRQ-r3-9h1" firstAttribute="trailing" secondItem="XGb-0m-dp4" secondAttribute="trailingMargin" constant="20" id="zcl-Jv-5tq"/>
                         </constraints>
                     </view>
                     <connections>

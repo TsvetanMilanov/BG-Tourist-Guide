@@ -54,6 +54,7 @@
 		C99496B01C66176100EBF25D /* TMAccountServices.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496AF1C66176100EBF25D /* TMAccountServices.m */; };
 		C99496B41C661B4800EBF25D /* TMTableViewBadgesDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496B31C661B4800EBF25D /* TMTableViewBadgesDelegate.m */; };
 		C99496B71C66236200EBF25D /* TMTableViewTouristSitesDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496B61C66236200EBF25D /* TMTableViewTouristSitesDelegate.m */; };
+		C99496BA1C67376B00EBF25D /* VisitTouristSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99496B91C67376B00EBF25D /* VisitTouristSiteViewController.swift */; };
 		C9ED0B6B1C6019660085EBF2 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9ED0B691C6019660085EBF2 /* Logo.png */; };
 		C9ED0B6C1C6019660085EBF2 /* SlimLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9ED0B6A1C6019660085EBF2 /* SlimLogo.png */; };
 		C9ED0B721C6035BD0085EBF2 /* RoundedCornersButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ED0B711C6035BD0085EBF2 /* RoundedCornersButton.m */; };
@@ -154,6 +155,8 @@
 		C99496B31C661B4800EBF25D /* TMTableViewBadgesDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTableViewBadgesDelegate.m; path = Common/Delegates/TMTableViewBadgesDelegate.m; sourceTree = "<group>"; };
 		C99496B51C66236200EBF25D /* TMTableViewTouristSitesDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTableViewTouristSitesDelegate.h; path = Common/Delegates/TMTableViewTouristSitesDelegate.h; sourceTree = "<group>"; };
 		C99496B61C66236200EBF25D /* TMTableViewTouristSitesDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTableViewTouristSitesDelegate.m; path = Common/Delegates/TMTableViewTouristSitesDelegate.m; sourceTree = "<group>"; };
+		C99496B81C67376B00EBF25D /* BG-Tourist-Guide-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BG-Tourist-Guide-Bridging-Header.h"; sourceTree = "<group>"; };
+		C99496B91C67376B00EBF25D /* VisitTouristSiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisitTouristSiteViewController.swift; path = ViewControllers/VisitTouristSiteViewController.swift; sourceTree = "<group>"; };
 		C9ED0B691C6019660085EBF2 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = Images/Logo.png; sourceTree = "<group>"; };
 		C9ED0B6A1C6019660085EBF2 /* SlimLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SlimLogo.png; path = Images/SlimLogo.png; sourceTree = "<group>"; };
 		C9ED0B701C6035BD0085EBF2 /* RoundedCornersButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoundedCornersButton.h; path = Views/RoundedCornersButton.h; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 				C954C7B51C6015AA00E12996 /* MainViewController.m */,
 				C99496751C65FB9E00EBF25D /* ScoreboardViewController.h */,
 				C99496761C65FB9E00EBF25D /* ScoreboardViewController.m */,
+				C99496B91C67376B00EBF25D /* VisitTouristSiteViewController.swift */,
+				C99496B81C67376B00EBF25D /* BG-Tourist-Guide-Bridging-Header.h */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -637,6 +642,7 @@
 				C9041B501C64A2AC004B5708 /* OfficialTouristSitesViewController.m in Sources */,
 				C9041B521C64A2AC004B5708 /* RateViewController.m in Sources */,
 				C9041B481C64A29D004B5708 /* LoginViewController.m in Sources */,
+				C99496BA1C67376B00EBF25D /* VisitTouristSiteViewController.swift in Sources */,
 				C994968D1C65FC9200EBF25D /* TMParentTouristSiteResponseModel.m in Sources */,
 				C9016DAF1C6166E200798C07 /* TMTouristSiteModel.m in Sources */,
 				C994968C1C65FC9200EBF25D /* TMParentTouristSiteInfoResponseModel.m in Sources */,
@@ -778,6 +784,7 @@
 			baseConfigurationReference = 099F8884153F349DFE1BC24A /* Pods-BG-Tourist-Guide.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "BG-Tourist-Guide/Info.plist";
@@ -785,6 +792,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "lab.hakintosh.BG-Tourist-Guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BG-Tourist-Guide/BG-Tourist-Guide-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -793,6 +802,7 @@
 			baseConfigurationReference = 8C6557488B28C9E673BA445F /* Pods-BG-Tourist-Guide.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "BG-Tourist-Guide/Info.plist";
@@ -800,6 +810,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "lab.hakintosh.BG-Tourist-Guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BG-Tourist-Guide/BG-Tourist-Guide-Bridging-Header.h";
 			};
 			name = Release;
 		};

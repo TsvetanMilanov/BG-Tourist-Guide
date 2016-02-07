@@ -32,6 +32,13 @@
     request.HTTPMethod = @"POST";
     [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *currentUserToken = [userDefaults valueForKey:CURRENT_USER_TOKEN_KEY];
+    
+    [request addValue:[NSString stringWithFormat:@"Bearer %@", currentUserToken] forHTTPHeaderField:@"Authorization"];
+
+    
     NSData *requestBody =[data dataUsingEncoding:NSUTF8StringEncoding];
     request.HTTPBody = requestBody;
     

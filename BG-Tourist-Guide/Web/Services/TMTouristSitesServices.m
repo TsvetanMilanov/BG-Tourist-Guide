@@ -95,4 +95,15 @@
     }];
 }
 
+-(void) visitTouristSite: (NSInteger) touristSiteId andBlock: (void(^)(NSError *err)) block {
+    [self.requester postJSONWithUrl:@"/api/TouristSites/Visit" data:nil andBlock:^(NSError *err, id result) {
+        if (err != nil) {
+            block(err);
+            return;
+        }
+        
+        block(nil);
+    }];
+}
+
 @end

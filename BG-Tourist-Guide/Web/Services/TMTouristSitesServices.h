@@ -28,4 +28,6 @@
 -(void) addTouristSite: (TMTouristSiteRequestModel*) model andBlock: (void(^)(NSError* err, TMSimpleTouristSiteResponseModel *result)) block;
 
 -(void) getTouristSitesForRate: (NSInteger) page andBlock: (void(^)(NSError *err, NSArray<TMTouristSiteResponseModel*> *result)) block;
+
+-(void) visitTouristSite: (NSInteger) touristSiteId andBlock: (void(^)(NSError *err)) block;
 @end

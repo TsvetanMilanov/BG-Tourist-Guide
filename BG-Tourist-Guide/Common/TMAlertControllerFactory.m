@@ -39,4 +39,31 @@
     
     return customProgressDialog;
 }
+
++(void) showEnterCodeDialogWithUiViewController: (UIViewController* _Nonnull) controller
+                                     andHandler: (void (^ __nullable)(NSString*_Nonnull text))handler {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle: @"Enter the code" message: nil preferredStyle: UIAlertControllerStyleAlert];
+    
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"Code...";
+    }];
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSString *text = alertController.textFields[0].text;
+        
+        if (text.length == 0) {
+            return;
+        }
+        
+        handler(text);
+    }];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:nil];
+    
+    [alertController addAction:okAction];
+    [alertController addAction:cancelAction];
+    
+    [controller presentViewController:alertController animated:YES completion: nil];
+}
+
 @end
