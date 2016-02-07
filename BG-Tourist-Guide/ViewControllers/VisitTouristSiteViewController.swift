@@ -9,45 +9,59 @@
 import UIKit
 import AVFoundation
 import QRCodeReader
+import CoreLocation
 
-class VisitTouristSiteViewController: UIViewController, QRCodeReaderViewControllerDelegate  {
+class VisitTouristSiteViewController: UIViewController, QRCodeReaderViewControllerDelegate, CLLocationManagerDelegate  {
+    var locationManager : CLLocationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        locationManager.delegate = self
+        locationManager.distanceFilter = kCLDistanceFilterNone;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     }
     
     @IBAction func btnScanQRCodeTap(sender: AnyObject) {
-        let reader: QRCodeReaderViewController = {
-            let builder = QRCodeViewControllerBuilder { builder in
-                builder.reader = QRCodeReader(metadataObjectTypes: [AVMetadataObjectTypeQRCode])
-                builder.showTorchButton = true
-            }
-            
-            return QRCodeReaderViewController(builder: builder)
-        }()
         
-        if QRCodeReader.supportsMetadataObjectTypes() {
-            reader.modalPresentationStyle = .FormSheet
-            reader.delegate               = self
-            
-            reader.completionBlock = { (result: QRCodeReaderResult?) in
-                if let result = result {
-                    print("Completion with result: \(result.value) of type \(result.metadataType)")
+        if (UIImagePickerController.isSourceTypeAvailable(.Camera))
+        {
+            let reader: QRCodeReaderViewController = {
+                let builder = QRCodeViewControllerBuilder { builder in
+                    builder.reader = QRCodeReader(metadataObjectTypes: [AVMetadataObjectTypeQRCode])
+                    builder.showTorchButton = true
                 }
+                
+                return QRCodeReaderViewController(builder: builder)
+            }()
+            
+            if QRCodeReader.supportsMetadataObjectTypes() {
+                reader.modalPresentationStyle = .FormSheet
+                reader.delegate = self
+                
+                reader.completionBlock = { (result: QRCodeReaderResult?) in
+                    if let result = result {
+                        print("Completion with result: \(result.value) of type \(result.metadataType)")
+                    }
+                }
+                
+                presentViewController(reader, animated: true, completion: nil)
+            }
+            else {
+                TMAlertControllerFactory.showAlertDialogWithTitle("Error", message: "Your device does not have a camera. Please ask for the code of the tourist site and enter it.", uiViewController: self, andHandler: nil);
             }
             
-            presentViewController(reader, animated: true, completion: nil)
         }
         else {
-            let alert = UIAlertController(title: "Error", message: "Reader not supported by the current device", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
-            
-            presentViewController(alert, animated: true, completion: nil)
+            TMAlertControllerFactory.showAlertDialogWithTitle("Error", message: "Your device does not have a camera. Please ask for the code of the tourist site and enter it.", uiViewController: self, andHandler: nil)
         }
+        
     }
     
     func reader(reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
@@ -72,7 +86,11 @@ class VisitTouristSiteViewController: UIViewController, QRCodeReaderViewControll
     }
     
     @IBAction func btnEnterCodeTap(sender: AnyObject) {
+        let weakSelf = self
         TMAlertControllerFactory.showTextInputDialogWithTitle("Enter the code:", controller: self) { (text) in
+            weakSelf.locationManager.requestWhenInUseAuthorization()
+            weakSelf.locationManager.requestLocation()
+            
             let requester = TMRequester()
             
             let loadingBar = TMActivityIndicatorFactory.activityIndicatorWithParentView(self.view)
@@ -92,14 +110,17 @@ class VisitTouristSiteViewController: UIViewController, QRCodeReaderViewControll
     }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
+        print("\(newLocation)")
+    }
     
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("\(error)")
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        for location in locations {
+            print("\(location)")
+        }
+    }
 }
