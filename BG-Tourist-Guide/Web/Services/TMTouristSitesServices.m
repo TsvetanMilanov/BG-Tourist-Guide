@@ -12,7 +12,7 @@
 @implementation TMTouristSitesServices
 
 -(void) getParentTouristSitesForPage: (NSInteger) page type: (NSInteger) type andBlock: (void(^)(NSError*, NSArray<TMSimpleParentTouristSiteResponseModel*>*)) block {
-    [self.requester getJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/Parents/Simple?page=%@&type=%ld", [NSNumber numberWithInteger: page], (long)type] andBlock:^(NSError *err, id result) {
+    [self.requester getJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/Parents/Simple?page=%ld&type=%ld", (long)page, (long)type] andBlock:^(NSError *err, id result) {
         NSMutableArray *mappedResult = [NSMutableArray new];
         
         for (NSDictionary *item in result) {

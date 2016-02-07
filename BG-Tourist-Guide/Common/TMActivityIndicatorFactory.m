@@ -15,7 +15,6 @@
     
     indicator.center = parent.center;
     [parent addSubview: indicator];
-    [indicator bringSubviewToFront:parent];
     
     return indicator;
 }

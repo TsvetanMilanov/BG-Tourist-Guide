@@ -24,7 +24,6 @@ class VisitTouristSiteViewController: UIViewController, QRCodeReaderViewControll
         super.viewWillAppear(animated)
         
         locationManager.delegate = self
-        locationManager.distanceFilter = kCLDistanceFilterNone;
         locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     }
     
@@ -61,28 +60,6 @@ class VisitTouristSiteViewController: UIViewController, QRCodeReaderViewControll
         else {
             TMAlertControllerFactory.showAlertDialogWithTitle("Error", message: "Your device does not have a camera. Please ask for the code of the tourist site and enter it.", uiViewController: self, andHandler: nil)
         }
-        
-    }
-    
-    func reader(reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
-        self.dismissViewControllerAnimated(true, completion: { [weak self] in
-            let requester = TMRequester()
-            let loadingBar = TMActivityIndicatorFactory.activityIndicatorWithParentView(self!.view)
-            
-            requester.postJSONWithUrl(result.value, data: nil, andBlock: { (err, result) in
-                loadingBar.stopAnimating()
-                if err != nil {
-                    TMAlertControllerFactory.showAlertDialogWithTitle("Error", message: "There was an error on the server. Please try again later.", uiViewController: self!, andHandler: nil)
-                    return;
-                }
-                
-                TMAlertControllerFactory.showAlertDialogWithTitle("Success", message: "The tourist site was visited successsfully.", uiViewController: self!, andHandler: nil)
-            })
-            })
-    }
-    
-    func readerDidCancel(reader: QRCodeReaderViewController) {
-        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func btnEnterCodeTap(sender: AnyObject) {
@@ -109,6 +86,27 @@ class VisitTouristSiteViewController: UIViewController, QRCodeReaderViewControll
         }
     }
     
+    
+    func reader(reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
+        self.dismissViewControllerAnimated(true, completion: { [weak self] in
+            let requester = TMRequester()
+            let loadingBar = TMActivityIndicatorFactory.activityIndicatorWithParentView(self!.view)
+            
+            requester.postJSONWithUrl(result.value, data: nil, andBlock: { (err, result) in
+                loadingBar.stopAnimating()
+                if err != nil {
+                    TMAlertControllerFactory.showAlertDialogWithTitle("Error", message: "There was an error on the server. Please try again later.", uiViewController: self!, andHandler: nil)
+                    return;
+                }
+                
+                TMAlertControllerFactory.showAlertDialogWithTitle("Success", message: "The tourist site was visited successsfully.", uiViewController: self!, andHandler: nil)
+            })
+        })
+    }
+    
+    func readerDidCancel(reader: QRCodeReaderViewController) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
         print("\(newLocation)")

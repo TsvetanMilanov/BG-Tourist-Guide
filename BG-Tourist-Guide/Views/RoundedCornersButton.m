@@ -11,7 +11,6 @@
 @implementation RoundedCornersButton
 
 - (void)drawRect:(CGRect)rect {
-    [self sizeThatFits: CGSizeMake(self.bounds.size.width, self.bounds.size.height + 100)];
     self.layer.cornerRadius = 15;
     
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
