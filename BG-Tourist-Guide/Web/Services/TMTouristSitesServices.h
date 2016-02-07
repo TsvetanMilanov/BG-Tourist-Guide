@@ -17,17 +17,29 @@
 
 @interface TMTouristSitesServices : TMBaseService
 
--(void) getParentTouristSitesForPage: (NSInteger) page type: (NSInteger) type andBlock: (void(^)(NSError *err, NSArray<TMSimpleParentTouristSiteResponseModel*> *result)) block;
+-(void) getParentTouristSitesForPage: (NSInteger) page
+                                type: (NSInteger) type
+                            andBlock: (void(^)(NSError *err, NSArray<TMSimpleParentTouristSiteResponseModel*> *result)) block;
 
--(void) getParentTouristSiteInfoById: (NSInteger) modelId andBlock: (void(^)(NSError* err, TMParentTouristSiteInfoResponseModel* result)) block;
+-(void) getParentTouristSiteInfoById: (NSInteger) modelId
+                            andBlock: (void(^)(NSError* err, TMParentTouristSiteInfoResponseModel* result)) block;
 
--(void) getTouristSitesNearMeForPage: (NSInteger) page andBlock: (void(^)(NSError *err, NSArray<TMTouristSiteResponseModel*> *result)) block;
+-(void) getTouristSitesNearMeForPage: (NSInteger) page
+                            andBlock: (void(^)(NSError *err, NSArray<TMTouristSiteResponseModel*> *result)) block;
 
--(void) addParentTouristSite: (TMParentTouristSiteRequestModel*) model andBlock: (void(^)(NSError* err, TMSimpleParentTouristSiteResponseModel *result)) block;
+-(void) addParentTouristSite: (TMParentTouristSiteRequestModel*) model
+                    andBlock: (void(^)(NSError* err, TMSimpleParentTouristSiteResponseModel *result)) block;
 
--(void) addTouristSite: (TMTouristSiteRequestModel*) model andBlock: (void(^)(NSError* err, TMSimpleTouristSiteResponseModel *result)) block;
+-(void) addTouristSite: (TMTouristSiteRequestModel*) model
+              andBlock: (void(^)(NSError* err, TMSimpleTouristSiteResponseModel *result)) block;
 
--(void) getTouristSitesForRate: (NSInteger) page andBlock: (void(^)(NSError *err, NSArray<TMTouristSiteResponseModel*> *result)) block;
+-(void) getTouristSitesForRate: (NSInteger) page
+                      andBlock: (void(^)(NSError *err, NSArray<TMTouristSiteResponseModel*> *result)) block;
 
--(void) visitTouristSite: (NSInteger) touristSiteId andBlock: (void(^)(NSError *err)) block;
+-(void) visitTouristSite: (NSInteger) touristSiteId
+                andBlock: (void(^)(NSError *err)) block;
+
+-(void) rateTouristSiteWithId: (NSInteger) touristSiteId
+                       rating: (NSInteger) rating
+                     andBlock: (void(^)(NSError *err)) block;
 @end

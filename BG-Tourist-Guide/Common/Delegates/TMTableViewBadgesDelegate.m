@@ -9,7 +9,7 @@
 #import "TMTableViewBadgesDelegate.h"
 
 @implementation TMTableViewBadgesDelegate
--(instancetype)initWithItems: (NSArray<NSString*>*) items {
+-(instancetype)initWithItems: (NSArray<TMBadgeResponseModel*>*) items {
     if (self = [super init]) {
         self.items = items;
     }
@@ -24,7 +24,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CellIdentifier"];
     }
     
-    cell.textLabel.text = self.items[indexPath.row];
+    cell.textLabel.text = self.items[indexPath.row].Title;
     
     return cell;
 }

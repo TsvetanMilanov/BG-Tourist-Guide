@@ -27,7 +27,7 @@
 @implementation ProfileViewController
 {
     NSMutableArray<TMTouristSiteResponseModel*> *_visitedTouristSites;
-    NSMutableArray<NSString*> *_badges;
+    NSMutableArray<TMBadgeResponseModel*> *_badges;
     TMAccountServices *_account;
     TMTableViewBadgesDelegate *_badgesDelegate;
     TMTableViewTouristSitesDelegate *_touristSitesDelegate;

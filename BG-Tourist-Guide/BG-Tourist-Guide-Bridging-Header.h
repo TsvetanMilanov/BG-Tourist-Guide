@@ -5,3 +5,4 @@
 #import "TMAlertControllerFactory.h"
 #import "TMRequester.h"
 #import "TMActivityIndicatorFactory.h"
+#import "TMSimpleTouristSiteResponseModel.h"

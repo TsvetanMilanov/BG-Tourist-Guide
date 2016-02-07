@@ -30,6 +30,17 @@
     [controller presentViewController:alertController animated:YES completion: nil];
 }
 
++(void)showCancelableAlertDialogWithTitle:(NSString *)title
+                        message:(NSString *)message
+               uiViewController:(UIViewController *)controller
+                     andHandler:(void (^ __nullable)(UIAlertAction *action)) handler{
+    UIAlertController *alertController = [TMAlertControllerFactory alertControllerWithTitle:title message:message andHandler: handler];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:nil]];
+    
+    [controller presentViewController:alertController animated:YES completion: nil];
+}
+
 +(TMProgressAlertDialog *)progressAlertDialogWithTitle:(NSString *)title{
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle: title message: @"\n" preferredStyle: UIAlertControllerStyleAlert];
     
@@ -40,9 +51,10 @@
     return customProgressDialog;
 }
 
-+(void) showEnterCodeDialogWithUiViewController: (UIViewController* _Nonnull) controller
-                                     andHandler: (void (^ __nullable)(NSString*_Nonnull text))handler {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle: @"Enter the code" message: nil preferredStyle: UIAlertControllerStyleAlert];
++(void) showTextInputDialogWithTitle: (NSString* _Nonnull) title
+                          controller: (UIViewController* _Nonnull) controller
+                          andHandler: (void (^ __nullable)(NSString* _Nonnull textField))handler {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle: title message: nil preferredStyle: UIAlertControllerStyleAlert];
     
     [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.placeholder = @"Code...";

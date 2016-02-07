@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "TMBadgeResponseModel.h"
 
 @interface TMTableViewBadgesDelegate : NSObject<UITableViewDelegate, UITableViewDataSource>
-@property (strong, nonatomic) NSArray<NSString*>* items;
+@property (strong, nonatomic) NSArray<TMBadgeResponseModel*>* items;
 
--(instancetype)initWithItems: (NSArray<NSString*>*) items;
+-(instancetype)initWithItems: (NSArray<TMBadgeResponseModel*>*) items;
 @end

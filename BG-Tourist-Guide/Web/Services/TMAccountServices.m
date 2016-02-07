@@ -8,6 +8,7 @@
 
 #import "TMAccountServices.h"
 #import "TMTouristSiteResponseModel.h"
+#import "TMBadgeResponseModel.h"
 
 @implementation TMAccountServices
 -(void) getProfileInformationWithBlock: (void(^)(NSError *err, TMProfileResponseModel *result)) block {
@@ -28,7 +29,16 @@
             [mappedVisitedTouristSites addObject: [[TMTouristSiteResponseModel alloc] initWithDictionary: item error: nil]];
         }
         
-        mappedResponse.VisitedTouristSites = [NSArray arrayWithArray:mappedVisitedTouristSites];
+        NSArray *notMappedBadges = [NSArray arrayWithArray: mappedResponse.Badges];
+        
+        mappedResponse.Badges = [NSMutableArray new];
+        NSMutableArray *mappedBadges = [NSMutableArray new];
+        
+        for (id item in notMappedBadges) {
+            [mappedBadges addObject: [[TMBadgeResponseModel alloc] initWithDictionary: item error: nil]];
+        }
+        
+        mappedResponse.Badges = [NSArray arrayWithArray:mappedBadges];
         
         block(nil, mappedResponse);
     }];

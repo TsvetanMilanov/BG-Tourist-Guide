@@ -6,6 +6,86 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Approve For Rating View Controller-->
+        <scene sceneID="GiC-L2-1Cp">
+            <objects>
+                <viewController id="TAw-e2-AXu" customClass="ApproveForRatingViewController" customModule="BG_Tourist_Guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="onF-zD-fOP"/>
+                        <viewControllerLayoutGuide type="bottom" id="ixP-gS-cxa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iq7-J4-XOV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bulgarian-Gerb.gif" translatesAutoresizingMaskIntoConstraints="NO" id="edL-co-e0s">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PrP-z0-UZZ">
+                                <rect key="frame" x="20" y="72" width="560" height="508"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="edL-co-e0s" firstAttribute="top" secondItem="onF-zD-fOP" secondAttribute="bottom" constant="44" id="9Nu-3K-JMB"/>
+                            <constraint firstItem="PrP-z0-UZZ" firstAttribute="top" secondItem="onF-zD-fOP" secondAttribute="bottom" constant="8" symbolic="YES" id="Hq8-Fv-5Fi"/>
+                            <constraint firstItem="edL-co-e0s" firstAttribute="bottom" secondItem="ixP-gS-cxa" secondAttribute="top" id="OfE-Ni-Ojq"/>
+                            <constraint firstAttribute="trailing" secondItem="edL-co-e0s" secondAttribute="trailing" id="bRT-P7-WJV"/>
+                            <constraint firstItem="PrP-z0-UZZ" firstAttribute="centerX" secondItem="edL-co-e0s" secondAttribute="centerX" id="cUt-Rj-I2D"/>
+                            <constraint firstItem="edL-co-e0s" firstAttribute="leading" secondItem="iq7-J4-XOV" secondAttribute="leading" id="f9n-RA-Mok"/>
+                            <constraint firstAttribute="bottom" secondItem="PrP-z0-UZZ" secondAttribute="bottom" constant="20" symbolic="YES" id="iPT-tN-DjX"/>
+                            <constraint firstItem="PrP-z0-UZZ" firstAttribute="leading" secondItem="iq7-J4-XOV" secondAttribute="leadingMargin" id="qB4-BS-an4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tvItems" destination="PrP-z0-UZZ" id="d8g-Vy-1Zh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Pe-7C-F8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-230" y="-1040"/>
+        </scene>
+        <!--Approve For Visiting View Controller-->
+        <scene sceneID="Pw9-xv-eVd">
+            <objects>
+                <viewController id="tjc-dv-Ofw" customClass="ApproveForVisitingViewController" customModule="BG_Tourist_Guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BXk-Su-97c"/>
+                        <viewControllerLayoutGuide type="bottom" id="hae-Tc-kek"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Js-Kh-4Nq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bulgarian-Gerb.gif" translatesAutoresizingMaskIntoConstraints="NO" id="YcN-ag-PaN">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MiV-Pc-36B">
+                                <rect key="frame" x="20" y="72" width="560" height="508"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MiV-Pc-36B" firstAttribute="centerX" secondItem="YcN-ag-PaN" secondAttribute="centerX" id="0nB-7a-hJc"/>
+                            <constraint firstItem="YcN-ag-PaN" firstAttribute="top" secondItem="BXk-Su-97c" secondAttribute="bottom" constant="44" id="Euh-D9-8lb"/>
+                            <constraint firstItem="MiV-Pc-36B" firstAttribute="top" secondItem="BXk-Su-97c" secondAttribute="bottom" constant="8" symbolic="YES" id="H4W-JF-UUT"/>
+                            <constraint firstItem="YcN-ag-PaN" firstAttribute="leading" secondItem="1Js-Kh-4Nq" secondAttribute="leading" id="J2k-8r-yD1"/>
+                            <constraint firstAttribute="trailing" secondItem="YcN-ag-PaN" secondAttribute="trailing" id="WHX-yX-tTd"/>
+                            <constraint firstItem="YcN-ag-PaN" firstAttribute="bottom" secondItem="hae-Tc-kek" secondAttribute="top" id="XaH-9v-KfI"/>
+                            <constraint firstAttribute="bottom" secondItem="MiV-Pc-36B" secondAttribute="bottom" constant="20" symbolic="YES" id="Zup-M0-dMl"/>
+                            <constraint firstItem="MiV-Pc-36B" firstAttribute="leading" secondItem="1Js-Kh-4Nq" secondAttribute="leadingMargin" id="wo6-qQ-4Yh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tvItems" destination="MiV-Pc-36B" id="zl5-9X-X5d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j55-SW-hGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-857" y="-381"/>
+        </scene>
         <!--Scoreboard-->
         <scene sceneID="YRg-Ye-SVC">
             <objects>
@@ -284,6 +364,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agL-Vj-hbM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1282" y="-381"/>
+        </scene>
+        <!--Administration View Controller-->
+        <scene sceneID="QxA-u4-og7">
+            <objects>
+                <viewController id="XUj-Ze-GBK" customClass="AdministrationViewController" customModule="BG_Tourist_Guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K0b-wv-YZM"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uhs-Qz-cx3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Dx-7g-djc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bulgarian-Gerb.gif" translatesAutoresizingMaskIntoConstraints="NO" id="0oA-P7-i5X">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spB-f7-nST">
+                                <rect key="frame" x="173" y="72" width="254" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Approve For Rating"/>
+                                <connections>
+                                    <segue destination="TAw-e2-AXu" kind="show" id="Xsz-fS-Esh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zy-gU-sO0">
+                                <rect key="frame" x="167" y="128" width="267" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Approve For Visiting"/>
+                                <connections>
+                                    <segue destination="tjc-dv-Ofw" kind="show" id="fN5-ah-BXR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0oA-P7-i5X" firstAttribute="bottom" secondItem="Uhs-Qz-cx3" secondAttribute="top" id="7cp-7Y-IPr"/>
+                            <constraint firstItem="5zy-gU-sO0" firstAttribute="leading" secondItem="spB-f7-nST" secondAttribute="leading" constant="-6" id="Lx1-hf-9V0"/>
+                            <constraint firstAttribute="trailing" secondItem="0oA-P7-i5X" secondAttribute="trailing" id="O7y-xD-wh3"/>
+                            <constraint firstItem="0oA-P7-i5X" firstAttribute="top" secondItem="K0b-wv-YZM" secondAttribute="bottom" id="Pl9-BP-HKG"/>
+                            <constraint firstItem="0oA-P7-i5X" firstAttribute="leading" secondItem="2Dx-7g-djc" secondAttribute="leading" id="TGw-LG-m7g"/>
+                            <constraint firstItem="5zy-gU-sO0" firstAttribute="top" secondItem="spB-f7-nST" secondAttribute="bottom" constant="8" symbolic="YES" id="tdv-Q8-h5d"/>
+                            <constraint firstItem="spB-f7-nST" firstAttribute="centerX" secondItem="0oA-P7-i5X" secondAttribute="centerX" id="u1i-46-RW3"/>
+                            <constraint firstItem="spB-f7-nST" firstAttribute="top" secondItem="K0b-wv-YZM" secondAttribute="bottom" constant="8" symbolic="YES" id="xEo-uK-cYA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Apa-Ec-852" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-230" y="-381"/>
         </scene>
         <!--Near Me-->
         <scene sceneID="CZ1-P0-DqO">
@@ -574,6 +703,7 @@
                         <outlet property="tvAddress" destination="kDJ-kt-VcI" id="JXQ-w5-1s1"/>
                         <outlet property="tvDescription" destination="i0i-pR-aLJ" id="dPN-fx-iSB"/>
                         <outlet property="tvLatitude" destination="p23-sY-5CH" id="Uww-pS-gEX"/>
+                        <outlet property="tvLongitude" destination="u0b-CN-eSF" id="mvL-RJ-xB5"/>
                         <outlet property="tvName" destination="JRp-Pp-OD2" id="z6m-LC-C0r"/>
                     </connections>
                 </viewController>
@@ -715,10 +845,10 @@
             </objects>
             <point key="canvasLocation" x="4120" y="310"/>
         </scene>
-        <!--Scoreboard-->
+        <!--BG Tourist Guide-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Scoreboard" id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController title="BG Tourist Guide" id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -788,6 +918,9 @@
                                 <rect key="frame" x="20" y="592" width="560" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Administration"/>
+                                <connections>
+                                    <segue destination="XUj-Ze-GBK" kind="show" id="FnM-0G-54u"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I21-Yq-N5e" customClass="RoundedCornersButton">
                                 <rect key="frame" x="20" y="149" width="560" height="54"/>

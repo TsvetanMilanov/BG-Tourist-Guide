@@ -56,6 +56,10 @@
 		C99496B71C66236200EBF25D /* TMTableViewTouristSitesDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496B61C66236200EBF25D /* TMTableViewTouristSitesDelegate.m */; };
 		C99496BA1C67376B00EBF25D /* VisitTouristSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99496B91C67376B00EBF25D /* VisitTouristSiteViewController.swift */; };
 		C99496BC1C67638300EBF25D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99496BB1C67638300EBF25D /* AVFoundation.framework */; };
+		C99496BF1C676E5200EBF25D /* AdministrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99496BE1C676E5200EBF25D /* AdministrationViewController.swift */; };
+		C99496C11C676E7000EBF25D /* ApproveForRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99496C01C676E7000EBF25D /* ApproveForRatingViewController.swift */; };
+		C99496C31C676E8000EBF25D /* ApproveForVisitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99496C21C676E8000EBF25D /* ApproveForVisitingViewController.swift */; };
+		C99496C61C6793B800EBF25D /* TMBadgeResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C99496C51C6793B800EBF25D /* TMBadgeResponseModel.m */; };
 		C9ED0B6B1C6019660085EBF2 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9ED0B691C6019660085EBF2 /* Logo.png */; };
 		C9ED0B6C1C6019660085EBF2 /* SlimLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9ED0B6A1C6019660085EBF2 /* SlimLogo.png */; };
 		C9ED0B721C6035BD0085EBF2 /* RoundedCornersButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ED0B711C6035BD0085EBF2 /* RoundedCornersButton.m */; };
@@ -159,6 +163,11 @@
 		C99496B81C67376B00EBF25D /* BG-Tourist-Guide-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BG-Tourist-Guide-Bridging-Header.h"; sourceTree = "<group>"; };
 		C99496B91C67376B00EBF25D /* VisitTouristSiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisitTouristSiteViewController.swift; path = ViewControllers/VisitTouristSiteViewController.swift; sourceTree = "<group>"; };
 		C99496BB1C67638300EBF25D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C99496BE1C676E5200EBF25D /* AdministrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdministrationViewController.swift; path = ViewControllers/Administration/AdministrationViewController.swift; sourceTree = "<group>"; };
+		C99496C01C676E7000EBF25D /* ApproveForRatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApproveForRatingViewController.swift; path = ViewControllers/Administration/ApproveForRatingViewController.swift; sourceTree = "<group>"; };
+		C99496C21C676E8000EBF25D /* ApproveForVisitingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApproveForVisitingViewController.swift; path = ViewControllers/Administration/ApproveForVisitingViewController.swift; sourceTree = "<group>"; };
+		C99496C41C6793B800EBF25D /* TMBadgeResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMBadgeResponseModel.h; path = Web/Models/Common/ResponseModels/TMBadgeResponseModel.h; sourceTree = "<group>"; };
+		C99496C51C6793B800EBF25D /* TMBadgeResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMBadgeResponseModel.m; path = Web/Models/Common/ResponseModels/TMBadgeResponseModel.m; sourceTree = "<group>"; };
 		C9ED0B691C6019660085EBF2 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = Images/Logo.png; sourceTree = "<group>"; };
 		C9ED0B6A1C6019660085EBF2 /* SlimLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SlimLogo.png; path = Images/SlimLogo.png; sourceTree = "<group>"; };
 		C9ED0B701C6035BD0085EBF2 /* RoundedCornersButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoundedCornersButton.h; path = Views/RoundedCornersButton.h; sourceTree = "<group>"; };
@@ -261,6 +270,7 @@
 		C954C7B11C60159000E12996 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C99496BD1C676E3B00EBF25D /* Administration */,
 				C9041B2E1C64A235004B5708 /* Account */,
 				C9041B2D1C64A227004B5708 /* TouristSites */,
 				C954C7B41C6015AA00E12996 /* MainViewController.h */,
@@ -411,6 +421,8 @@
 			children = (
 				C99496A21C65FD0700EBF25D /* TMScoreboardResponseModel.h */,
 				C99496A31C65FD0700EBF25D /* TMScoreboardResponseModel.m */,
+				C99496C41C6793B800EBF25D /* TMBadgeResponseModel.h */,
+				C99496C51C6793B800EBF25D /* TMBadgeResponseModel.m */,
 			);
 			name = ResponseModels;
 			sourceTree = "<group>";
@@ -424,6 +436,16 @@
 				C99496B61C66236200EBF25D /* TMTableViewTouristSitesDelegate.m */,
 			);
 			name = Delegates;
+			sourceTree = "<group>";
+		};
+		C99496BD1C676E3B00EBF25D /* Administration */ = {
+			isa = PBXGroup;
+			children = (
+				C99496BE1C676E5200EBF25D /* AdministrationViewController.swift */,
+				C99496C01C676E7000EBF25D /* ApproveForRatingViewController.swift */,
+				C99496C21C676E8000EBF25D /* ApproveForVisitingViewController.swift */,
+			);
+			name = Administration;
 			sourceTree = "<group>";
 		};
 		C9E86B0D1C60D44F00B87456 /* Data */ = {
@@ -637,6 +659,7 @@
 				C99496811C65FC8600EBF25D /* TMTouristSiteRequestModel.m in Sources */,
 				C9016DAC1C6165AF00798C07 /* TMParentTouristSiteModel.m in Sources */,
 				C9FDE06B1C62BE4B005D0FDB /* TMTouristSitesServices.m in Sources */,
+				C99496C61C6793B800EBF25D /* TMBadgeResponseModel.m in Sources */,
 				C99496A41C65FD0700EBF25D /* TMScoreboardResponseModel.m in Sources */,
 				C994967A1C65FC0500EBF25D /* TMCommonServices.m in Sources */,
 				C99496AA1C660F2300EBF25D /* ProfileViewController.m in Sources */,
@@ -650,11 +673,13 @@
 				C994968D1C65FC9200EBF25D /* TMParentTouristSiteResponseModel.m in Sources */,
 				C9016DAF1C6166E200798C07 /* TMTouristSiteModel.m in Sources */,
 				C994968C1C65FC9200EBF25D /* TMParentTouristSiteInfoResponseModel.m in Sources */,
+				C99496C31C676E8000EBF25D /* ApproveForVisitingViewController.swift in Sources */,
 				C994969F1C65FCD900EBF25D /* TMUserRegisterRequestModel.m in Sources */,
 				C954C7D71C60165C00E12996 /* TMRequester.m in Sources */,
 				C99496B71C66236200EBF25D /* TMTableViewTouristSitesDelegate.m in Sources */,
 				C9041B491C64A29D004B5708 /* RegisterViewController.m in Sources */,
 				C99496741C65DF4A00EBF25D /* UnofficialTouristSitesViewController.m in Sources */,
+				C99496C11C676E7000EBF25D /* ApproveForRatingViewController.swift in Sources */,
 				C9ED0B721C6035BD0085EBF2 /* RoundedCornersButton.m in Sources */,
 				C99496801C65FC8600EBF25D /* TMParentTouristSiteRequestModel.m in Sources */,
 				C99496B01C66176100EBF25D /* TMAccountServices.m in Sources */,
@@ -669,6 +694,7 @@
 				C99496991C65FCCF00EBF25D /* TMUserLoginResponseModel.m in Sources */,
 				C9041B551C64A2CF004B5708 /* TouristSiteDetailsViewController.m in Sources */,
 				C99496A71C65FDFD00EBF25D /* TMBaseService.m in Sources */,
+				C99496BF1C676E5200EBF25D /* AdministrationViewController.swift in Sources */,
 				C96066DE1C6256E10070D36E /* TMProgressAlertDialog.m in Sources */,
 				C954C7C41C6015E300E12996 /* TMActivityIndicatorFactory.m in Sources */,
 				C994968F1C65FC9200EBF25D /* TMSimpleTouristSiteResponseModel.m in Sources */,

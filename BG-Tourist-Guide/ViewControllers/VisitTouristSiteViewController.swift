@@ -72,7 +72,7 @@ class VisitTouristSiteViewController: UIViewController, QRCodeReaderViewControll
     }
     
     @IBAction func btnEnterCodeTap(sender: AnyObject) {
-        TMAlertControllerFactory.showEnterCodeDialogWithUiViewController(self) { (text) in
+        TMAlertControllerFactory.showTextInputDialogWithTitle("Enter the code:", controller: self) { (text) in
             let requester = TMRequester()
             
             let loadingBar = TMActivityIndicatorFactory.activityIndicatorWithParentView(self.view)

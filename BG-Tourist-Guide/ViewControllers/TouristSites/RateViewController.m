@@ -13,7 +13,7 @@
 #import "TMActivityIndicatorFactory.h"
 
 @interface RateViewController ()
-@property (weak, nonatomic) IBOutlet UITableView *tvItems;
+@property (strong, nonatomic) IBOutlet UITableView *tvItems;
 @end
 
 @implementation RateViewController
@@ -54,8 +54,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CellIdentifier"];
     }
     
-    cell.textLabel.text = _items[indexPath.row].name;
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    TMTouristSiteResponseModel *item = _items[indexPath.row];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ -> %@ / 10", item.name, item.rating];
     
     if (indexPath.row >= _items.count - 1 && _items.count > 0 && _hasMoreItems == YES) {
         [self loadData];
@@ -85,7 +86,27 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    __weak RateViewController *weakSelf = self;
+    TMTouristSiteResponseModel *item = _items[indexPath.row];
     
+    [TMAlertControllerFactory showTextInputDialogWithTitle:@"Enter rating" controller:self andHandler:^(NSString * _Nonnull text) {
+        __weak UIActivityIndicatorView *loadingBar = [TMActivityIndicatorFactory activityIndicatorWithParentView: weakSelf.view];
+        [loadingBar startAnimating];
+        
+        [_touristSites rateTouristSiteWithId: item.modelId rating:[text integerValue] andBlock:^(NSError *err) {
+            [loadingBar stopAnimating];
+            
+            if (err != nil) {
+                [TMAlertControllerFactory showAlertDialogWithTitle:@"Error" message:@"Cannot rate this tourist site. Please try again later." uiViewController:weakSelf andHandler:nil];
+                return;
+            }
+            
+            [TMAlertControllerFactory showAlertDialogWithTitle:@"Success" message:@"Tourist site rated." uiViewController:weakSelf andHandler:^(UIAlertAction * _Nonnull action) {
+                [weakSelf loadData];
+                [weakSelf.tvItems reloadData];
+            }];
+        }];
+    }];
 }
 
 -(void) loadData{

@@ -106,4 +106,15 @@
     }];
 }
 
+-(void) rateTouristSiteWithId: (NSInteger) touristSiteId rating:(NSInteger) rating andBlock: (void(^)(NSError *err)) block {
+    [self.requester postJSONWithUrl:[NSString stringWithFormat:@"/api/TouristSites/Rate/%ld?rating=%ld", touristSiteId, rating] data:nil andBlock:^(NSError *err, id result) {
+        if (err != nil) {
+            block(err);
+            return;
+        }
+        
+        block(nil);
+    }];
+}
+
 @end
